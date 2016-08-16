@@ -1,0 +1,336 @@
+/* ----- New in DAP v4.4 ----- */
+.userProfileLabel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #000000;
+	font-weight: normal;
+	text-align: left;
+}
+
+.userProfileField {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	font-weight: normal;
+	width: 175px;
+}
+
+.userProfileSubmitButton {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	font-weight: normal;
+}
+
+.confirmationMessage {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #CC0000;
+	font-weight: bold;
+	text-align: center;
+}
+
+.dap_userprofile_heading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #CC0000;
+	font-weight: bold;
+	padding: 10px 10px 20px 10px;
+}
+
+.dap_highlight_bg {
+	background-color: #FFCC00; /* #FFDFB0 #FFFAAF */
+	padding: 5px;
+}
+
+/* ----- End DAP v4.4 changes ----- */
+
+/* CSS for User Profile Table */
+table.dap_user_profile_table {
+	background-color: #fafafa;
+	width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	border: 1px solid #CCC;
+	border-collapse:collapse;
+	-moz-border-radius: 10px;  
+  	-webkit-border-radius: 10px;  
+  	-khtml-border-radius: 10px;  
+  	border-radius: 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+table.dap_user_profile_table td {
+	padding: 8px;
+	border-collapse:collapse;
+	-moz-border-radius: 10px;  
+  	-webkit-border-radius: 10px;  
+  	-khtml-border-radius: 10px;  
+  	border-radius: 10px;
+	padding: 10px 10px 10px 10px;
+	background-color: #fafafa;
+}
+
+.dap_userprofile_heading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #CC0000;
+	font-weight: bold;
+	padding: 10px 10px 20px 10px;
+}
+
+
+/* CSS for Product Links Table */
+.dap_product_links_table {
+	background-color: #fafafa;
+	width:100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	border: 1px solid #CCC;
+	border-collapse:collapse;
+	-moz-border-radius: 10px;  
+  	-webkit-border-radius: 10px;  
+  	-khtml-border-radius: 10px;  
+  	border-radius: 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+.dap_product_links_table div {
+	padding: inherit;
+}
+
+/* CSS for Product Links List */
+.dap_product_links_list {
+	padding:10;
+	list-style-type:none;
+	line-height:2em;
+	margin-left:auto;
+}
+
+/* CSS for Default Link color of Product Links */
+#dap_product_links_list a {
+	background-color:#fff;
+	color:#0000CC;
+}
+
+/* CSS for 'Visited' Link color of Product Links */
+#dap_product_links_list a:visited {
+	background-color:#fff;
+	color:#8F234B;
+}
+
+/* CSS for Product Heading Text Style in Product Table */
+.dap_product_heading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #CC0000;
+	font-weight: bold;
+}
+
+
+
+/* CSS for Affiliate Table Main */
+table.dap_affiliate_table_main {
+	border-width: 0px;
+	border-style: solid;
+	background-color: #fafafa;
+	width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	border-collapse:collapse;
+}
+
+/* CSS for Affiliate Earnings Table */
+table.dap_affiliate_details_table {
+	padding: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	background-color: #fafafa;
+	width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+}
+
+table.dap_affiliate_details_table td {
+	padding: 5px;
+	
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	background-color: #fafafa;
+	-moz-border-radius: 1px 1px 1px 1px;
+}
+
+.affiliate_section_heading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #CC0000;
+	font-weight: bold;
+}
+
+.affiliate_sub_heading {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+.regulartext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	font-weight: normal;
+}
+
+.regulartextLarge {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #111111;
+	font-weight: normal;
+}
+
+.regulartextLargeBold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #111111;
+	font-weight: bold;
+}
+
+.regulartextVeryLargeBoldRed {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #CC0000;
+	font-weight: bold;
+}
+
+/* CSS for errorMsgTemplates */
+table.errorMsgTemplateTable {
+	background-color: #FFFFFF;
+	width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+}
+
+table.errorMsgTemplateTable td {
+	font-size: 12pt;
+	font-weight: normal;
+	
+	padding: 8px;
+	border-width: 0px;
+	border-style: solid;
+	border-collapse: collapse;
+	background-color: #FFF7C3;
+	-moz-border-radius: 1px 1px 1px 1px;
+}
+
+
+.spacer {
+	clear:both;
+	height:1px;
+}
+
+/* ----------- DAP Signup Form ----------- */
+.dap_direct_signup_form {
+	margin:auto;
+	width:400px;
+	padding:14px;
+}
+#stylized {
+	border:solid 1px #000000;
+	background:#EFEFEF;
+}
+#stylized h1 {
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:8px;
+}
+#stylized p {
+	font-size:11px;
+	color:#000000;
+	margin-bottom:0px;
+}
+#stylized label {
+	display: block;
+	float:left;
+	clear: both;
+	color:#000000;
+	font-size:14px;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+	padding:10px;
+	margin:10px 0px;
+}
+#stylized input {
+	float: left;
+	font-size:14px;
+	border:solid 1px #aacfe4;
+	width:160px;
+	padding:10px;
+	margin:10px 5px;
+}
+#stylized .small {
+	color:#666666;
+	display:block;
+	font-size:10px;
+	font-weight:normal;
+	text-align:right;
+	width:140px;
+}
+#stylized button {
+	float: inherit;
+	clear:both;
+	margin-left:150px;
+	width:125px;
+	height:31px;
+	background:#C4C4C4;
+	text-align:center;
+	color:#000000;
+	font-size:14px;
+	font-weight:bold;
+}
+#stylized p:empty {
+	display: none;
+}
+#stylized br { 
+	display:none 
+}

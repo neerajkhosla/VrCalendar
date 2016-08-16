@@ -1,0 +1,295 @@
+#checkoutWrapper {width:100%; margin:0 auto; font-family:"Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif !important; font-size:13px; line-height:18px; color:#333;}
+#checkoutWrapper a {text-decoration:none;}
+#checkoutWrapper a img {border:0 none;}
+#checkoutLeft {float:left; width:99.5%; border:1px solid #9DABBD; margin-right:18px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){#checkoutLeft {padding-bottom:7px;}}
+#checkoutProgress {margin:0 !important; padding:0 !important;}
+#checkoutProgress li {list-style:none !important; position:relative; height:35px; float:left;}
+#checkoutProgress li.step1 {z-index:3; background:url(/dap/images/checkout/step1.png) no-repeat 0 0; width:175px;}
+#checkoutProgress li.step1.done {background:url(/dap/images/checkout/step1d.png) no-repeat 0 0;}
+#checkoutProgress li.step2 {z-index:2; background:url(/dap/images/checkout/step2.png) no-repeat 0 0; width:210px; left:-15px;}
+#checkoutProgress li.step2.current {background:url(/dap/images/checkout/step2c.png) no-repeat 0 0;}
+#checkoutProgress li.step2.done {background:url(/dap/images/checkout/step2d.png) no-repeat 0 0;}
+#checkoutProgress li.step3 {z-index:1; background:url(/dap/images/checkout/step3.png) no-repeat 0 0; width:215px; left:-30px;}
+#checkoutProgress li.step3.current {background:url(/dap/images/checkout/step3c.png) no-repeat 0 0;}
+#checkoutProgress li.step3.done {background:url(/dap/images/checkout/step3d.png) no-repeat 0 0;}
+#orderWrapper {padding:10px; padding-top:0; clear:both;}
+#orderWrapper .orderTitle {font-size:17px; color:#369; padding:10px 0 5px 0; border-bottom:1px dashed #369;}
+#productInformation {margin:10px 0 !important; padding:0 !important;}
+#productInformation li {list-style:none !important; padding:5px; border:1px solid #ddd; border-bottom:0 none; line-height:23px;}
+#productInformation li.productHeader {background:#eee; border:1px solid #ccc; color:#000;}
+#productInformation li.productTotal {background:#f9f9f9; border-bottom:1px solid #ddd; padding:0;}
+#productInformation li div {display:inline-table; vertical-align:top;}
+#productInformation .productName, #productInformation .couponCode {width:64%;}
+#productInformation .couponCode {width:62%; color:#000; padding:2px 2px 2px 5px; vertical-align:middle;}
+#productInformation .couponCode input[type="text"] {color:#369 !important; background:#fff !important; border:1px solid #999 !important; font-family:"Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif !important; font-size:13px !important; padding:3px !important; width:135px !important; box-shadow:0 0 0 transparent; border-radius:0;}
+#productInformation .couponCode .couponbtn {background:url(/dap/images/checkout/btn_apply.png) no-repeat 0 0 !important; border:0 none !important; padding:0 !important; width:61px !important; height:25px !important; text-indent:-9999px; cursor:pointer; border-radius:0; box-shadow:0 0 0 transparent;}
+#productInformation .productName a {font-weight:bold; color:#666; display:block;}
+#productInformation .productAmount, #productInformation .cartTotal {width:30%; text-align:right; color:#000;}
+#productInformation .cartTotal {width:29.5%; font-weight:bold; vertical-align:middle;}
+#productInformation .deleteProduct {margin-left:5px;}
+#productInformation .deleteProduct img {margin-top:3px;}
+#orderWrapper .infoBar {background:#FFFFCC; border:1px dotted #999; padding:2px 0 2px 7px; color:#000; text-align:center;}
+#orderWrapper .infoBar img {vertical-align:middle; margin:0 2px; border:0 none !important;}
+#billingInfo {float:left; clear:both; width:100%; margin:10px 0;}
+#Billing.expanded {width:100%;}
+.orderTitle a {float:right; font-size:12px; color:#333;}
+#Billing.expanded .addressConfirmation {width:48%; float:left;}
+#Billing.expanded .addressConfirmation a {color:#333;}
+#Billing.expanded .infoBar {float:right; padding:7px;}
+#divShippingInformation .infoBar {padding:7px 0; text-align:center;}
+.orderTitle {margin-bottom:10px;}
+.checkoutForms {margin:0 !important; padding:0 !important;}
+.checkoutForms li {list-style:none !important; border:1px solid #ddd; margin:2px 0; line-height:normal; float:left; width:100%;}
+.checkoutForms .formLabel {display:inline-table; vertical-align:middle; background:#f9f9f9; padding:7px; border-right:1px solid #ddd; text-align:right;}
+.checkoutForms input[type="text"], .checkoutForms input[type="password"], .checkoutForms textarea, .checkoutForms select {color:#000 !important; background:#fff url(/dap/images/checkout/bg_textbox.png) repeat-x 100% 0 !important; border:1px solid #999 !important; font-family:"Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif !important; font-size:13px !important; padding:4px !important; box-shadow:0 0 0 transparent; border-radius:0;}
+.checkoutForms select {background:#fff !important; padding:0 !important; width:345px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){.checkoutForms select {width:340px; margin-left:2px;}}
+.checkoutForms .notes select {width:85px; margin-top:5px; margin-left:2px;}
+#Billing .formLabel, #divShippingInformation .formLabel {min-width:110px;}
+#Billing input[type="text"], #divShippingInformation input[type="text"] {min-width:335px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){#Billing input[type="text"], #divShippingInformation input[type="text"] {min-width:330px;}}
+.checkBillingAddress {margin-top:5px;}
+#additionalInfo {float:left; width:100%; clear:both;}
+#additionalInfo .formLabel {min-width:160px;}
+#additionalInfo .textarea {font:inherit !important; padding:0 !important;}
+#additionalInfo .textarea .formLabel {height:60px; float:left;}
+#additionalInfo input[type="text"] {min-width:285px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){#additionalInfo input[type="text"] {min-width:280px;}}
+#additionalInfo textarea {min-width:285px; height:56px; margin:4px 0 0 3px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){#additionalInfo textarea {min-width:280px;}}
+#comments {clear:both; margin:0; padding:0; background:transparent; border:0 none;}
+#comments textarea {color:#000 !important; background:#fff url(/dap/images/checkout/bg_textbox.png) repeat-x 100% 0 !important; border:1px solid #999 !important; font-family:"Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif !important; font-size:13px !important; padding:4px !important; min-width:465px; height:65px; box-shadow:0 0 0 transparent; border-radius:0;}
+#termsConditions {float:left; width:100%; clear:both; margin:10px 0;}
+#termsConditions textarea {float:left; clear:both; position:relative; color:#333 !important; background:#f1f1f1 !important; border:1px solid #999 !important; font-family:"Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif !important; font-size:13px !important; padding:4px !important; min-width:465px; height:70px; box-shadow:0 0 0 transparent; border-radius:0;}
+#termsConditions label {margin-top:5px; float:left; width:100%; clear:both;}
+#termsConditions #tandc {vertical-align:middle;}
+.colorGray {color:#999;}
+#paymentInformation {float:left; width:100%; clear:both;}
+#paymentInformation img {border:0 none; margin-bottom:0;}
+#paymentInformation .orderTitle {color:#000; border-bottom:1px dashed #000;}
+#payWithCC {width:67%; float:left;}
+#payPal {width:27.5%; float:left;}
+#payPal img {width:95%;}
+#textOr {float:left; width:5%; text-align:center; padding:90px 0;}
+#textOr.Confirmation {padding:79px 0;}
+#payPal {float:right; text-align:center; border:1px dashed #bbb; padding:77px 0; margin-top:2px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){#payPal {padding:85px 0;}}
+#payPal.Confirmation {padding:61px 0; margin-top:2px;}
+#payWithCC .formLabel {width:120px;}
+#payWithCC .notes .formLabel {width:120px; position:relative; height:30px; margin-bottom:-12px; float:left; margin-right:3px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){#payWithCC .notes .formLabel {height:34px;}}
+#payWithCC .notes.expirationDate .formLabel {height:auto; margin-bottom:0;}
+#payWithCC input[type="text"] {min-width:168px; margin-top:2px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){#payWithCC input[type="text"] {min-width:165px; margin-top:4px;}}
+#payWithCC .cardCode input[type="text"] {min-width:142px; vertical-align:middle;}
+#payWithCC .cardCode img {vertical-align:middle;}
+#payWithCC .ccImages {float:right; margin:1px 7px 0 0; min-width:168px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){#payWithCC .ccImages {margin:3px 10px -3px 0; min-width:168px;}}
+#payWithCC .checkoutNotes {font-size:11px; color:#777; padding:0 5px 3px 0; margin-top:-3px; float:right;}
+@media screen and (-webkit-min-device-pixel-ratio:0){#payWithCC .checkoutNotes {margin-top:-3px;}}
+#payWithCC .actionButton {background:#9DABBD; border:0 none; text-align:center; padding:4px 1px 0 1px;}
+#payWithCC .actionButton #btnSubmit {width:171px !important; height:25px !important; background:url(/dap/images/checkout/btn_paywithcc.png) no-repeat 0 0 !important; border:0 none !important; padding:0 !important; text-indent:-9999px; cursor:pointer;}
+#checkoutRight {float:left; width:350px;}
+#orderFeatures {border:1px solid #ddd; padding-bottom:10px;}
+.checkoutTitle {font-size:17px; padding:10px; border-bottom:1px dashed #ddd;}
+#orderFeatures ul {margin:0 !important; padding:10px 0 0 0 !important;}
+#orderFeatures ul li {list-style:none !important; color:#369; background:url(/dap/images/checkout/icon_check.png) no-repeat 10px 50%; padding:5px 0 5px 30px;}
+#orderTestimonials {margin:0 0 10px 0 !important; padding:0 !important;}
+#orderTestimonials li {list-style:none !important; border-bottom:1px solid #eee; margin-top:10px;}
+#orderTestimonials .testimonialTitle {font-size:17px; color:#369; padding:10px 0 5px 25px; margin-bottom:5px; background:url(/dap/images/checkout/quote_top.png) no-repeat 0 50%;}
+#orderTestimonials .testimonialUser {font-size:14px; padding:5px 0; background:url(/dap/images/checkout/quote_bottom.png) no-repeat 100% 50%;}
+#accessConfirmatoin {float:left; clear:both; width:100%; margin:0 0 30px 0;}
+#accessConfirmatoin a {color:#000;}
+#orderImage{text-align:center;}
+#userLogin {float:left; width:96%; margin-bottom:10px; padding:10px; background:#9DABBD;}
+#userLogin input[type="text"], #userLogin input[type="password"] {color:#000 !important; background:#fff !important; border:1px solid #999 !important; font-family:"Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif !important; font-size:13px !important; padding:3px !important; width:198px !important; box-shadow:0 0 0 transparent; border-radius:0;}
+#userLogin input[type="submit"] {background:#369; border:0 none !important; padding:2px 8px 2px 8px !important; cursor:pointer; border-radius:0; box-shadow:0 0 0 transparent; color:#fff !important; font-weight:bold; font:inherit !important;}
+@media screen and (-webkit-min-device-pixel-ratio:0){#userLogin input[type="submit"] {padding:4px 10px 3px 10px !important;}}
+#userLogin a {font-size:14px; color:#fff; text-decoration:none;}
+.terms {border-bottom:1px dashed #369; margin-bottom:35px; width:100%;}
+.ordertermsTitle {width:452px; padding:8px 0 5px 25px; font-size:17px; color:#369; text-align:left;}
+form#formPayment {padding:0 !important; margin:0 !important; width:auto !important;}
+/***************MODIFIED***************/
+
+
+
+/* Z-INDEX */
+ .formError { z-index: 990; }
+    .formError .formErrorContent { z-index: 991; }
+    .formError .formErrorArrow { z-index: 996; }
+
+    .ui-dialog .formError { z-index: 5000; }
+    .ui-dialog .formError .formErrorContent { z-index: 5001; }
+    .ui-dialog .formError .formErrorArrow { z-index: 5006; }
+
+
+
+
+.inputContainer {
+	position: relative;
+	float: left;
+}
+
+.formError {
+	position: absolute;
+	top: 300px;
+	left: 300px;
+	display: block;
+	cursor: pointer;
+	text-align: left;
+}
+
+.formError.inline {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: inline-block;
+}
+
+.ajaxSubmit {
+	padding: 20px;
+	background: #55ea55;
+	border: 1px solid #999;
+	display: none;
+}
+
+.formError .formErrorContent {
+	width: 100%;
+	background: #EEEEEE;
+	position:relative;
+	color: #000;
+	min-width: 120px;
+	font-size: 11px;
+	border: 2px solid #ddd;
+	box-shadow: 0 0 6px #000;
+	-moz-box-shadow: 0 0 6px #000;
+	-webkit-box-shadow: 0 0 6px #000;
+	-o-box-shadow: 0 0 6px #000;
+	padding: 4px 10px 4px 10px;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-o-border-radius: 6px;
+}
+
+.formError.inline .formErrorContent {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	border: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-o-border-radius: 0;
+}
+
+.greenPopup .formErrorContent {
+	background: #33be40;
+}
+
+.blackPopup .formErrorContent {
+	background: #393939;
+	color: #FFF;
+}
+
+.formError .formErrorArrow {
+	width: 15px;
+	margin: -2px 0 0 13px;
+	position:relative;
+}
+body[dir='rtl'] .formError .formErrorArrow,
+body.rtl .formError .formErrorArrow {
+	margin: -2px 13px 0 0;
+}
+
+.formError .formErrorArrowBottom {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	margin: 0px 0 0 12px;
+	top:2px;
+}
+
+.formError .formErrorArrow div {
+	border-left: 2px solid #ddd;
+	border-right: 2px solid #ddd;
+	box-shadow: 0 2px 3px #444;
+	-moz-box-shadow: 0 2px 3px #444;
+	-webkit-box-shadow: 0 2px 3px #444;
+	-o-box-shadow: 0 2px 3px #444;
+	font-size: 0px;
+	height: 1px;
+	background: #EEEEEE;
+	margin: 0 auto;
+	line-height: 0;
+	font-size: 0;
+	display: block;
+}
+
+.formError .formErrorArrowBottom div {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+}
+
+.greenPopup .formErrorArrow div {
+	background: #33be40;
+}
+
+.blackPopup .formErrorArrow div {
+	background: #393939;
+	color: #FFF;
+}
+
+.formError .formErrorArrow .line10 {
+	width: 15px;
+	border: none;
+}
+
+.formError .formErrorArrow .line9 {
+	width: 13px;
+	border: none;
+}
+
+.formError .formErrorArrow .line8 {
+	width: 11px;
+}
+
+.formError .formErrorArrow .line7 {
+	width: 9px;
+}
+
+.formError .formErrorArrow .line6 {
+	width: 7px;
+}
+
+.formError .formErrorArrow .line5 {
+	width: 5px;
+}
+
+.formError .formErrorArrow .line4 {
+	width: 3px;
+}
+
+.formError .formErrorArrow .line3 {
+	width: 1px;
+	border-left: 2px solid #ddd;
+	border-right: 2px solid #ddd;
+	border-bottom: 0 solid #ddd;
+}
+
+.formError .formErrorArrow .line2 {
+	width: 3px;
+	border: none;
+	background: #ddd;
+}
+
+.formError .formErrorArrow .line1 {
+	width: 1px;
+	border: none;
+	background: #ddd;
+}

@@ -1,0 +1,54 @@
+.save_changes_button {
+background-color: #21759B;
+background-image: linear-gradient(to bottom, #2A95C5, #21759B);
+border-color: #21759B #21759B #1E6A8D;
+box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset;
+color: #FFFFFF;
+text-decoration: none;
+text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.msg_success {
+color:red;
+font-weight:bold;
+font-size:14px;
+}
+				
+.msg_error {
+color:red;
+font-weight:bold;
+}
+
+.min_req {
+list-style:inside disc; width:150px;
+}
+
+.img_set {
+vertical-align:middle;
+width:15px;
+height:15px;
+margin-left:15px;
+}
+
+.err_label {
+color:red;
+font-weight:bold;
+}
+
+.msg_label { 
+width:25%; 
+}
+.msg_text { 
+width:80%;
+color:red;
+font-weight:bold;
+}
+
+.msg_img { width:5%; }
+
+tr { 
+vertical-align:top; 
+}
+td {
+padding: 5px 0;
+}

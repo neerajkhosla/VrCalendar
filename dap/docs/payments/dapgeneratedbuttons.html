@@ -1,0 +1,51 @@
+<h3>1<strong>)</strong> Enable "Auto-Return" and "Payment Data Transfer"</h3>
+<ul>
+  <li>Log in to your Paypal account.</li>
+	<li>Go to <strong>Profile</strong>.</li>
+	<li>Click on Website Payment Preferences</li>
+	<li>Turn <strong>Auto Return</strong> to <strong>On</strong> (see image below)</li>
+	<li>Set <strong>Return URL</strong> to http://YourSite.com/dap/dap-thankyou.php</li>
+	<li>Scroll down further to the <strong>Payment Data Transfer</strong> (optional) section</li>
+	<li>Set <strong>Payment Data Transfer</strong> to <strong>On</strong></li>
+	<li>Scroll all the way to the bottom of the page, and then <strong>Save</strong> the changes.</li>
+	<li>Now come back to this same page just like you did before (<strong>Profile</strong> &gt; <strong>Website Payment Preferences</strong>)</li>
+	<li>This time, simply scroll down to the <strong>Payment Data Transfer (optional)</strong> section</li>
+	<li>Now you will see a long, ugly string of text next to the <strong>Identity Token</strong> field (see image below). Copy that string.</li>
+	<li>Go back to <strong>DAP Dashboard &gt; Setup &gt; Config &gt; Payment Processing &gt; Paypal Identity Token</strong> field, and enter this string there, and save it.</li>
+</ul>
+<strong> </strong><img class="alignnone size-full wp-image-1568" style="border: 1px solid black;" title="dap-paypal-pdt-settings" src="http://DigitalAccessPass.com/doc/wp-content/uploads/2011/01/dap-paypal-pdt-settings.png" alt="" width="826" height="686" />
+<h3><strong>2) Some </strong>More Config Settings (Defaults)</h3>
+<p>You don't need to change any of the other settings, but they are explained here anyway.
+  
+  You will find these under <strong>DAP Dashboard &gt; Setup &gt; Config &gt; Payment Processing </strong>section.  <img class="alignnone size-full wp-image-1072" style="border: 1px solid black;" title="DAP_Generated_Button_Config" src="http://DigitalAccessPass.com/doc/wp-content/uploads/2011/01/DAP_Generated_Button_Config1.png" alt="" width="815" height="336" />
+</p>
+<h3><strong>3) Generate Buy Button from within DAP</strong>
+</h3>
+<p>You can generate the button for Paypal for your product, on the <strong>DAP Dashboard &gt; Payments/Coupons &gt; Generate Paypal Button </strong>page.
+</p>
+<p><a href="http://www.digitalaccesspass.com/doc/wp-content/uploads/2011/01/dap-dap-generated-buttons.png" target="_blank"><img class="alignnone size-full wp-image-1567" style="border: 1px solid black;" title="dap-dap-generated-buttons" src="http://www.digitalaccesspass.com/doc/wp-content/uploads/2011/01/dap-dap-generated-buttons.png" alt="" width="643" height="365" /></a>
+</p>
+<h3>4) Publish generated Buy-button generated on your Sales page.</h3>
+That's it!
+<h3>Sales Flow</h3>
+Here's how the flow works now:
+<ul>
+	<li>Prospect clicks on buy-button your sales page and is taken to a Paypal checkout page at Paypal.com</li>
+	<li>They purchase your product and complete the payment</li>
+	<li>They are initially redirected to the "Auto Return" url from Step 2 above</li>
+	<li>DAP captures customer email, name, product name, etc</li>
+	<li>DAP creates member account for buyer on your system, and gives them access to the product, will send out the Welcome-Email from the product page, etc</li>
+	<li>It auto-logs them in to your membership site - no need for member to wait for Welcome email just to get their login information (that email is sent anyway, and will be waiting for them in their inbox)</li>
+	<li><strong> </strong>DAP now needs to know where to redirect the user to.
+      <br />
+      a) If Product-level <strong>Logged-In URL</strong> is set in DAP for this Product that they just purchased, then it redirects them to that URL
+      <br />
+  b) If no Product-level Logged-In URL is set, OR if the buyer has access to more than 1 product (if they had previously purchased another one of your products, for example), then it uses the Global "Logged-In URL" setting from: <strong>Setup &gt; Config &gt; Advanced &gt; URL to which user is redirected to right after login</strong></li>
+</ul>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">
+
+<strong>2) DAP Generated Buttons For Paypal </strong>
+
+With DAP 4.0, we have added support for DAP generated buttons for Paypal.  You no longer have to generate buttons within Paypal.
+
+</div>

@@ -1,0 +1,256 @@
+body {
+background: #FFFFFF;
+font-family: Helvetica;
+color: #808080;
+}
+a {
+color: #3A41A1;
+}
+#wrapper {
+width: 100%;
+background:url(../images/straws.png) repeat;
+box-shadow: 0px 1px 5px rgba(0,0,0,0.75);
+float:left;
+margin-bottom:25px;
+}
+.cancel{
+font-weight:bold;
+}
+#header {
+
+color: #000000;
+margin-bottom: 15px;
+}
+#upgrade{
+font-size: 12px;
+font-weight: bold;
+}
+.rowhead {
+display: table-row;
+padding: 5px;
+border-bottom: 1px dotted black;
+font-weight:bold;
+background: #EFEFEF;
+line-height: 32px;
+}
+.entry{
+/*overflow:visible !important;*/
+}
+.rowhead:first-child {
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-8 */
+}
+.rowhead:last-child {
+border:none;
+}
+.rowhead:last-child:hover {
+
+}
+.cell-header {
+padding: 2px;
+display: table-cell;
+width: 90px;
+font-size: 13px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+color: #000;
+text-align:center;
+border-bottom: 1px solid #333;
+border-right: 1px solid #EEEEEE;
+background: rgba(0,0,0,0.1);
+}
+.cell-header-start{
+padding: 2px;
+display: table-cell;
+width: 138px;
+font-size: 13px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+color: #000;
+text-align:center;
+border-bottom: 1px solid #333;
+border-right: 1px solid #EEEEEE;
+background: rgba(0,0,0,0.1);
+}
+.cell-header-end{
+padding: 2px;
+display: table-cell;
+width: 138px;
+font-size: 13px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+color: #000;
+text-align:center;
+border-bottom: 1px solid #333;
+border-right: 1px solid #EEEEEE;
+background: rgba(0,0,0,0.1);
+}
+.cell-header-sub{
+padding: 2px;
+display: table-cell;
+width: 121px;
+font-size: 13px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+color: #000;
+text-align:center;
+border-bottom: 1px solid #333;
+border-right: 1px solid #EEEEEE;
+background: rgba(0,0,0,0.1);
+}
+.cell-header-amt{
+padding: 2px;
+display: table-cell;
+width: 36px;
+font-size: 13px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+color: #000;
+text-align:center;
+border-bottom: 1px solid #333;
+border-right: 1px solid #EEEEEE;
+background: rgba(0,0,0,0.1);
+}
+.cell-header-mode{
+padding: 2px;
+display: table-cell;
+width: 90px;
+font-size: 13px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+color: #000;
+text-align:center;
+border-bottom: 1px solid #333;
+border-right: 1px solid #EEEEEE;
+background: rgba(0,0,0,0.1);
+}
+.cell-header:last-child {
+border-right:none;
+}
+.cell-left {
+display: table-cell;
+padding-top: 8px;
+padding-bottom: 8px;
+/*font-weight: bold;*/
+font-family: tahoma;
+width: 90px;
+font-size: 12px;
+padding:5px !important;
+border-right: 1px solid #FFEEFF;
+text-align:left;
+color:#000000;
+
+}
+.cell-left-start {
+display: table-cell;
+padding-top: 8px;
+padding-bottom: 8px;
+/*font-weight: bold;*/
+font-family: tahoma;
+width: 90px;
+font-size: 12px;
+border-right: 1px solid #FFEEFF;
+text-align:center;
+color:#000000;
+
+}
+.cell-left-end {
+display: table-cell;
+padding-top: 8px;
+padding-bottom: 8px;
+/*font-weight: bold;*/
+font-family: tahoma;
+width: 90px;
+font-size: 12px;
+border-right: 1px solid #FFEEFF;
+text-align:center;
+color:#000000;
+}
+.cell-left-sub {
+display: table-cell;
+padding-top: 8px;
+padding-bottom: 8px;
+/*font-weight: bold;*/
+font-family: tahoma;
+width: 90px;
+font-size: 12px;
+padding:8px !important;
+border-right: 1px solid #FFEEFF;
+text-align:center;
+color:#000000;
+white-space:nowrap;
+}
+.cell-left-amt {
+display: table-cell;
+padding-top: 8px;
+padding-bottom: 8px;
+/*font-weight: bold;*/
+font-family: tahoma;
+font-size: 12px;
+padding:8px !important;
+border-right: 1px solid #FFEEFF;
+text-align:center;
+color:#000000;
+
+}
+.cell-left-mode {
+display: table-cell;
+padding-top: 8px;
+padding-bottom: 8px;
+/*font-weight: bold;*/
+font-family: tahoma;
+width: 90px;
+font-size: 12px;
+padding:8px !important;
+border-right: 1px solid #FFEEFF;
+text-align:center;
+color:#000000;
+
+}
+
+.rowget a:link a:active{
+/* color: blue!important;
+ text-decoration:underline!important; */
+}
+ 
+.rowget a:link, .rowget a:visited{
+color: blue!important;
+text-decoration:underline!important; 
+}
+.rowget a:hover, .rowget a:hover{
+text-decoration:underline!important;
+}
+.cell-right {
+display: table-cell;
+padding: 2px;
+text-align: center;
+font-size: 11px;
+font-weight: bold;
+font-family: tahoma;
+border-top:1px solid #fff;
+}
+.cell-left:hover, .cell-right:hover {
+
+}
+.rowget{
+display: table-row;
+padding: 5px;
+border-bottom: 1px dotted black;
+/*font-weight:bold;*/
+background: #FFFFFF;
+}
+.rowget:hover{
+background:rgba(0,0,0,0.1);
+color:#fff;
+}
+.cell-left input[type="image"]{
+margin-bottom: -7px;
+}
+.post{
+padding:50px 20px;
+}
+#wrapper > form{
+display: table;
+width: 100%;
+}

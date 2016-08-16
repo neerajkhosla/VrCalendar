@@ -1,0 +1,11 @@
+# BEGIN DAP
+#Paste this at the very end of your .htaccess file 
+#that is your WordPress blog's main (root) folder
+<IfModule mod_rewrite.c>
+#dap
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} (.*)/wp-content/uploads/(.*)
+RewriteRule (.*) /dap/client/website/dapclient.php?dapref=%{REQUEST_URI}&plug=wp&%{QUERY_STRING}  [L]
+</IfModule>
+# END DAP

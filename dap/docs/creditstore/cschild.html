@@ -1,0 +1,22 @@
+<h3>Credit Store Child Product</h3>
+<p>1. The product that the users can get access to by redeeming their credits (in the store) is what we refer to as CHILD product.</p>
+<p>2. You can give any name to the product (does not have to be called ‘child’).</p>
+<p>3. Each product that needs to serve as child needs to be designated as Credit Store Child in DAP products page OR in DAP Admin-&amp;gt;Credit Store-&amp;gt;Storefront Settings page.</p>
+<p>&lt;span style=&quot;color: #ff0000;&quot;&gt;4. You cannot use regular dripping if you make a product a Credit Store Child Product.&lt;/span&gt;</p>
+<p>5. Users can earn credits by purchasing master product and then spend the credits to get access to child products in the credit storefront.</p>
+<p>6. Users can redeem the entire product in the store and get access to all the content that belongs to the child product (added in content responder tab) OR</p>
+<p>7. Users can redeem just the content that they are interested in by redeeming access to individual content instead of full product.</p>
+<p><strong>8. How to add setup a Child Product?</strong>
+<ul>
+<li>Create the product in DAP products page and desginate it as CS Child Product.</li>
+<li>Go to the Notifications tab of the child product (in dap products page) and setup the welcome email that the users will receive with their id/password when they redeem product in the store.</li>
+<li>Go to Content Responder tab of the child product (in dap products page) and set the content that you want to make available under this child product. If you do not want to allow your users to redeem their credits at ‘content level’ (pay-per-post), then you can leave the credits per post set to 0 (or whatever the default is set to).</li>
+<li>IMPORTANT NOTE: Whatever content you add in the Content Responder tab is the content the users will have access to when they purchase the product via credits in the store.</li>
+<li>Go to DAP Admin -&gt; Credit Store -&gt; Store Front Settings page, select the child product you created above, and then setup the rest of the fields on this page.</li>
+<li>If you setup a child product with ‘content-level credits disabled’ in DAP Admin -&gt; Credit Store -&gt; Store Front Settings page, then the ‘content level credits’ set in contentresponder section does not matter. It will not get used. The product level credits (set in DAP Admin -&gt; Credit Store -&gt; Store Front Settings page) will be used.</li>
+<li>If you have setup a child product with ‘content-level credits enabled’ or if you switch from content-level-credits disabled to enabled mode, then the ‘content level credits’ set in contentresponder section DOES matter. DAP will add up each individual content level credit to derive the total number of credits needed to buy the product. So remember to set the ‘required credits per content’ correctly if you use content-level credits (pay-per-post).</li>
+<li>Now save the settings.</li>
+<li>Create an association between the child and the category otherwise the child product will not show up in the store. Do this for every child product that should show up in the store.</li>
+<li>Now visit the Credit Store Front page (created by clicking on the CS editor icon in WP admin -&gt; pages -&gt; visual tab) and you will find the child products listed there in the store.</li>
+</ul>
+  If your users want to redeem access to child, then as long as they have enough credits in their account, they can login to their membership, visit the storefront page and redeem credits. They can earn credits by purchasing the master product. You can create multiple master products each allowing different number of credits (5-credits, 10 credits, 50 credits etc). This way the users can purchase the master and get 5, 10, 50.. credits and then visit the store to redeem it.</p>

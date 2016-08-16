@@ -1,0 +1,44 @@
+<script type="text/javascript">
+function clearCouponDefaultText(form) {
+	if ( form.coupon_code.value == "Enter Coupon (optional)" ) {
+		form.coupon_code.value = "";
+	}
+}
+function resetCouponDefaultText(form) {
+	if ( form.coupon_code.value == "" ) {
+		form.coupon_code.value = "Enter Coupon (optional)";
+	}
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0" class="cartSummary">
+<tr class="cartTotal">
+    <td class="coupon">
+ 
+    <input type="text" id="coupon_code" name="coupon_code" size="6" title="Optional" value="Enter Coupon (optional)" onFocus="clearCouponDefaultText(this.form);"  onBlur="resetCouponDefaultText(this.form);">
+			  <input type="button" name="btnCoupon" id="btnCoupon" onClick='applyCoupon(document.formOrderCheckout);' value='Apply'>
+              <input type="image" name="btnPleaseWait" id="btnPleaseWait" style="display:none;margin-bottom:-8px!important;" height="30" width="90"  src="/dap/images/pleasewait.png" />
+    </td>
+    <td colspan="2" class="totalTxt"></td>
+    <td>&nbsp;</td>
+    <td class="totalAmount">Total:&nbsp;[CARTTOTAL]</td>
+    
+</tr>
+<tr>
+    <td class="actionBtns" colspan="5">
+    	  <!--<input type="button" onclick='document.location.href="/dap/cancel-sample.html"'  value="Cancel" class="btnCancel"/>
+          <input type="button" onclick='processContinue(this.form);' value="Continue Shopping" class="btnCheckout"/>
+          <input type="button" onclick='processUpsell(this.form);' value="Checkout" class="btnCheckout"/>-->
+        <!--------------MOdified----
+        <input type="image" onclick='document.location.href="/dap/cancel-sample.html"'  value="Cancel" src="/dap/inc/content/dapcartsummary/includes/templates/template1/images/cancelBlue.png"/>  
+        <input type="image" onclick='processContinue(this.form);' value="Continue Shopping" src="/dap/inc/content/dapcartsummary/includes/templates/template1/images/continueshoppingblue.png"/>
+          <input type="image" onclick='processUpsell(this.form);' value="Checkout" src="/dap/inc/content/dapcartsummary/includes/templates/template1/images/checkoutblue.png"/>
+       ------------------------->   
+       <!--<input type="image" onclick='document.location.href="/dap/cancel-sample.html"'  value="Cancel" src="[CANCELIMGSRC]"/>-->  
+        <input type="image" onclick='processContinue(this.form);' id="continueshopping"	value="Continue Shopping" src="[SHOPPINGIMGSRC]"/>
+          <input type="image" onclick='processUpsell(this.form);' id="checkout" value="Checkout" src="[CHECKOUTIMGSRC]"/>
+      [HIDDENFIELDS]
+      </td>
+</tr>
+</table>
+</div>
+</form>

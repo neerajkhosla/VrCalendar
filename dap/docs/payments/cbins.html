@@ -1,0 +1,53 @@
+Starting with DAP v3.9, DAP now has support for ClickBank's <strong>Instant Notification Services (INS)</strong>.
+
+This is very similar to Paypal's Instant Payment Notification (IPN).
+
+The ClickBank INS notification will be processed instantly in real time, and your members will receive their welcome email with their membership login info instantly after purchase.
+<h3>CB INS Setup</h3>
+<p>1. Login to your ClickBank account
+</p>
+<p>2. Go to the "<strong>Account Settings</strong>" tab at the top
+</p>
+<p>3. Click on "<strong>My Site</strong>" from the sub-menu at the top.
+</p>
+<p> <img class="alignnone size-full wp-image-979" title="cbins_mysite" src="http://www.digitalaccesspass.com/doc/wp-content/uploads/2010/10/cbins_mysite.png" border="1" alt="" width="592" height="133" />
+</p>
+<p>4. Under <strong>Advanced Tools</strong>, update the <strong>Instant Notification Service</strong> URL (accept the terms of service etc), and make sure the URL points to:
+</p>
+<blockquote>
+<h3><strong>http://YourSite.com/dap/dap-clickbank.php</strong></h3>
+</blockquote>
+<p>Replace <strong>YourSite.com</strong> above with your actual domain name.
+</p>
+<p>5. Select <strong>Version 1.0</strong> .
+</p>
+<p><img class="alignnone size-full wp-image-980" title="cbins_insurl" src="http://www.digitalaccesspass.com/doc/wp-content/uploads/2010/10/cbins_insurl.png" border="1" alt="" width="642" height="103" /></p>
+<p>
+  
+  6. Whatever value you put in the <strong>Secret Key</strong> field in ClickBank (see image above), put the same value (in <strong>UPPERCASE</strong>) in to your <strong>DAP Admin Dashboard</strong> on your web site, at:
+  
+  <strong>Setup &gt; Config &gt; Payment Processing &gt; Secret Authorization Key used when interfacing with external systems</strong>
+</p>
+<p><img class="alignnone size-full wp-image-981" title="cbins_secretkey" src="http://www.digitalaccesspass.com/doc/wp-content/uploads/2010/10/cbins_secretkey.png" border="1" alt="" width="437" height="151" />
+</p>
+<p>7.  The <strong>Product Title </strong>in CB must match the <strong>Product Name</strong> in DAP.
+</p>
+<p>That's it! </p>
+<h3><strong>Testing
+</strong></h3>
+<p>Make a test purchase.
+  
+  If the integration was setup correctly, the user will be registered in DAP.  You will find the user account in the DAP <strong>Users &gt; Manage</strong> screen and you will find the completed transaction / order details on the DAP <strong>Orders</strong> page.
+</p>
+<p>If the test order is listed in DAP Orders page, then CB is correctly  integrated with DAP.  Check the payment status in DAP Orders page. </p>
+<p>If it  says <strong>Success</strong>, but no welcome/thank-you email got sent, then make sure  you set the thank-you email for that product in DAP products page.
+</p>
+<h3>Troubleshooting</h3>
+<p>If no order is listed in DAP orders page for the test purchase, then CB is not integrated with DAP.  </p>
+<p>To troubleshoot, do the following: </p>
+<ol>
+  <li>Set DAP <strong>Setup &gt; Config &gt; Log Level</strong> to 5.</li>
+	<li>Empty log content under <strong>System -&gt; Logs</strong>.</li>
+	<li>Run another test purchase.</li>
+	<li><a href="http://www.digitalaccesspass.com/support" target="_blank">Send us </a> the log snippet from <strong>System -&gt; Logs</strong>.</li>
+</ol>

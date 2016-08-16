@@ -1,0 +1,659 @@
+#emailListHeader ul {
+	list-style-type: none;
+	margin: 0 0 0 0;
+	padding: 0px;
+	width:100%;
+}
+
+#emailListHeader li {
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 1px;
+	background-color:#FFFFFF;
+	/* border: #CCCCCC solid 1px; */
+	color:#000;
+	font-size:11px;
+}
+
+#emailList {
+	float: left;
+	width: 100%;
+}
+
+#emailList ul {
+	list-style-type: none;
+    padding-left: 0px;
+	width:100%;
+}
+
+#emailList li {
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 1px;
+	background-color:#EFEFEF;
+	border: #CCCCCC solid 1px;
+	color:#000;
+	font-size:11px;
+}
+
+
+#sortableFileListHeader ul {
+	list-style-type: none;
+	margin: 0 0 0 0;
+	padding: 0px;
+	width:100%;
+}
+
+#sortableFileListHeader li {
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 1px;
+	background-color:#FFFFFF;
+	/* border: #CCCCCC solid 1px; */
+	font-size:11px;
+}
+
+#sortableFileList {
+	float: left;
+	width: 100%;
+}
+
+#sortableFileList ul {
+	list-style-type: none;
+    padding-left: 0px;
+	width:100%;
+}
+
+#sortableFileList li {
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 2px;
+	background-color:#EFEFEF;
+	border: #CCCCCC solid 1px;
+	color:#000;
+	font-size:11px;
+}
+
+#sortableFileList span {
+	background-color:#EFEFEF;
+}
+
+
+a.popinout { background:url("../../images/popout.png") }
+a.popinout.active { background:url("../../images/popin.png") }
+
+input[type=text], input[type=password], textarea  {
+	padding:5px 5px 5px 5px;
+	border:1px solid #AAA;
+	background:#FFFFFF;
+	font: 12px arial, sans-serif;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	
+	-webkit-box-shadow: 2px 2px 3px #999;
+	box-shadow: 2px 2px 2px #bbb;
+}
+
+input[disabled] {
+	color:#BFBFBF;
+}
+
+input[type=button], input[type=submit] {
+	padding:5px 5px 5px 5px;
+	border:1px solid #AAA;
+	background:#DFDFDF;
+	font: 12px arial, sans-serif;
+	-moz-border-radius:12px;
+	-khtml-border-radius:12px;
+	
+	border-top-left-radius: 12px;
+	-moz-border-radius-topleft: 12px;
+	-webkit-border-top-left-radius: 12px;
+	
+	border-bottom-right-radius: 12px;
+	-moz-border-radius-bottomright: 12px;
+	-webkit-border-bottom-right-radius: 12px;
+	
+	border-top-right-radius: 12px;
+	-moz-border-radius-topright: 12px;
+	-webkit-border-top-right-radius: 12px;
+	
+	border-bottom-left-radius: 12px;
+	-moz-border-radius-bottomleft: 12px;
+	-webkit-border-bottom-left-radius: 12px;
+	
+	-webkit-box-shadow: 2px 2px 3px #999;
+    box-shadow: 2px 2px 2px #bbb;
+}
+
+.textarea {
+	padding:5px;
+	border:1px solid #AAA;
+	background:#FFFFFF;
+	font: 12px arial, sans-serif;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	
+	border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	
+	border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	
+	border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	
+	-webkit-box-shadow: 0 0 0 4px #fafafa;
+	box-shadow: 0 0 0 4px #fafafa;
+}
+
+input:hover, input:focus {
+	border-color: #777777;
+	background: #E8E8E8;
+} 
+
+select {
+	line-height: 1.5em;
+	padding: 2px 2px 2px 2px;
+	background:#FFFFFF;
+	font: 14px arial, sans-serif;
+}
+
+.checkbox, .radio {
+	width: 19px;
+	height: 25px;
+	padding: 0 5px 0 0;
+	display: block;
+	clear: left;
+	float: left;
+}
+
+a:link {
+	color: #00C;
+}
+
+a:visited {
+	color: #551A8B;
+}
+
+input.groovybutton {
+	font-size:10px;
+	font-family:Verdana, sans-serif;
+	font-weight:normal;
+	color:#333333;
+	background-color:#D4D0C8;
+	border-style:solid;
+	border-color:#BBBBBB;
+	border-width:2px;
+}
+
+.heading1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000
+}
+.bullettext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none
+}
+.scriptsubheading {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #000000
+}
+.highlighted {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	background-color: #FFFF99
+}
+.sidebullet {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none
+}
+.headingSuper {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none
+}
+.sidebulletSmall {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none
+}
+.bodytextSubHeading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none
+}
+.bodytextSubHeadingHighlighted {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	background-color: #FFCC00;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+.scriptDescription {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	color: #333333
+}
+.scriptDescription {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #333333
+}
+.bodytext {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+}
+.BodyTextRed {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #CC0000;
+}
+.scriptheader {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #CC0000;
+	font-weight: bold;
+}
+.BodyTextSelect {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	overflow:auto;
+	width:200px;
+}
+.BodyTextSmall {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+.bodytextLarge {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #111111;
+	font-weight: normal;
+}
+.bodytextArial {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	text-align: left;
+}
+.headingSuperRed {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #CC0000;
+}
+.plainLink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-style: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.TableHeading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.bodytextWithBG {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	background-color: #CEE7FF;
+}
+.channel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #B8F1BF;
+}
+.nonHighlightedRow {
+	background-color: #EFEFEF;
+}
+.highlightedRow {
+	background-color: #CCFF99;
+}
+.nonHighlightedRowWhite{
+	background-color: #FFFFFF;
+}
+div.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	font-weight: bold;
+	border-top: 1px solid #006699;
+	border-bottom: 1px solid #006699;
+	padding: 4px 4px 4px 5px;
+	margin-bottom: 4px;
+}
+/* Technique to change the "+" to the image in the expando bars */
+span.expando {
+	display:block;
+	float:left;
+	width:16px;
+	height:16px;
+	margin-right:2px;
+	background-image:url("/dap/images/expand.gif");
+	background-repeat:no-repeat;
+	margin-top:0px;
+}
+span.expando span {
+	display:none;
+}
+span.expando3 {
+	display:block;
+	float:left;
+	width:16px;
+	height:16px;
+	margin-right:2px;
+	background-image:url("/dap/images/collapse.gif");
+	background-repeat:no-repeat;
+	margin-top:0px;
+}
+span.expando3 span {
+	display:none;
+}
+div.switchcontent {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	padding: 4px 4px 4px 5px;
+	margin: 0px;
+}
+table.sofT {
+	background-color: #fafafa;
+	border: 1px #6699CC solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+/* ADMIN HEADER MENU CSS */
+
+body {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin:0;
+	font-size:0.65em;
+}
+#adminheader {
+	background:#1b4d92;
+	height:60px;
+}
+#adminheader .textfloat {
+	float:right;
+	margin-top:27px;
+	margin-right:20px;
+	color:#fff;
+	font-family:Trebuchet MS;
+	font-size:19px;
+}
+#adminheader .logoutfloat {
+	color:#fff;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	clear:left;
+	text-align:right;
+}
+#adminheader .logoutfloat img {
+	margin-top:-5px;
+}
+#adminheader .logoutfloat a:link {
+	margin-top:17px;
+	color:white;
+	text-decoration:none;
+}
+#adminheader .logoutfloat a:hover {
+	text-decoration:underline;
+}
+#adminnavi {
+	background: url('../../images/navi_admin_bkgd.jpg') repeat-x;
+	width:100%;
+	height: 40px;
+}
+#nav, #nav ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	list-style-position:outside;
+	position:relative;
+	line-height:1.5em;
+	margin-left:auto;
+}
+#nav a {
+	display:block;
+	padding:11px 15px;/* controller for main menu padding */
+	color:#102E56;
+	font-weight:bold;
+	text-decoration:none;
+	background: url('../../images/navi_admin_bkgd.jpg') repeat-x;
+	z-index:1;
+}
+#nav ul a, #nav ul li a {
+	display:block;
+	background:#FFB366 !important;
+	z-index:1;
+	text-transform:capitalize;
+	padding:5px;
+	margin-left:5px;
+	font-weight:bold;
+}
+#nav ul a:hover, #nav ul li a:hover {
+	background-color:#1B4D92!important;
+	color:#fff;
+}
+#nav a:hover {
+	background-color:#fff;
+	color:#fff;
+}
+#nav li {
+	float:left;
+	position:relative;
+}
+#nav ul {
+	position:absolute;
+	display:none;
+	width:12em;
+	top:2.87em;
+}
+#nav li ul a {
+	width:12em;
+	height:auto;
+	float:left;
+}
+#nav ul ul {
+	top:auto;
+}
+#nav li ul ul {
+	left:12em;
+	margin:0px 0 0 10px; /* controller for nested menu margins */
+}
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li:hover ul ul ul ul {
+	display:none;
+}
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul {
+	display:block;
+}
+/* END ADMIN HEADER MENU CSS */
+
+
+.tooltip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: none;
+}
+
+.divalign {
+	width:800px;
+}
+
+/* Added 05/30/2011 for new DAP UI Changes (helptips, expando box, etc */
+											
+.product_main {
+	position: relative;
+	width:980px;
+	height:auto;
+	left:0;
+	top: 0px;
+	margin-left: 0px;
+}
+
+h2.trigger {
+	padding: 0 0 0 20px;
+	margin: 10px 0 5px 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-top: 1px solid #006699;
+	border-bottom: 1px solid #006699;
+	background: url(/dap/images/expand.gif) no-repeat left center;
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+h2.trigger a {
+	color: #000000;
+	text-decoration: none;
+	display: block;
+}
+h2.trigger a:hover {
+	color: #777777;
+}
+h2.active {
+	background: url(/dap/images/collapse.gif) no-repeat left center;
+	background-color: #CFCFCF;
+}
+.toggle_container {
+	margin: 0 0 5px;
+	padding: 0;
+	border-top: 1px solid #d6d6d6;
+	/*background: #f0f0f0 url(toggle_block_stretch.gif) repeat-y left top;*/
+	overflow: hidden;
+	font-size: 1.2em;
+	width: 100%;
+	clear: both;
+}
+.toggle_container .block {
+	background-color: #FFFFFF;
+	padding: 10px 10px 10px 10px; /*--Padding of Container--*//*background: url(toggle_block_btm.gif) no-repeat left bottom; /*--Bottom rounded corners--*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+}
+
+
+/* Not Used Currently */
+.popup_modify{
+	position:absolute;
+	z-index:10;   
+	width:172px;
+	height:102px;
+	text-align:center;
+	color:#FF0000;
+	font: 14px Verdana, Arial, Helvetica, sans-serif;
+}
+
+table.sofTNoBGColor {
+	border: 1px #000000 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	background-color:#E4E5F5;
+}
+
+.twoColFixRt #container {
+	width: 970px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.twoColFixRt #sidebar1 {
+	float: right; /* since this element is floated, a width must be given */
+	width: 250px; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	background: #EFEFEF; /* the background color will be displayed for the length of the content in the column, but no further */
+	padding: 15px 10px;
+}
+.twoColFixRt #mainContent {
+	margin: 0 250px 0 0; /* the right margin on this div element creates the column down the right side of the page - no matter how much content the sidebar1 div contains, the column space will remain. You can remove this margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends. */
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}

@@ -1,0 +1,110 @@
+.vrc-calendar-wrapper:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.vrc.vrc-calendar {
+
+}
+.vrc.vrc-calendar .calendar-page {
+    padding-right: 1px;
+}
+.vrc.vrc-calendar .calendar-month-container .calendar-month-name {
+    text-align: center;
+}
+.vrc.vrc-calendar .calendar-month-container table {
+    margin: 0;
+}
+.vrc.vrc-calendar .calendar-month-container table,
+.vrc.vrc-calendar .calendar-month-container table tr,
+.vrc.vrc-calendar .calendar-month-container table tr td{
+    border:none;
+}
+.vrc.vrc-calendar.vrc-calendar-small * {
+    font-size: 11px;
+}
+.vrc.vrc-calendar.vrc-calendar-medium * {
+    font-size: 13px;
+}
+.vrc.vrc-calendar.vrc-calendar-large * {
+    font-size: 15px;
+}
+#vrc-booking-form-wrapper {
+    border:1px solid #dedede;
+}
+#vrc-booking-form-wrapper .booking-heading,
+#booking-form-fields,
+#booking-form-action{
+    padding: 10px;
+}
+#vrc-booking-form-wrapper .booking-heading {
+    background: #4f5152;
+    color:#fff;
+    font-size: 18px;
+}
+
+#vrc-booking-form-wrapper .booking-heading .pull-right {
+    font-size: 14px;
+    line-height: 28px;
+}
+#booking-form-charges .border-top{
+    border-top: 1px solid #dedede;
+}
+#vrc-payment-error {
+    padding: 15px;
+    margin: 10px 0;
+}
+#ui-datepicker-div {
+    display: none;
+}
+
+.vrc-layout-inline .vrc-calendar {
+    width: 70%;
+    float: left;
+}
+.vrc-layout-inline .calendar-from {
+    width: 30%;
+    float: left;
+}
+.vrc-layout-inline .calendar-from .col-sm-6,
+.vrc-layout-inline .calendar-from .col-sm-4 {
+    width: 100% !important;
+}
+
+@media screen and (max-width: 1280px){
+    .vrc-calendar-wrapper .vrc.vrc-calendar .col-md-4 {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 980px){
+    .vrc-layout-inline .vrc-calendar {
+        width: initial;
+        float: none;
+    }
+    .vrc-layout-inline .calendar-from {
+        width: initial;
+        float: none;
+    }
+}
+@media screen and (max-width: 966px){}
+@media screen and (max-width: 960px){}
+@media screen and (max-width: 800px){}
+@media screen and (max-width: 768px){}
+@media screen and (max-width: 736px){}
+@media screen and (max-width: 659px){}
+@media screen and (max-width: 640px){}
+@media screen and (max-width: 627px){}
+@media screen and (max-width: 603px){}
+@media screen and (max-width: 598px){}
+@media screen and (max-width: 568px){}
+@media screen and (max-width: 480px){}
+@media screen and (max-width: 414px){}
+@media screen and (max-width: 375px){}
+@media screen and (max-width: 384px){}
+@media screen and (max-width: 361px){}
+@media screen and (max-width: 360px){}
+@media screen and (max-width: 340px){}
+@media screen and (max-width: 320px){}

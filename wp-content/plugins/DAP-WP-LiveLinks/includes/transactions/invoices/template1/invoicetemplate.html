@@ -1,0 +1,142 @@
+
+<style type="text/css">
+<!--
+body {
+  font-family:Tahoma;
+}
+
+img {
+  border:0;
+}
+.tinytext{
+	text-align:left;
+	font-size:small;
+	}
+#page {
+  width:750px;
+  margin:0 auto;
+  
+
+}
+#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px Helvetica, Sans-Serif; text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }
+#companydetails{
+	float:left;
+	background:#eee;
+	padding:10px;
+	margin-bottom:15px;
+	}
+#address { width: 250px; float: left; }
+
+
+
+#logo {
+text-align:right;	
+  float:right;
+  margin:0;
+}
+
+table { border-collapse: collapse;width:100%; }
+table td, table th { border: 1px solid black; padding: 5px; }
+
+
+
+
+#meta { margin-top: 1px; width: 300px;text-align:right; }
+#meta td { text-align: right;  }
+#meta td.meta-head { text-align: right; background: #eee; }
+#items { clear: both; width: 100%; margin: 15px 0 15px 0; border: 1px solid black;padding-bottom:15px; }
+#items th { background: #eee; }
+
+#items tr.item-row td { border: 0; vertical-align: top; }
+#items td.description { width: 300px; }
+#items td.item-name { width: 175px; }
+#items td.description textarea, #items td.item-name textarea { width: 100%; }
+#items td.total-line { border-right: 0; text-align: right; }
+#items td.total-value { border-left: 0; padding: 10px; }
+#items td.total-value textarea { height: 20px; background: none; }
+#items td.balance { background: #eee; }
+#items td.blank { border: 0; }
+-->
+</style>
+<page>
+<div id="page">
+  		<div id="header">INVOICE</div>
+		
+		
+		<div id="companydetails">
+        <strong>Company Details</strong><br/><br/>
+            <div id="address">%%COMPANYNAME%%
+
+<a href="mailto:%%adminemail%%">%%ADMINEMAIL%%</a>
+</div>
+</div>
+
+            <div id="logo">
+    <a href="%%COMPANYURL%%"><img src="%%logo%%" alt="Logo" width=150 /></a>
+  </div>
+  
+      <table id="meta">
+                <tbody><tr>
+                    <td class="meta-head">Invoice #</td>
+                    <td>%%TRANSACTIONID%%</td>
+                </tr>
+                <tr>
+
+                    <td class="meta-head">Date</td>
+                    <td>%%TRANSACTIONDATE%%</td>
+                </tr>
+
+            </tbody></table>
+  <div id="content">
+    <p>
+      <strong>Customer Details</strong><br>
+      Name: %%FIRST_NAME%% %%LAST_NAME%%<br>
+      Email: %%EMAIL_ID%%<br>
+      %%PAYMENTTYPE%% 
+      
+    
+      </p>
+        
+    <hr>
+    <table id="items" align="center">
+		
+		  <tbody><tr>
+		      <th>Item Name</th>
+		      <th>Description</th>
+		      <th>Amount</th>
+		      <th>Currency</th>
+		  </tr>
+		  
+		  <tr class="item-row">
+		      <td class="item-name">%%ITEMNAME%%</td>
+		      <td class="description">%%DESCRIPTION%%</td>
+		      <td>%%AMOUNT%%</td>
+              <td>%%CURRENCY%%</td>
+		      
+		  </tr>
+		  
+		  
+		  
+		 
+		  
+		
+		 
+		 
+		
+		</tbody></table>
+    <hr>
+    <p style="text-align:left;">
+      Thank you for your order!  This transaction will appear on your billing statement as %%COMPANYNAME%%.<br>
+      If you have any questions, please feel free to contact us at <a href="mailto:%%ADMINEMAIL%%">%%ADMINEMAIL%%</a>.
+    </p>
+
+    <hr>
+    <p>
+      </p><div class="tinytext">This communication is for the exclusive use of the addressee and may contain proprietary, confidential or privileged information. If you are not the intended recipient any use, copying, disclosure, dissemination or distribution is strictly prohibited.
+      <br><br>
+      
+      </div>
+    <p></p>
+  </div><!--end content-->
+</div><!--end page-->
+</page>

@@ -1,0 +1,84 @@
+<div id="checkoutWrapper"><!---Start checkoutwrapper-->
+<div id="checkoutLeft"><!---Start checkoutLeft-->
+
+<form name="formUpdateCCProfile" id="formUpdateCCProfile" autocomplete="off" method="post" action="/dap/updateCCProfile-submit.php" onsubmit="return askvalidation()">
+<div id="orderWrapper"><!---Start orderwrapper-->
+<!-- Payment Information Div -->
+<div id="paymentInformation">
+  <div class="orderTitle">Update Credit Card</div>
+  <div id="payWithCC">
+      <ul class="checkoutForms">
+      <li class="notes">
+            <div class="formLabel">Card Number</div>
+            <div class="formFields">
+                %%CARDNUM%%
+                <div class="checkoutNotes">(no spaces/dashes)</div>
+            </div>
+        </li>
+        <li class="notes expirationDate">
+            <div class="formLabel">Expiration Date</div>
+            <!--<input type="text" id="exp_date" name="exp_date" maxLength="4" size="4" value="<?php //if ($_SESSION['paymentObj'] != null) echo $_SESSION['paymentObj']->getExp_date(); ?>" />-->
+            %%EXPIRATIONDATE%%
+        </li>
+        <li class="cardCode">
+            <div class="formLabel">Card Code</div>
+             %%CARDCODE%%
+      <a id="aCardCodeWhatsThis" href="/dap/Card_Code.html" target=_blank onclick='javascript:return PopupLink(this);'><img src="/dap/images/checkout/icon_info.png" alt="" /></a>
+        </li>
+      </ul>
+  </div>
+</div><!--End Payment Information--->
+</div><!-- END orderWrapper-->
+<div id="billingInfo">
+  <div id="Billing">
+  <div class="orderTitle">Update Billing Information</div>
+  <ul class="checkoutForms">
+  	  <li>
+          <div class="formLabel">Email</div>
+          %%EMAIL%%
+      </li>
+      <li>
+          <div class="formLabel">* First Name</div>
+          %%FIRSTNAME%%
+      </li>
+      <li>
+          <div class="formLabel">* Last Name</div>
+          %%LASTNAME%%
+      </li>   
+      
+      <li>
+          <div class="formLabel">* Address</div>
+          %%ADDRESS%%
+      </li>
+      <li>
+          <div class="formLabel">* City</div>
+          %%CITY%%
+      </li>
+      <li>
+          <div class="formLabel">* Country</div>
+           %%COUNTRY%%
+      </li>
+      <li>
+          <div class="formLabel">* State/Province</div>
+          %%STATE%%
+      </li>
+ 	  <li>
+          <div class="formLabel">* Zip Code</div>
+          %%ZIPCODE%%
+      </li>
+      <li>
+          <div class="formLabel">Phone</div>
+          %%PHONE%%
+      </li>
+      <li class="actionButton" id="actionButton">
+          %%ACTIONBUTTON%%
+      </li>
+  </ul>
+  </div>
+</div>
+%%HIDDENFIELDS%%
+<input type="hidden" name="stripeToken" id="stripeToken" value="" />
+			  
+</form>
+</div><!--End checkoutLeft-->
+</div> <!--Div checkoutWrapper-->

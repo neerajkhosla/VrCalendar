@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>1 Click Upsell With Paypal</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #600;
+}
+-->
+</style></head>
+
+<body>
+
+<table width="700" border="0" align="center" cellpadding="20" cellspacing="10">
+  <tr>
+    <td bgcolor="#FFFFFF"><h4 align="center">(SAMPLE UPSELL PAGE)</h4>
+      <h1 align="center">Thank You!</h1>
+    <p>Your order has been successfully processed.</p>
+    <p>But here's a a very special offer.</p>
+    <p>MyWebmasterInABox product - normally sells for $97</p>
+<p>S3MediaVault.com script - normally sells $27</p>
+    <p>Add BOTH to your current order, for <strong>just $0.01</strong>. </p>
+    <p>And you can get it only during this special offer.    </p>
+    <div align="center">
+      <table width="550" border="1" cellspacing="0" cellpadding="5">
+        <tr>
+          <td><div align="center">
+            <h2>MyWebmasterInABox <br />
+              PHP Scripts</h2>
+            <p><img src="http://mywebmasterinabox.com/images/wbib.jpg" /></p>
+            <p><span style="color: #C00"><s>$0.01</s></span></p>
+            <h1>              AND</h1>
+            <h2>              S3MediaVault.com<br />
+              Wordpress Plugin<br />
+              &amp; Amazon S3              <br />
+              Media Player </h2>
+<p><span style="color: #C00"><s>$27.00</s></span></p>
+<p>&nbsp;</p>
+<p>One-Time Offer. Never before, Never again.</p>
+            <h1 style="color: #C00"><s>$0.01</s> &nbsp;&nbsp;$67</h1>
+<form name="generate_paypal" method="post" action="https://localhost/dap/PaypalAddToCart.php">
+<input type="hidden" name="item_name" value="Paypal Upsell1 "/>
+<input type="hidden" name="description" value="Paypal Upsell1" />
+<input type="hidden" name="amount" value="0.01" />
+<input type="hidden" name="trial_amount" value="0.00" />
+<input type="hidden" name="total_occurrences" value="0" />
+<input type="hidden" name="is_recurring" value="N" />
+<input type="hidden" name="recurring_cycle_1" value="0" />
+<input type="hidden" name="recurring_cycle_2" value="0" />
+<input type="hidden" name="recurring_cycle_3" value="0" />
+<input type="hidden" name="payment_succ_page" value="https://localhost/dap/continue.php?url=/dap/downsell1-paypalstandard-sample.html" />
+<input type="hidden" name="payment_gateway" value="paypal" />
+<input type="hidden" name="is_submitted" value="Y" />
+<input type="submit" value="AddToCart" />
+</form>
+
+            <p>&nbsp;</p>
+            <form action='http://localhost/dap/continue.php?url=/dap/thankyou-sample.html' method='post' name='generate_paypal'>
+              <input type='submit' value='No, Thanks' />
+            </form>
+            <p>&nbsp;</p>
+            <p style="color: #C00">&nbsp;</p>
+            </div></td>
+          </tr>
+        </table>
+      <p>&nbsp;</p>
+      <p>Copyright &copy; 2010 YourSite.com. All rights reserved.</p>
+    </div></td>
+  </tr>
+</table>
+
+
+<p>&nbsp;</p>
+</body>
+</html>

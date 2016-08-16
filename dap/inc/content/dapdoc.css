@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Karla:700, 400);
+.btn {
+    display: inline-block!important;
+   font-size: 1.2em!important;
+    font-family:'Karla', verdana, sans-serif!important;
+    padding: .4em .666666667em!important;
+    line-height: 1.333333333!important;
+    font-weight: 600!important;
+    background-color: #FF7400!important;
+    border: 0.07143em solid #FF7400!important;
+    border-radius: .2em!important;
+    border-bottom: 0.3em solid #E82C0C!important;
+    color: #fff!important;
+    margin-left: .3em!important;
+    margin-bottom: .3em!important;
+    text-decoration: none!important;
+}
+.btnsmall {
+    display: inline-block!important;
+    font-size: 1.0em!important;
+    font-family:'Karla', verdana, sans-serif!important;
+    padding: .4em .666666667em!important;
+    line-height: 1.3!important;
+    font-weight: 600!important;
+    background-color: #FF7400!important;
+    border: 0.07143em solid #FF7400!important;
+    border-radius: .2em!important;
+    border-bottom: 0.3em solid #E82C0C!important;
+    color: #fff!important;
+    margin-left: .3em!important;
+    margin-bottom: .3em!important;
+    text-decoration: none!important;
+	width:310px!important;
+}
+.btn-large {
+    padding: 0.3em 1.5em!important;
+    font-size: 1.5em!important;
+    line-height: normal!important;
+    border-radius: .2em!important;
+    font-weight: 700!important;
+}
+.btn-x-large {
+    font-size: 2em!important;
+}
+.btn:hover {
+    background-color: #FF8400!important;
+    border-color: #FF8400!important;
+    text-decoration: none!important;
+    border-bottom-color: #E83014;
+}
+
+.btnsmall:hover {
+    background-color: #FF8400!important;
+    border-color: #FF8400!important;
+    text-decoration: none!important;
+    border-bottom-color: #E83014;
+}

@@ -1,0 +1,276 @@
+
+<script>
+function showDiv(input) {
+	var divName = document.getElementById(input);
+	divName.style.display = "block"; //to show it
+}
+
+function hideDiv(input) {
+	var divName = document.getElementById(input);
+	divName.style.display = "none"; //to hide it
+}
+function showHideShippingDiv(form) {
+			var oChkCopyBill = form.chkCopyBill;
+			if (oChkCopyBill.checked == true) {
+				showDiv('divShippingInformation');
+			} else {
+				hideDiv('divShippingInformation');
+			}
+		}
+	
+</script>
+
+<div id="checkoutWrapper"><!--Start Checkout Wrapper-->
+<div id="wrapper"><!--Start wrapper-->
+<div id="errorText">
+ %%ERRORTEXT%%
+ </div>
+ <!--DIv Userlogin-->
+<div id="userLogin" style="display:%%LOGINVISIBILITY%%">
+			<input value="Email Address" data-validation-placeholder="Email Address" class="validate[required] text-input" type="text" name="dapemail" id="dapemail" />
+			<input type="password" value="password" name="password" id="password" />
+			<input type="button" value="Sign In" onclick="return loginsubmit(document.getElementById('dapemail').value,document.getElementById('password').value,document.URL)" /><br />
+			<!--<a href="#">Or continue to create a <u>new account</u></a>-->
+            
+		</div>
+<!--End div Userlogin-->
+
+	<div id="checkoutLeft">
+		<form name="formPayment" id="formPayment" autocomplete="off" method="post" action="/dap/buynow-submit.php">
+		<div id="orderWrapper">
+			
+            <!--
+			<div class="infoBar">
+				Fill in the details below to pay with <img src="images/cc_visa.png" alt="" /><img src="images/cc_master.png" alt="" /><img src="images/cc_amex.png" alt="" /><img src="images/cc_discover.png" alt="" /> OR <a href="#"><img src="images/btn_paypal.png" alt="Click here to Checkout with PayPal" title="Click here to Checkout with PayPal" /></a>
+			</div>-->
+			<div id="billingInfo"><!--Start Billing INFO--->
+				<div id="Billing">
+					<div class="orderTitle">Billing Information</div>
+					<ul class="checkoutForms">
+						<li>
+						<div class="formLabel">* First Name</div>
+                        %%FIRSTNAME%%
+					</li>
+					<li>
+						<div class="formLabel">* Last Name</div>
+                        %%LASTNAME%%
+					</li>   
+					<li>
+						<div class="formLabel">Address</div>
+                        %%ADDRESS%%
+					</li>
+					<li style="display:%%ADDRESS2VISIBILITY%%">
+					<div class="formLabel">Address2</div>
+                    %%ADDRESS2%%
+					</li>
+					<li>
+						<div class="formLabel">Country</div>
+                        %%COUNTRY%%
+					</li>
+					<li>
+						<div class="formLabel">State/Province</div>
+                        %%STATE%%
+					</li>
+                    <li>
+						<div class="formLabel">* City</div>
+                        %%CITY%%
+					</li>
+					
+					<li>
+						<div class="formLabel">* Zip Code</div>
+                        %%ZIPCODE%%
+					</li>
+					
+                    <li>
+						<div class="formLabel">* Email</div>
+                        %%EMAIL%%
+					</li>
+					<li style="display:%%COMPANYVISIBILITY%%">
+                    <div class="formLabel">Company</div>
+					%%COMPANY%%
+					</li>
+					<li style="display:%%PHONEVISIBILITY%%">
+					<div class="formLabel">Phone</div>
+                    %%PHONE%%
+					</li>
+					<li STYLE="display:%%FAXVISIBILITY%%">
+					<div class="formLabel">Fax</div>
+                    %%FAX%%
+					</li>
+					</ul>
+					<div class="checkBillingAddress"><label><input type="checkbox" id="chkCopyBill" onClick="showHideShippingDiv(this.form);">  Ship to a different address?</label></div>
+				</div>
+				<div id="divShippingInformation" style="display:none"><!-- DIV divShippingInformation-->
+					<div class="orderTitle">Shipping Information</div>
+					<div class="infoBar">Shipping Address not the same as Billing Address</div>
+					<ul class="checkoutForms">
+                    <li>
+                    	<div class="formLabel">* First Name</div>
+                    	%%SFIRSTNAME%%
+                    </li>
+                    <li>
+                    	<div class="formLabel">* Last Name</div>
+                    	%%SLASTNAME%%
+                    </li>
+                    <li>
+                    	<div class="formLabel">Address</div>
+                    	%%SADDRESS%%
+                    </li>
+                    
+                    <li style="display:%%SADDRESS2VISIBILITY%%">
+                    	<div class="formLabel">Address2</div>
+                    	%%SADDRESS2%%
+                    </li>
+                    <li>
+                    	<div class="formLabel">Country</div>
+                    	%%SCOUNTRY%%
+                    </li>
+                    <li>
+                    	<div class="formLabel">State/Province</div>
+                    	%%SSTATE%%
+                    </li>
+                    <li>
+                    	<div class="formLabel">* City</div>
+                    	%%SCITY%%
+                    </li>
+                    
+                    <li>
+                    	<div class="formLabel">* Zip Code</div>
+                   	 	%%SZIPCODE%%
+                    </li>
+					</ul>
+				</div>
+			</div><!--End Billing INFO--->
+			<div id="additionalInfo" style="display:%%ADDITIONALVISIBILITY%%">
+				<div class="orderTitle">Additional Information</div>
+				<ul class="checkoutForms">
+						<li>
+							<div class="formLabel">Phone</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">Tax ID</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">SSN</div>
+							<input type="text" />
+						</li>
+						<li class="textarea">
+							<div class="formLabel">Customer Feedback</div>
+							<textarea></textarea>
+						</li>
+					</ul>
+			</div>
+			<div id="comments" style="display:%%COMMENTVISIBILITY%%">
+				<div class="orderTitle">Comments</div>
+				<textarea></textarea>
+			</div>
+			<div id="termsConditions" style="display:%%TERMSVISIBILITY%%">
+				<input type="checkbox" />
+				<div class="orderTitle"><span class="colorGray">I accept</span> Terms &amp; Conditions</div>
+				<textarea readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta, libero et dignissim convallis, nibh sapien malesuada quam, in fermentum risus odio vitae urna. Nulla facilisi. Morbi eget eros sed est pellentesque ultrices a sit amet nulla. Integer quam est, hendrerit vel euismod nec, sagittis at magna.</textarea>
+			</div>
+			<div id="paymentInformation">
+				<div class="orderTitle">Payment Information</div>
+				<div id="payWithCC">
+                %%CARDTYPE%%
+					<ul class="checkoutForms">
+						<li>
+							<!--<div class="formLabel">Pay with Credit Card</div>-->
+							<div class="ccImages">
+								<img src="/dap/images/checkout/cc_visa.png" alt="" />&nbsp;
+								<img src="/dap/images/checkout/cc_master.png" alt="" />&nbsp;
+								<img src="/dap/images/checkout/cc_amex.png" alt="" />&nbsp;
+								<img src="/dap/images/checkout/cc_discover.png" alt="" /> 
+							</div>
+						</li>
+						<li class="notes">
+							<div class="formLabel">* Card Number</div>
+							<div class="formFields">
+								%%CARDNUM%%
+								<div class="checkoutNotes">(no spaces/dashes)</div>
+							</div>
+						</li>
+						<li class="notes">
+							<div class="formLabel">* Expiration Date</div>
+							%%EXPIRATIONDATE%%
+							<div class="checkoutNotes">mmyy</div>
+						</li>
+						<li class="cardCode">
+							<div class="formLabel">* Card Code</div>
+							 %%CARDCODE%%
+							<a id="aCardCodeWhatsThis" href="/dap/Card_Code.html" target=_blank onclick='javascript:return PopupLink(this);'><img src="/dap/images/checkout/icon_info.png" alt="" /></a>
+						</li>
+						<li class="actionButton">
+							%%ACTIONBUTTON%%
+						</li>
+					</ul>
+				</div>
+				<div id="textOr" style="display:%%PAYPALVISIBILITY%%">OR</div>
+				<div id="payPal" style="display:%%PAYPALVISIBILITY%%">%%PAYPALBUTTON%%</div>
+               
+			</div>
+            %%HIDDENFIELDS%%
+		</div>
+        </form>
+	</div>
+	<div id="checkoutRight">
+     <div class="productInfo">
+            <div class="orderTitle">Product Summary</div>
+			<ul id="productInformation">
+				<li class="productHeader">
+					<div class="productName">Name/ Description</div>
+                    
+					<div class="productAmount">Amount</div>
+					
+				</li>
+				%%PRODUCT%%
+                %%PRODUCTSUMMARY%%
+				<li class="productTotal">
+					
+					%%CARTTOTAL%%
+				</li>
+			</ul>
+            </div>
+		<!--<div id="orderFeatures">
+			<div class="checkoutTitle">Here's What You Will Recieve:</div>
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+				<li>Vivamus sed metus nulla, vehicula suscipit dui.</li>
+				<li>Mauris augue felis, tristique a blandit in, condimentum.</li>
+				<li>Suspendisse in tortor odio. Integer ut quam velit.</li>
+				<li>Aliquam consequat varius lacus, et iaculis tellus sagittis.</li>
+			</ul>
+		</div>-->
+        %%FIRSTMESSAGE%%
+		%%SECONDMESSAGE%%	
+        %%THIRDMESSAGE%%        
+	
+			<!--<div id="orderTestimonials">
+				<div class="testimonialTitle">Nullam tristique cursus varius.</div>
+				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam egestas nisi a augue scelerisque dapibus. Duis blandit nunc ut quam.
+				<div class="testimonialUser">&mdash; Veena Prashanth</div>
+			</div>
+			<div id="orderTestimonials">
+				<div class="testimonialTitle">Nullam tristique cursus varius.</div>
+				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam egestas nisi a augue scelerisque dapibus. Duis blandit nunc ut quam.
+				<div class="testimonialUser">&mdash; Veena Prashanth</div>
+			</div>
+			<div id="orderTestimonials">
+				<div class="testimonialTitle">Nullam tristique cursus varius.</div>
+				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam egestas nisi a augue scelerisque dapibus. Duis blandit nunc ut quam.
+				<div class="testimonialUser">&mdash; Veena Prashanth</div>
+			</div>
+		-->
+		<div id="orderImage">%%FIRSTIMAGE%%</div>
+        <div class="secondBar">
+				<!--<img src="/dap/images/checkout/cc_visa.png" alt="" />&nbsp;
+								<img src="/dap/images/checkout/cc_master.png" alt="" />&nbsp;
+								<img src="/dap/images/checkout/cc_amex.png" alt="" />&nbsp;
+								<img src="/dap/images/checkout/cc_discover.png" alt="" /> -->
+                                %%SECONDIMAGE%%
+	</div>
+    </div>
+</div><!--End wrapper--->
+</div>

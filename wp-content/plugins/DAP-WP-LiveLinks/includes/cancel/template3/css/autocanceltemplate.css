@@ -1,0 +1,9 @@
+
+#autoCancellationLight {background:#f9f9f9; border:3px solid #f1f1f1; color:#777; font-family:Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-weight:bold; font-size:14px; padding:10px 12px; line-height:20px; position:relative;}
+#autoCancellationLight a {color:#ff0000; text-decoration:none; font-size:12px;}
+#autoCancellationLight a:hover {text-decoration:underline;}
+#autoCancellationLight span {color:#000;}
+#autoCancellationLight .acName {color:#000; text-transform:uppercase; font-size:18px; margin-bottom:10px;}
+#autoCancellationLight a.btnCancel {display:inline-block; background:#333; color:#fff; text-transform:uppercase; font-size:10px; padding:0 7px; text-decoration:none; position:absolute; right:-2px; top:-3px;}
+#autoCancellationLight a.btnCancel:hover {background:#ff0000;}
+.acDetails {margin:10px 0; border:0 none; border-top:1px dashed #ccc; padding:5px 0;}

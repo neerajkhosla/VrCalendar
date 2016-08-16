@@ -1,0 +1,98 @@
+
+<style type="text/css">
+<!--
+body {
+  font-family:Tahoma;
+}
+
+img {
+  border:0;
+}
+.tinytext{
+	text-align:left;
+	font-size:small;
+	}
+#page {
+  width:700px;
+  margin:0 auto;
+  padding:15px;
+
+}
+
+#logo {
+  float:left;
+  margin:0;
+}
+
+#address {
+  height:132px;
+  margin-left:500px;
+  text-align:left; 
+}
+
+table {
+  width:100%;
+}
+
+td {
+padding:5px;
+}
+.description { width: 300px; }
+tr.odd {
+  background:#e1ffe1;
+}
+-->
+</style>
+<page>
+<div id="page">
+  <div id="logo">
+    <a href="%%COMPANYURL%%"><img src="%%logo%%" alt="Logo" width=150 /></a>
+  </div><!--end logo-->
+  
+  <div id="address">
+
+    <p>
+    <strong>Company Details</strong><br>
+    %%COMPANYNAME%%<br>
+    <a href="mailto:%%adminemail%%">%%ADMINEMAIL%%</a>
+    <br><br>
+    Invoice Id: %%TRANSACTIONID%%<br/>
+    Invoice Date: %%TRANSACTIONDATE%%<br />
+    <br>
+    </p>
+  </div><!--end address-->
+
+  <div id="content">
+    <p>
+      <strong>Customer Details</strong><br>
+      Name: %%LAST_NAME%% %%FIRST_NAME%%<br>
+      Email: %%EMAIL_ID%%<br>
+      %%PAYMENTTYPE%%    </p>
+    <hr>
+    <table>
+      <tbody>
+      <tr>
+      <td><strong>Name</strong></td>
+      <td><strong>Description</strong></td>
+      <td><strong>Amount</strong></td>
+      <td><strong>Currency</strong></td>
+      </tr>
+      <tr class="odd"><td>%%ITEMNAME%%</td><td class="description">%%DESCRIPTION%%</td><td>%%AMOUNT%%</td><td>%%CURRENCY%%</td></tr>
+
+    </tbody></table>
+    <hr>
+    <p>
+      Thank you for your order!  This transaction will appear on your billing statement as %%COMPANYNAME%%.<br>
+      If you have any questions, please feel free to contact us at <a href="mailto:%%ADMINEMAIL%%">%%ADMINEMAIL%%</a>.
+    </p>
+
+    <hr>
+    <p>
+      </p><div class="tinytext">This communication is for the exclusive use of the addressee and may contain proprietary, confidential or privileged information. If you are not the intended recipient any use, copying, disclosure, dissemination or distribution is strictly prohibited.
+      <br><br>
+      
+      </div>
+    <p></p>
+  </div><!--end content-->
+</div><!--end page-->
+</page>

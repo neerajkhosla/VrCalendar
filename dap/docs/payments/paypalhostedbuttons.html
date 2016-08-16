@@ -1,0 +1,28 @@
+<h3>1. Create your "Buy Now" or "Subscribe" or "Add to Cart" button</h3>
+<ul>
+  <li>Log in to your Paypal account</li>
+	<li>Click on the "Merchant Services" tab</li>
+	<li>From under the "Create Buttons" section, choose any one of the following links based on the type of product you wish to sell.
+* <strong>Add to cart</strong> (for multiple-item purchases)
+* <strong>Buy now</strong> (for one-time products)
+* <strong>Subscribe</strong> (for subscription-based recurring products)
+<img class="alignnone size-full wp-image-1574" style="border: 1px solid black;" title="dap-paypal-create-buttons" src="http://www.digitalaccesspass.com/doc/wp-content/uploads/2009/01/dap-paypal-create-buttons.png" alt="" width="610" height="353" />
+That will bring you to the actual button-creation page.</li>
+	<li><strong>"Item Name"
+</strong>Make sure the Paypal "<strong>Item Name</strong>" is the EXACT same spelling and case as the DAP "<strong>Product Name</strong>" that you created within DAP. In fact, login as DAP admin, edit the product, <em>copy</em> the text from the "Product Name" field, then <em>paste</em> this into your Paypal "Item Name" field, so that there are no typos. If the product names don't match, DAP will ignore any IPN posts coming in from Paypal, which means no account will be created for your new member.</li>
+	<li>Finally, when creating the button, just add a custom varible to the button as follows:Under "<strong>Step 3: Customize advanced features (optional)</strong>" tab, within the "Advanced Variables" text box, enter the following (change the text YourSite.com below to your domain name).
+<blockquote><strong>notify_url=http://YourSite.com/dap/dap-paypal.php</strong></blockquote>
+<strong> </strong></li>
+</ul>
+<h3>2. Save the button.</h3>
+<h3><strong>3.</strong> <strong>Copy the HTML code for this button</strong></h3>
+<h3>4. Publish the code on your web site's sales page</h3>
+<p>..or WP page or post.  </p>
+<p>That's it!  </p>
+<p>So when someone subscribes to, or purchases your product using this button, Paypal will send an IPN notification to your web site to the above link. </p>
+<p>DAP will then verify the product and payment status, and then will automatically add give the buyer/subscriber access to that product.  </p>
+<p>If the email id used in this purchase is not already associated with an account on your site, then DAP automatically creates a new account, and sends the buyer an "activation" email that requires them to click on a link to confirm and activate their account.
+  
+  But If this email id belongs to someone who already has an account in DAP (existing buyer, purchased a different product this time), then DAP doesn't create a new account for this user. It simply gives the existing account access to this new product.  </p>
+<p>So when the user logs in, they will see that they now have access to TWO products, with each product and the available URL's listed separately. </p>
+<p><strong>Note</strong>: If you're going to be using Paypal to process payments, then you don't need to set up the Email Processing info in your <strong>DAP Admin &gt; Config &gt; Payment Processing</strong> screen. You don't need to set up the DAP Email Order cron job either.</p>

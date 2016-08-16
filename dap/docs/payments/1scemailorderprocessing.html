@@ -1,0 +1,54 @@
+<p>If you're using 1ShoppingCart or <a href="http://1SiteAutomation.com" target="_blank">1SiteAutomation.com</a> (our private label of 1SC), if you want your users to be automatically logged in to their DAP membership area upon completion of purchase, then <a href="http://www.digitalaccesspass.com/doc/dap-1sc-login-xpress/">refer to this documentation on how to setup <strong>Login Xpress with 1ShoppingCart</strong></a>.
+  
+  </p>
+<p>If you only sell one-time products, then the 1SC Login Xpress is the only thing you will need to integrate DAP and 1SC.
+</p>
+<p>However, if you sell RECURRING products via 1SC, then you need to set up the <strong>email parsing of orders</strong> to allow DAP to process recurring payment notification from 1SC, as described below.
+</p>
+<p>The reason for this, is that 1ShoppingCart, while very robust as a cart, does not trigger payment notification messages on the backend (like Paypal can do with IPN) when recurring payments comes in for a member.
+</p>
+<p>So, we at DAP have created an exclusive "<strong>Email Order Processing</strong>" feature, where DAP will log in to your <strong>billing email inbox </strong>(where your 1SC email notifications come in) and then check your emails as if it were your personal assistant, and then process any orders that match your DAP Product names.
+  
+  That is how DAP is able to do automated processing of Cancellations and Failed Recurring Payments.
+  
+  For 1ShoppingCart and ClickBank, DAP does "Email Parsing" of orders.
+</p>
+<h3>Setting Up "Email Parsing"</h3>
+<p>Basically all you will be doing here is telling DAP where your payment notification emails from 1SC come in, and how to go fetch those emails so the recurring payments can be processed automatically, without you having to lift a finger.
+</p>
+<p>1) <strong>Log in to your 1SC account</strong>. Then go to "<strong>Setup &gt; Orders</strong>". Copy the email id that you have entered into the "<strong>Order Notice Email - Primary Destination</strong>" field. </p>
+<p>Please note that 1SC DOES NOT send recurring billing notifications to the email id in the "Secondary Destination". So be sure you use the email id from the "Primary Destination" field.
+</p>
+<p><img title="dap-1sc-billingemail" src="http://DigitalAccessPass.com/doc/wp-content/uploads/2008/11/dap-1sc-billingemail.png" alt="" width="536" height="150" />
+</p>
+<p>So let's say you have set the primary destination email currently, to point to  say 'billing@yoursite.com'. Now make sure that the emails in your billing@yoursite.com inbox remain in '<strong>Unread</strong>' status, because when DAP logs in to check your recurring notifications, it will be looking at only Unread emails. It will not touch the ones that are already read.
+</p>
+<p>2) Go to <strong>DAP Admin Dashboard &gt; Setup &gt;  Config &gt; Payment Integration </strong>.
+</p>
+<p>3) On this screen, configure the following fields... </p>
+<blockquote>
+  <p><strong>Email Server Where Order Emails Come In</strong> : <strong><span style="color: #ff0000;">mail.yoursite.com</span></strong>    </p>
+  <p><strong>Email Server Protocol (pop3/imap)</strong> : <span style="color: #ff0000;"><strong>imap </strong><span style="color: #000000;">(no need to change this)</span><strong>
+    </strong></span>    </p>
+  <p><strong>Email Server Port :  <span style="color: #ff0000;">143 </span></strong>(probably won't need to change this)    </p>
+  <p><strong>Email Server Protocol (ssl/nossl) </strong> :  <span style="color: #ff0000;"><strong>nossl </strong></span><strong> </strong>(probably won't need to change this)    </p>
+  <p><strong>Email Server User Name</strong> : <span style="color: #ff0000;"><strong>billing@yoursite.com </strong></span><strong> </strong>(enter email id copied from Step #1 above)    </p>
+  <p><strong>Email Server Password</strong> : <span style="color: #ff0000;"><strong>yourpassword</strong></span> <strong> </strong>(the password to your email inbox for the above email address)</p>
+</blockquote>
+That's it as far as setup is concerned.
+<h3>Additional Notes</h3>
+<p>4) Set up your sales page as you would normally do when accepting payment through 1ShoppingCart. The only thing you need to make sure is to use the exact same "Product Name' in your cart as well as within DAP.
+</p>
+<p>So, if you set up a product called "My Membership Site" within DAP, then use the same name "My Membership Site" in your 1SC product name.
+</p>
+<p>5) During installation, a Cron job (dap-emailorder.php) would have already been set up in your web hosting cpanel, to run every 10 minutes. So, every 10 minutes, DAP will automatically check the email id specified in <strong>Email Server User Name</strong> (the email id from Step 1).
+</p>
+<p>If there is a payment notification (first time or recurring payment) for a product name that matches a product name in DAP, then it will automatically add that customer to DAP as a member if they're a new member, or if they're an existing member and it was a recurring payment notification, then DAP will "extend" their membership access by a month (or whatever your recurring cycle is), so that they will continue to get access to your membership site until the next payment comes in.
+</p>
+<h3><strong>Testing</strong></h3>
+<p>Try out some test purchases first. Make sure you try out the full purchase and full user experience, end-to-end. </p>
+<p><span style="color: #ff0000;"><strong>WARNING 1</strong></span>: If you ever change the name of your product in 1ShoppingCart, or within DAP, make sure that both DAP and 1SC Product names are in sync.
+  
+  <strong></strong></p>
+<p><span style="color: #ff0000;"><strong>WARNING 2</strong></span>: Do not use SKU in 1SC while defining the product. DAP will not parse the emails correctly if you use SKU.  </p>
+<p>More: <a href="http://www.digitalaccesspass.com/doc/troubleshooting-1shoppingcart-integration/">Troubleshooting 1ShoppingCart Integration</a></p>

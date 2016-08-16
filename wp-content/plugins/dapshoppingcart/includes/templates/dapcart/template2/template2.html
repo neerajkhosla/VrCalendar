@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Step1: Checkout</title>
+<link href="checkout.css" rel="stylesheet" />
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>
+function showDiv(input) {
+	var divName = document.getElementById(input);
+	divName.style.display = "block"; //to show it
+}
+
+function hideDiv(input) {
+	var divName = document.getElementById(input);
+	divName.style.display = "none"; //to hide it
+}
+function showHideShippingDiv(form) {
+			var oChkCopyBill = form.chkCopyBill;
+			if (oChkCopyBill.checked == true) {
+				showDiv('divShippingInformation');
+			} else {
+				hideDiv('divShippingInformation');
+			}
+		}
+		/*
+$(function(){
+	$('#Shipping .checkoutForms').hide();
+	$('#billingAddress').live("click", function(){
+		if (this.checked) {
+			$('#Shipping .infoBar').hide();
+			$('#Shipping .checkoutForms').show();
+		}
+		else {
+			$('#Shipping .infoBar').show();
+			$('#Shipping .checkoutForms').hide();
+		}
+	});
+});*/
+</script>
+</head>
+<body>
+<div id="checkoutWrapper">
+<div id="wrapper"><!--Start wrapper-->
+	<div id="checkoutLeft">
+		<form name="formPayment" id="formPayment" autocomplete="off" method="post" action="/dap/buynow-submit.php">
+		<div id="orderWrapper">
+			
+            <!--
+			<div class="infoBar">
+				Fill in the details below to pay with <img src="images/cc_visa.png" alt="" /><img src="images/cc_master.png" alt="" /><img src="images/cc_amex.png" alt="" /><img src="images/cc_discover.png" alt="" /> OR <a href="#"><img src="images/btn_paypal.png" alt="Click here to Checkout with PayPal" title="Click here to Checkout with PayPal" /></a>
+			</div>-->
+			<div id="billingInfo">
+				<div id="Billing">
+					<div class="orderTitle">Billing Information</div>
+					<ul class="checkoutForms">
+						<li>
+							<div class="formLabel">* First Name</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">* Last Name</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">* Email</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">Address</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">* City</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">* Zip Code</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">Country</div>
+							<select>
+								<option>United States</option>
+							</select>
+						</li>
+						<li>
+							<div class="formLabel">State/Province</div>
+							<select>
+								<option>Arizona</option>
+							</select>
+						</li>
+						<li>
+							<div class="formLabel">Phone</div>
+							<input type="text" />
+						</li>
+					</ul>
+					<div class="checkBillingAddress"><label><input type="checkbox" id="chkCopyBill" onClick="showHideShippingDiv(this.form);">  Ship to a different address?</label></div>
+				</div>
+				<div id="divShippingInformation" style="display:none"><!-- DIV divShippingInformation-->
+					<div class="orderTitle">Shipping Information</div>
+					<div class="infoBar">Shipping Address not the same as Billing Address</div>
+					<ul class="checkoutForms">
+						<li>
+							<div class="formLabel">* First Name</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">* Last Name</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">* Email</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">Address</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">* City</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">* Zip Code</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">Country</div>
+							<select>
+								<option>United States</option>
+							</select>
+						</li>
+						<li>
+							<div class="formLabel">State/Province</div>
+							<select>
+								<option>Arizona</option>
+							</select>
+						</li>
+						<li>
+							<div class="formLabel">Phone</div>
+							<input type="text" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="additionalInfo">
+				<div class="orderTitle">Additional Information</div>
+				<ul class="checkoutForms">
+						<li>
+							<div class="formLabel">Phone</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">Tax ID</div>
+							<input type="text" />
+						</li>
+						<li>
+							<div class="formLabel">SSN</div>
+							<input type="text" />
+						</li>
+						<li class="textarea">
+							<div class="formLabel">Customer Feedback</div>
+							<textarea></textarea>
+						</li>
+					</ul>
+			</div>
+			<div id="comments">
+				<div class="orderTitle">Comments</div>
+				<textarea></textarea>
+			</div>
+			<div id="termsConditions">
+				<input type="checkbox" />
+				<div class="orderTitle"><span class="colorGray">I accept</span> Terms &amp; Conditions</div>
+				<textarea readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta, libero et dignissim convallis, nibh sapien malesuada quam, in fermentum risus odio vitae urna. Nulla facilisi. Morbi eget eros sed est pellentesque ultrices a sit amet nulla. Integer quam est, hendrerit vel euismod nec, sagittis at magna.</textarea>
+			</div>
+			<div id="paymentInformation">
+				<div class="orderTitle">Payment Information</div>
+				<div id="payWithCC">
+					<ul class="checkoutForms">
+						<li>
+							<!--<div class="formLabel">Pay with Credit Card</div>-->
+							<div class="ccImages">
+								<img src="images/cc_visa.png" alt="" />&nbsp;
+								<img src="images/cc_master.png" alt="" />&nbsp;
+								<img src="images/cc_amex.png" alt="" />&nbsp;
+								<img src="images/cc_discover.png" alt="" />
+							</div>
+						</li>
+						<li class="notes">
+							<div class="formLabel">* Card Number</div>
+							<div class="formFields">
+								<input type="text" />
+								<div class="checkoutNotes">(no spaces/dashes)</div>
+							</div>
+						</li>
+						<li class="notes">
+							<div class="formLabel">* Expiration Date</div>
+							<input type="text" />
+							<div class="checkoutNotes">mmyy</div>
+						</li>
+						<li class="cardCode">
+							<div class="formLabel">* Card Code</div>
+							<input type="text" />
+							<a href="#"><img src="images/icon_info.png" alt="" /></a>
+						</li>
+						<li class="actionButton">
+							<input type="submit" value="Pay with Credit Card" />
+						</li>
+					</ul>
+				</div>
+				<div id="textOr">OR</div>
+				<div id="payPal"><a href="#"><img src="images/btn_paypalb.png" alt="" /></a></div>
+                <div class="productInfo">
+            <div class="orderTitle">Product Information</div>
+			<ul id="productInformation">
+				<li class="productHeader">
+					<div class="productName">Name/ Description</div>
+					<div class="productAmount">Amount</div>
+					
+				</li>
+				<li>
+					<div class="productName">
+						<a href="#">Platinum Members</a>
+						</div>
+                        <div class="productDescription">Platinum Members get access to our entire library of Videos
+					</div>
+					<div class="productAmount">$0.01</div>
+					
+				</li>
+				<li>
+					<div class="productName">
+						<a href="#">Platinum Members</a></div>
+                        <div class="productDescription">
+						Platinum Members get access to our entire library of Videos
+					</div>
+					<div class="productAmount">$0.01</div>
+					
+				</li>
+				<li class="productTotal">
+					<div class="couponCode">
+						Coupon Code:
+						<input type="text" />
+						<input type="submit" value="Apply" />
+					</div>
+					<div class="cartTotal">Total: $0.01</div>
+					<div class="deleteProduct">&nbsp;</div>
+				</li>
+			</ul>
+            </div>
+			</div>
+            
+		</div>
+        </form>
+	</div>
+	<div id="checkoutRight">
+		<!--<div id="orderFeatures">
+			<div class="checkoutTitle">Here's What You Will Recieve:</div>
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+				<li>Vivamus sed metus nulla, vehicula suscipit dui.</li>
+				<li>Mauris augue felis, tristique a blandit in, condimentum.</li>
+				<li>Suspendisse in tortor odio. Integer ut quam velit.</li>
+				<li>Aliquam consequat varius lacus, et iaculis tellus sagittis.</li>
+			</ul>
+		</div>-->
+	
+			<div id="orderTestimonials">
+				<div class="testimonialTitle">Nullam tristique cursus varius.</div>
+				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam egestas nisi a augue scelerisque dapibus. Duis blandit nunc ut quam.
+				<div class="testimonialUser">&mdash; Veena Prashanth</div>
+			</div>
+			<div id="orderTestimonials">
+				<div class="testimonialTitle">Nullam tristique cursus varius.</div>
+				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam egestas nisi a augue scelerisque dapibus. Duis blandit nunc ut quam.
+				<div class="testimonialUser">&mdash; Veena Prashanth</div>
+			</div>
+			<div id="orderTestimonials">
+				<div class="testimonialTitle">Nullam tristique cursus varius.</div>
+				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam egestas nisi a augue scelerisque dapibus. Duis blandit nunc ut quam.
+				<div class="testimonialUser">&mdash; Veena Prashanth</div>
+			</div>
+		
+		<div id="orderImage"><img src="images/satisfaction_gurantee.png" alt="" /></div>
+        <div class="infoBar">
+				<img src="images/cc_visa.png" alt="" />
+                <img src="images/cc_master.png" alt="" />
+                <img src="images/cc_amex.png" alt="" />
+                <img src="images/cc_discover.png" alt="" /> 
+	</div>
+</div><!--End wrapper--->
+</div>
+</body>
+</html>

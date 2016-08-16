@@ -1,0 +1,11 @@
+<p><strong>Default</strong>: <em>blank </em><br />
+  (meaning, don't enter anything at all)</p>
+<p><strong>IMPORTANT</strong>: Regardless of whether you enter anything here, you <strong>MUST</strong> <strong>ENTER </strong>a valid URL at <a href="manageConfig.php#postloginurl" target="_blank">Setup &gt; Config &gt; Post-Login URL (Global)</a></p>
+<p><strong></strong>This is the URL to which a user will be redirected to, right after login - <em>if</em> they have access to <em>just this one</em> product.</p>
+<p>Unless you specifically wish to set a product level post-login landing page for some reason, don't use this field to specify the post-login URL. The reason for that is, if a user has access to just one product, then DAP will know that it should use this product's Post-Login URL.</p>
+<p>But what happens if a user has access to multiple products?  DAP now has no way of knowing which Product's Post-Login URL to redirect the user to, and will instead use the global setting anyway.</p>
+<p>So, better to just set up this post-login URL at a global level, by going to <a href="manageConfig.php#postloginurl" target="_blank">Setup &gt; Config &gt; Post-Login URL (Global)</a></p>
+<p><strong>NOTE</strong>: If you're using the <strong>DAP_ProductLinks Widget</strong>, then you must enter a valid URL here, otherwise the sidebar link won't work.</p>
+<br />
+[Previously known as &quot;Logged-In URL&quot;]
+<p></p>

@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Regular.otf);
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+body{
+	font-family:'OpenSans';
+	font-size:100%;
+	max-width:1280px;
+	margin:auto;
+}
+h1,h2,h3,h4,h5,h6{font-family:'Montserrat';}
+p,a,li,ul,quote,span{font-family:'OpenSans';font-size:15px;}
+.wrapper{margin:auto;width:85%;overflow: hidden;}
+
+.footer{background-color:#111111;padding: 40px 0 30px;}
+.footer *{font-family:'Montserrat';}
+.footer p{text-align: center;}
+.footer p#copyright{color:#908989;font-size: 13px;}
+.footer p#copyright span{color:#0e51b7;}
+.footer p#menu{color:#fff;list-style:none;font-size:14px;}
+.footer p#menu span{padding: 0 20px;}
+
+.subscriber{background-color:#2a61b3;padding:20px 0;}
+.subscriber div:last-child{position:relative;}
+.subscriber p{color:#fff;font-size:15px;padding: 5px 0;}
+.subscriber form{width:100%;}
+.subscriber form input[type="text"]{background:url('../images/sub-button.png') no-repeat center right;  background-color: #fff;width: 80%;padding: 10px 10px;background-size: 50px;border: none;color:#000;/* position:absolute; */right:0;}
+.subscriber form input[type="submit"]{display:none;}
+
+.options{background-color:#f3f3f3;padding:50px 0;}
+.options h4{color:#191919;text-align:center;font-family:'Montserrat';}
+.options .row:nth-child(3) #entry{min-height: 135px;}
+.options .row:nth-child(2) #entry{min-height: 95px;}
+.options .row:last-child #entry{min-height: 115px;}
+.options #entry{background-color:#fff;padding: 10px 15px 10px 0;margin: 10px 0;}
+.options #entry p{color:#919191;font-size:15px;padding-left:30px;background:url('../images/entry-list.png') no-repeat 3% 7%;font-family:'OpenSans';}
+
+.map{background:url('../images/map-bg.png') no-repeat center;background-size:cover;padding: 40px 0 50px;}
+.map img{width:95%;}
+.map p{color:#fff;font-size: 15px;padding: 15px 0;font-family:'OpenSans';}
+.map h4,.map p span{color:#ffc600;font-family:'Montserrat';}
+.map h4{text-transform:uppercase;}
+
+.main-content{padding:40px 50px;}
+.main-content #steps{width: 20%;float: left;text-align: center;background-color: #2766c6;padding: 20px 0 25px;min-height: 125px;border-right:1px solid #377ae1;}
+.main-content #steps:last-child{border-right:none;}
+.main-content #steps:hover{background:url('../images/steps-hover.png') no-repeat center;background-size:cover;}
+.main-content #steps p{color:#fff;font-size:15px;width:55%;margin:auto;}
+.main-content #listing h3{color:#2e6dcc;background:url('../images/listing-header-bg.png') no-repeat left bottom;padding-bottom: 10px;margin-bottom:25px;}
+.main-content #listing ul li{list-style-image:url('../images/entry-list.png');color:#b0b0b0;font-size: 15px;margin-bottom: 15px;/* background:url('../images/entry-list.png') no-repeat 3% 7% */}
+.main-content #listing button{background-image:url('../images/checkmark.png'),url('../images/button-bg.png');background-repeat:no-repeat,no-repeat;background-position:10% center,center;border: none;border-radius: 10px;padding: 15px 10px 15px 50px;color: #fff;font-size: 14px;box-shadow: none;background-color:transparent;margin-left:30px;}
+.main-content #sander h4{color:#2e6dcc;text-decoration:underline;}
+.main-content #sander ul li{list-style-image:url('../images/entry-list-hover.png');color:#b0b0b0;font-size:15px;padding: 5px 0;}
+.main-content #sander ul li:hover{list-style-image:url('../images/entry-list.png');color:#2e6dcc;}
+.main-content #sander hr{color:rgba(176, 176, 176, 0.29);}
+.main-content #sander .col-lg-8,.main-content #sander .col-lg-4 #sander-com{border:1px solid rgba(176, 176, 176, 0.29)}
+.main-content #sander .col-lg-4 #sander-com{background:url(../images/testi-bg.png) no-repeat center bottom;border-bottom:2px solid #2e6dcc;background-size: contain;padding: 0 15px;}
+.main-content #sander p{color:#b0b0b0;line-height: 22px;font-size: 13.5px;}
+.main-content #sander p#name{color:#fff;background:url('../images/name-bg.png') no-repeat right bottom;text-align:right;padding: 10px 15px 10px 0;margin: 0 -15px 0 0;line-height: 15px;background-size: 70% 100%;}
+
+.slider{text-align:center;background:url('../images/slider-bg.png') no-repeat center;background-size:cover;padding: 180px 0;}
+.slider h1,.slider p{color:#fff;}
+.slider h1 span{color:#ffba00;font-size:36px;}
+.slider button{color:#fff;background-color:#0e51b7;border-radius:10px;padding:10px 30px;border:none;font-size:15px;}
+header a#logo img{margin: 40px auto;}
+header div#pre {text-align: right;}
+header #pre p{font-family:'Montserrat';color:#555555;float:right;margin: 10px 0;}
+header #pre form{float:right;margin: 10px 0 10px 20px;}
+header #pre form input[type="text"]{border-radius: 20px;color: #878787;border: 1px solid rgba(135, 135, 135, 0.47);padding: 5px 10px;width: 220px;font-size: 13px;background:url('../images/search-icon.png') no-repeat 95% 50%;}
+header #pre img {margin: 10px 15px;}
+header #navigation ul{width: 100%;overflow: hidden;}
+header #navigation ul li{color: #878787;list-style: none;text-transform: uppercase;float: left;font-size: 14px;margin: 10px 15px;}
+header #navigation ul li:hover{color:#faa002;}
+body.murray .pre-map{margin: 40px 0 30px;}
+body.murray .pre-map .wrapper{border-bottom:2px solid #2e6dcc;}
+body.murray .pre-map ul{padding:0;margin-bottom: 10px;overflow: hidden;}
+body.murray .pre-map ul li{float:left;color:#858585;list-style:none;}
+body.murray .pre-map ul li:hover{color:#2e6dcc;}
+body.murray .pre-map ul li:after{content:">";padding: 20px;}
+body.murray .pre-map ul li:last-child:after{content:"";padding-right: 0px;}
+body.murray .slider{height:150px;padding:0;background-position-y: 100%;}
+body.murray .cities{padding:30px 0 50px;}
+body.murray .cities h4{color:#2e6dcc;background: url('../images/listing-header-bg.png') no-repeat left bottom;padding-bottom:10px;}
+body.murray .cities .row:last-child h4{background: url('../images/listing-header-bg.png') no-repeat right bottom;}
+body.murray .cities p{color:#919191;}
+body.murray .cities .row:last-child{margin-top:50px;}
+body.murray .cities .row:last-child p,body.murray .cities .row:last-child h4{text-align:right;}
+body.murray .main-content #form{border:1px solid rgba(176, 176, 176, 0.29);padding:0 15px;margin-bottom:20px;}
+body.murray .main-content #form input ,body.murray .main-content #form select,body.murray .main-content #form textarea{width: 100%;padding: 5px 10px;font-size: 15px;margin-bottom: 10px;border: 1px solid rgba(176, 176, 176, 0.29);color:rgba(176, 176, 176);}
+body.murray .main-content #form h4{color:#fff;background:url('../images/header-content-bg.png') no-repeat center;background-size:100% 100%;margin: 0px -15px 10px;padding: 15px 15px;text-decoration: none;font-size: 14px;font-weight: normal;}
+body.murray .main-content #form p{color:#b5b5b5;}
+body.murray .main-content #form select{-webkit-appearance: none;background:url('../images/select-arrow.png') no-repeat 97% 100%;color:rgb(176, 176, 176);}
+body.murray .main-content #form select option{color:rgb(176, 176, 176);}
+body.murray .main-content #form textarea{height: 100px;}
+body.murray .main-content #form input[type="submit"]{color:#fff;border:none;background:url('../images/submit-form-bg.png') no-repeat center;background-size:cover;}
+body.murray .main-content table{width:100%;margin-bottom:20px;border:1px solid rgba(176, 176, 176, 0.29);}
+body.murray .main-content table tr{}
+body.murray .main-content table tr:nth-child(even){background-color:#ebebeb;}
+body.murray .main-content table tr:nth-child(odd){background-color:#fff;}
+body.murray .main-content table tr th{font-size:14px;color:#2e6dcc;padding:5px 0px 5px 10px;}
+body.murray .main-content table tr td{color:#969696;font-size:14px;padding:5px 0px 5px 10px;}
+body.murray .main-content #sander .col-lg-8{border:none;}
+body.murray .main-content #sander .col-lg-8 h4{padding:10px;text-decoration:none;font-size:14px;background-color:#2e6dcc;color:#fff;margin:0;}
+
+body.real-estate .main-content #sander #market-analysis{border: 1px solid rgba(176, 176, 176, 0.29);padding: 0 15px;margin-bottom: 20px;}
+body.real-estate .main-content #sander #market-analysis h4#first{border-bottom:4px solid rgba(46, 109, 204, 0.54);}
+body.real-estate .main-content #sander #market-analysis h4{border-bottom:1px solid #2e6dcc;text-decoration:none;padding-bottom:10px;color: #272828;}
+body.real-estate .main-content #sander h3 {font-size: 17px;border-bottom: 4px solid rgba(46, 109, 204, 0.54); text-decoration: none;padding-bottom: 10px;color: #272828;}
+
+body.office-space .main-content #sander .company-logos{text-align: center;padding: 25px 0px;border: 1px solid rgba(176, 176, 176, 0.51);box-shadow:0px 0px 15px 0px rgba(176, 176, 176, 0.51);margin-bottom:40px;}
+body.office-space .main-content #sander .offices-avail{}
+body.office-space .main-content #sander .offices-avail ul{margin: 0 0 20px;padding: 0;}
+body.office-space .main-content #sander .offices-avail ul li{list-style:none;position: relative;float: left;padding-right: 2.8%;color: #5a5a5a;border-bottom: 2px solid #2e6dcc;padding-bottom: 20px;margin-bottom: 50px;}
+body.office-space .main-content #sander .offices-avail ul li:hover{color:#2e6dcc;}
+body.office-space .main-content #sander .offices-avail ul li ul{display:none;margin: 0;}
+body.office-space .main-content #sander .offices-avail ul li:hover ul{display: block;position: absolute;width: 100%;top: 100%;background:url('../images/offices-menu-hover.png') no-repeat top center;}
+body.office-space .main-content #sander .offices-avail ul li:hover ul li{color: #2e6dcc;padding: 25px 0 10px;margin: 0;border: none;}
+body.office-space .main-content #sander #real-offices{border: 1px solid rgba(176, 176, 176, 0.51);padding: 20px 30px;overflow: hidden;}
+body.office-space .main-content #sander #real-offices .row{border-bottom:1px solid rgba(176, 176, 176, 0.51);padding-bottom: 10px;margin-bottom: 15px;}
+body.office-space .main-content #sander #real-offices .row:last-child{border-bottom:none}
+body.office-space .main-content #sander .col-lg-4 #sander-com{box-shadow:0px 0px 0px 1px rgba(176, 176, 176, 0.1);padding-top: 25px;margin-bottom:15px;}
+body.office-space .main-content #sander .col-lg-4 #sander-com p span{color:#2e6dcc;font-size:16px;}
+body.office-space .main-content #sander #sander-com.orange p#name {color: #fff;background: url('../images/name-bg-orange.png') no-repeat right bottom;}
+body.office-space .main-content #sander .col-lg-4 #sander-com.orange{border-bottom: 2px solid #FAA002;}
+body.office-space .main-content #sander h2{padding-left: 15px;color: #2E6DCC;font-size: 20px;margin-bottom: 30px;}

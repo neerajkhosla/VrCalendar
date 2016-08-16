@@ -1,0 +1,64 @@
+<p><strong>Broadcast Option 1</strong></p>
+<p>1) All Users <strong>(Active And Expired) </strong>
+</p>
+<p>Select users where : </p>
+<p>- user status is "A" (Active)
+</p>
+<p>- user has not opted out of email (opted_out = 'N') </p>
+<p>2) All Paid Users <strong>(Active And Expired)</strong></p>
+<p>
+  Select users where :
+</p>
+<p>- user status is "A" (Active)
+</p>
+<p>- user has not opted out of email (opted_out = 'N')
+</p>
+<p>- user has access to atleast 1 paid product
+</p>
+<p>- user's product status to that paid product is "A" (active).
+</p>
+<p>3) All Paid Users <strong>(Active) </strong>
+</p>
+<p>Select users where :
+</p>
+<p>- user status is "A" (Active)
+</p>
+<p>- user has not opted out of email (opted_out = 'N')
+</p>
+<p>- user has access to atleast 1 paid product
+</p>
+<p>- user's product status to that paid product is "A" (active)
+</p>
+<p>- user's ACCESS END DATE to that paid product is in future (not expired) </p>
+<p>If you want to find out what users will receive this email,  go to <strong>DAP Users =&gt; Manage Page =&gt; Export </strong>=&gt; And select these options:</p>
+<p><strong>All Paid Users, Email Opt-In Status= Opted-In, Access End Date=Is Active,  User Data Or User/Product Data=Select 'Just User Data</strong>'</p>
+<p>This will result in a csv list of all users in this category.</p>
+<p>4) All Paid Users <strong>(Expired)</strong>
+</p>
+<p>Select users where :
+</p>
+<p>- user status is "A" (Active)
+</p>
+<p>- user has not opted out of email (opted_out = 'N')
+</p>
+<p>- user's product status is "A" (active) 
+</p>
+<p>- user's access end date to ALL paid products must have expired (in the past)  </p>
+<p>Basically pick users where user does not have access to ANY paid product where ACCESS END DATE is in future.
+  Pick only users whose access to ALL paid products has expired. </p>
+<p>If you want to find out what users will receive this email, go to <strong>DAP Users =&gt; Manage Page =&gt; Export </strong>=&gt; And select these options:</p>
+<p><strong>All Paid Users, Email Opt-In Status= Opted-In, Access End Date=Has Expired,  User Data Or User/Product Data=Select 'User And Product Data</strong>'. </p>
+<p>Then look for users in this list whose access to all paid products has expired. </p>
+<p><strong>Note: </strong>this <strong>export</strong> option will result in users that have ANY Expired paid products. </p>
+<p>But when you use this <strong>broadcast</strong> option, it will result in broadcast email to only those users that have ALL expired paid products.</p>
+<p>5) All Free Users <strong>(Double-Opted-In)</strong></p>
+<p>Select users where :
+</p>
+<p>- user status is "A" (Active)
+</p>
+<p>- user has not opted out of email (opted_out = 'N')
+</p>
+<p>- user has access to a FREE product(s)
+</p>
+<p>- user's product status is "A" (user has double-opted-in) 
+</p>

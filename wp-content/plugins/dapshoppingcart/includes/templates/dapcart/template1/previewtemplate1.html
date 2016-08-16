@@ -1,0 +1,155 @@
+
+<div id="checkoutWrapper">
+ <div id="errorText">
+ 
+ </div>
+<!--DIv Userlogin-->
+<div id="userLogin" style="display:block">
+			<input value="Email Address" data-validation-placeholder="Email Address" class="validate[required] text-input" type="text" name="dapemail" id="dapemail" />
+			<input type="password" value="password" name="password" id="password" />
+			<input type="button" value="Sign In" onclick="return loginsubmit(document.getElementById('dapemail').value,document.getElementById('password').value,document.URL)" /><br />
+			<!--<a href="#">Or continue to create a <u>new account</u></a>-->
+            
+		</div>
+<!--End div Userlogin-->
+<div id="checkoutLeft">
+    <div id="orderWrapper">
+    <form name="formPayment" id="formPayment" autocomplete="off" method="post" action="/dap/buynow-submit.php">
+
+<!-- PRoduct Information--->
+<div class="productInfo">
+			<div class="orderTitle">Product Information</div>
+			<ul id="productInformation">
+				<li class="productHeader">
+					<div class="productName">Name/ Description</div>
+                    <div class="productQuantity">Qty</div>
+					<div class="productAmount">Amount</div>
+					
+				</li>
+				<li>
+					<div class="productName">
+						<a href="#">DAP Credit Store</a>
+						This is a dummy product for one-time-purchase [non-subscription]
+					</div>
+                    <div class="productQuantity">1</div>
+					<div class="productAmount">$1.00</div>
+					
+				</li>
+                <li>
+					<div class="productName">
+						<a href="#">Gold Subscription</a>
+						This is a dummy Subscription Product with a monthly subscription - payments every 30 days.
+					</div>
+                    <div class="productQuantity">1</div>
+					<div class="productAmount">$1.00</div>
+					
+				</li>
+				<li class="productTotal">
+					
+					<div class="couponCode"></div><div class="cartTotal">Total: $2.00
+				</li>
+			</ul>
+      </div><!----End Product Information---->
+     
+<div id="billingInfo"><!---Billing Info---->
+        <!---Div Billing----->
+        <div id="Billing">
+        <div class="orderTitle">Billing Information</div>
+        <ul class="checkoutForms">
+					<li>
+						<div class="formLabel">* First Name</div>
+                        <input type="text" id="first_name" name="first_name" maxLength="50" size="20" class="validate[required] text-input" value="" />
+					</li>
+					<li>
+						<div class="formLabel">* Last Name</div>
+                        <input type="text" id="last_name" name="last_name" maxLength="50" size="20" class="validate[required] text-input" value="" />
+					</li>   
+					<li>
+						<div class="formLabel">Address</div>
+                        <input type="text" id="address" name="address" maxLength="100" size="20" class="validate[required] text-input" value="" />
+					</li>
+					<li style="display:none">
+					<div class="formLabel">Address2</div>
+                    <input type="text" id="address2" name="address2" maxLength="100" size="20" value="" />
+					</li>
+					<li>
+						<div class="formLabel">Country</div>
+                        <select onchange="print_state('state',this.selectedIndex,'');" id="country" name ="country" class="validate[required]"></select>
+					</li>
+					<li>
+						<div class="formLabel">State/Province</div>
+                        <select name ="state" id ="state" class="validate[required]"><option value="">Select state</option></select><script language="javascript">print_country("country","","");
+	
+	</script>	
+					</li>
+                    <li>
+						<div class="formLabel">* City</div>
+                        <input type="text" id="city" name="city" maxLength="100" size="20" class="validate[required] text-input" value="" />
+					</li>
+					
+					<li>
+						<div class="formLabel">* Zip Code</div>
+                        <input type="text" id="zip" name="zip" maxLength="10" size="20" class="validate[required] text-input" value=""" />
+					</li>
+					
+                    <li>
+						<div class="formLabel">* Email</div>
+                        <input type="text" id="email" name="email" maxLength="255" size="20" class="validate[required,custom[email]] text-input" value="" />
+					</li>
+					
+        </ul>
+        <div class="checkBillingAddress"><label><input type="checkbox" id="chkCopyBill" onClick="showHideShippingDiv(this.form);"> Ship to a different address?</label></div>
+        <!-- tableCustomerBilling -->
+        </div>
+        <!---End Billing--->
+        
+    </div><!---End Billing Info--->
+        
+        <!-- Payment Information Div -->
+		<div id="paymentInformation">
+			<div class="orderTitle">Payment Information</div>
+			<div id="payWithCC">
+				
+					<ul class="checkoutForms">
+						<li>
+							<div class="formLabel">Pay with Credit Card</div>
+							<div class="ccImages">
+								<img src="/dap/images/checkout/cc_visa.png" alt="" />&nbsp;
+								<img src="/dap/images/checkout/cc_master.png" alt="" />&nbsp;
+								<img src="/dap/images/checkout/cc_amex.png" alt="" />&nbsp;
+								<img src="/dap/images/checkout/cc_discover.png" alt="" />
+							</div>
+						</li>
+						<li class="notes">
+							<div class="formLabel">* Card Number</div>
+							<div class="formFields">
+								<input type="text" id="card_num" name="card_num" maxlength="16" size="18" class="validate[condRequired[exp_date,exp_date_year,card_code]] text-input" value="" />
+								<div class="checkoutNotes">(no spaces/dashes)</div>
+							</div>
+						</li>
+						<li class="notes expirationDate">
+							<div class="formLabel">* Expiration Date</div>
+							<!--<input type="text" id="exp_date" name="exp_date" maxLength="4" size="4" value="<?php //if ($_SESSION['paymentObj'] != null) echo $_SESSION['paymentObj']->getExp_date(); ?>" />-->
+							<select name="exp_date" id="exp_date" class="validate[condRequired[card_num,exp_date_year,card_code]]"><option value=" ">Month</option>
+                            </select><select name="exp_date_year" id="exp_date_year" class="validate[condRequired[card_num,exp_date,card_code]]"><option value=" ">Year</option></select>
+						</li>
+						<li class="cardCode">
+							<div class="formLabel">* Card Code</div>
+							 <input type="text" id="card_code" name="card_code" maxLength="4" class="validate[condRequired[card_num,exp_date_year,exp_date],custom[onlyNumberSp]] text-input"  size="4" value="" />
+               <a id="aCardCodeWhatsThis" href="/dap/Card_Code.html" target=_blank onclick='javascript:return PopupLink(this);'><img src="/dap/images/checkout/icon_info.png" alt="" /></a>
+						</li>
+						<li class="actionButton">
+							<input name="btnSubmit" type="button" class="submitbtn" id="btnSubmit" onclick="onSubmit(this.form);" value = "Submit Order" tabindex="0" />
+						</li>
+					</ul>
+				</div>
+				<div id="textOr" style="display:block">OR</div>
+				<div id="payPal" style="display:block"><input type="image" src="/dap/images/checkout/btn_paypalb.png" border="0" id="paypalsubmit" id="paypalsubmit" onclick="return paypalformsubmit();" name="paypalsubmit"  alt="Make payments with PayPal - it's fast, free and secure!"></div>
+			</div><!--End Payment Information--->
+            
+            </form>
+            </div><!-- END orderWrapper-->
+            </div><!--End checkoutLeft-->
+            </div> <!--Div checkoutWrapper-->
+
+</body>

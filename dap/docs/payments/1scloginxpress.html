@@ -1,0 +1,51 @@
+<p>DAP Supports <strong>Login Xpress</strong> with 1ShoppingCart (<a href="http://www.digitalaccesspass.com/doc/dap-1sc-login-xpress/" target="_blank">What is Login Xpress?</a>)
+  
+  </p>
+<p>The documentation below will show you how to setup 1ShoppingCart and DAP, so that your buyers can be automatically logged in to your "Member's Area" upon completion of their purchase.
+</p>
+<blockquote>
+  <p><strong>Note About Processing Recurring Orders via 1SC</strong>    </p>
+  <p>If you only sell <strong>ONE-TIME</strong> products at this time, then the <strong>Login Xpress</strong> flow below is all you will need to  setup as far DAP &amp; 1SC integration is concerned.</p>
+</blockquote>
+<blockquote>
+  <p>If you are selling <strong>RECURRING</strong> products via 1SC , but <strong>DO NOT WANT </strong>your users to be <strong>automatically logged in</strong> to the "Members' Area" right after their purchase, and you prefer sending them their membership login info (email &amp; password) via email, then you DO NOT need to read this post any further - simply head over to this post: <a href="http://DigitalAccessPass.com/doc/payment-processing-via-email/">1ShoppingCart Recurring Payment Processing via Email</a>  </p>
+  <p>But if you sell <strong>RECURRING </strong>products via 1SC<strong> </strong>and you <strong>DO WANT </strong>also want your users to be <strong>automatically logged in</strong> to the "Members' Area" right after their purchase, then  continue reading this post for <strong>Login Xpress</strong> setup. After setting up Login Xpress, you will also need to set up the email parsing of orders to allow DAP to process <strong>RECURRING </strong>payment notifications from 1SC as described <a href="http://www.digitalaccesspass.com/doc/payment-processing-via-email/" target="_blank">here.
+</a></p>
+</blockquote>
+<p><span style="text-decoration: underline;"><strong>Login Xpress Setup</strong></span>
+</p>
+<p>1) Set up your sales page as you would normally do when accepting  payment through 1ShoppingCart. The only thing you need to  make sure is to use the exact same "Product Name" in your cart as well  as within DAP.
+  
+  So, if you set up a product called "My Membership Site" within DAP,  then use the same name "My Membership Site" as your 1SC  product name.
+</p>
+<p>2) Login to your 1ShoppingCart admin account
+</p>
+<p>Go to Products &gt; Manage Products. </p>
+<p>Edit the Product you are setting up.
+</p>
+<p>Go to the "Links" tab of that Product.
+</p>
+<p>Set up the <strong>Thank You URL</strong> to point to a DAP script on your site, as shown below:
+</p>
+<blockquote>
+<h3><strong> </strong>http://<strong>YourSite.com</strong>/dap/dap-1shopcart.php?cartId=<span style="color: #ff0000;"><strong>SecretKey</strong></span></h3>
+</blockquote>
+<p><strong>Note</strong>: <strong>YourSite.com</strong> should be replaced by the name of your site
+
+  <strong><span style="color: #ff0000;">SecretKey</span> </strong>should be set to the same value that you set in <strong> DAP Dashboard </strong>&gt; <strong>Setup </strong>&gt; <strong>Config </strong>&gt;<strong> Payment Processing</strong> &gt;<strong> Secret Authorization Key used when interfacing with external systems.</strong></p>
+<p><a href="http://1SiteAutomation.com" target="_blank"><img class="alignnone size-full wp-image-1013" style="border: 1px solid black;" title="dap-1sc-thankyouurl" src="http://www.digitalaccesspass.com/doc/wp-content/uploads/2010/11/dap-1sc-thankyouurl.png" alt="" width="620" height="357" /></a></p>
+<p>
+
+  <span style="text-decoration: underline;"><strong>DAP Secret Key Setup</strong></span></p>
+<p><img class="alignnone size-full wp-image-1019" style="border: 1px solid black;" title="dap_secret_key" src="http://www.digitalaccesspass.com/doc/wp-content/uploads/2010/11/dap_secret_key1.png" alt="" width="621" height="49" /><br class="spacer_" />
+  
+  <br class="spacer_" />
+  
+  3) Now open a brand new browser session where you are not logged in as DAP admin.  </p>
+<p>Complete a test purchase using an user email that is not already in your DAP</p>
+<p>.  If the integration worked correctly, then a new user account will automatically get created in DAP, and the user will also be automatically logged in to DAP.  </p>
+<p>After auto-login, DAP will redirect the users to whatever you configured in DAP under :</p>
+<p><strong>DAP Dashboard &gt; Setup &gt; Config &gt; Advanced &gt; URL to which the user is redirected to upon login.</strong><br class="spacer_" />
+  
+  <br class="spacer_" />
+</p>

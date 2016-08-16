@@ -1,0 +1,20 @@
+#Paste this at the very end of your .htaccess file 
+#in your web site's root folder
+
+<IfModule mod_rewrite.c>
+#dap
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !dapclient.php
+RewriteCond %{REQUEST_URI} !^/dap/
+RewriteCond %{REQUEST_FILENAME} !(.*)(\.php|\.css|\.js|\.jpg|\.gif|\.png|\.txt)$
+RewriteRule (.*)   /dap/client/website/dapclient.php?dapref=/$1&plug=wp&%{QUERY_STRING}  [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !dapclient.php
+RewriteCond %{REQUEST_URI} !^/dap/
+RewriteCond %{REQUEST_FILENAME} !(.*)(\.php|\.css|\.js|\.jpg|\.gif|\.png|\.txt)$
+RewriteRule (.*)   /dap/client/website/dapclient.php?dapref=/$1&plug=wp&%{QUERY_STRING}  [L]
+</IfModule>

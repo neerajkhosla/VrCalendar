@@ -1,0 +1,8 @@
+emailId,firstname,lastname,password,Product name,address,city,state,zip,country,phone,company,flag to indicate paid or free user
+
+you@yourdomain.com,joe,,test123,Example One-time Product,99 hill ave,cityname,NY,12345,USA,,DAP,y
+you@yourdomain-1.com,joe1,smith,,Example One-time Product,99 hill ave,cityname,NY,12345,USA,,DAP,y
+
+
+
+		

@@ -1,0 +1,292 @@
+.PageNew {border: #828282 2px solid; padding: 5px; width:700px; text-align:left;}
+.PageCartSummary {border: #828282 2px solid; padding: 5px; width:800px; text-align:left;}
+
+.HorizontalLine {
+	background-color: #666666;
+	height: 1px;
+}
+
+.Comment
+{
+	font-size: 12px;
+}
+
+.LabelColOrderTop,
+.LabelColOrderBottom,
+.LabelColTotal,
+.LabelColOrderTopWLI,
+.LabelColOrderBottomWLI,
+.LabelColTotalWLI,
+.LabelColPayBy,
+.LabelColCC,
+.LabelColBank,
+.LabelColBill,
+.LabelColShip
+{ text-align: right; }
+
+.LabelColOrderSummary 
+{ 
+text-align: left; 
+font-size: 16px;
+font-weight: bold;
+
+}
+
+.LabelColTotalSummary 
+{ 
+text-align: left; 
+font-size: 16px;
+font-weight: bold;
+}
+
+.LabelColOrderTotal
+{ 
+width: 130px; 
+font-size: 16px;
+font-weight: bold;
+}
+
+.LabelColOrderTop,
+.LabelColOrderBottom,
+.LabelColTotal,
+.LabelColShip,
+.LabelColBill,
+.LabelColCC,
+.LabelColCaptcha
+{ width: 130px; }
+
+.LabelColOrderTop,
+.LabelColOrderBottom,
+.LabelColTotal,
+.LabelColShip,
+.LabelColBill,
+.LabelColCC,
+.LabelColCaptcha
+{ font-size: 14px; }
+
+.LabelColOrderTop
+{  font-weight: bold; }
+
+.DataColOrderTop,
+.DataColTotal
+{ font-size: 14px; text-align:left }
+
+.DataColOrderCenter
+{ font-size: 14px; text-align:left }
+
+.LabelColOrderDescr { font-weight: bold; }
+.DataColOrderDescr {}
+
+.DataColOrderBottomWLI,
+.DataColTotalWLI,
+.DescrColOrderBottomWLI
+{ text-align: right; }
+
+.LabelColTotal,
+.DataColTotal,
+.LabelColTotalWLI,
+.DataColTotalWLI,
+{ font-size:14px; font-weight: bold; width: 130px;}
+
+.DataColTotal,
+.LabelColTotal
+{ font-size:14px; font-weight: bold; }
+
+
+.LabelColCC,
+.LabelColBill,
+.LabelColShip
+{ width: 130px; font-weight: bold; }
+
+.LabelColPaymR {width: 250px;}
+
+#tdBillingInformation {width:250px;}
+
+.HeaderFooter1 
+{
+    font-size: 15px;
+    font-weight:normal;
+    text-align:center;
+    vertical-align:middle;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.Label { font-weight:600; }
+.Label { font-size:14px; }
+
+.LabelHeading {
+	font-size:18px;
+	text-align:center;
+	font-weight: bold;
+}
+
+.tab-box {
+  border:1px solid;
+  padding: 5px 15px;
+  text-decoration:none;
+  background-color: #EFEFEF;
+}
+
+. {font-size: 14px;  }
+
+.Error1 {
+    font-size: 14px;
+    color: Red;
+    background-color: White;
+    margin-top: 15px;
+    margin-left: 15px;
+    text-align:left;
+}
+
+.Attention1 {
+    font-size: 22px;
+    font-weight:600;
+    color:Red;
+    background-color:White;
+    text-align:center;
+}
+
+input.input_text {height: 25px; line-height:15px; font-size:14px;}
+
+#tablePaymentDetailsRcpt {width:100%;}
+#tableBillingShipping {width:100%;}
+#divThankYou {font-size: 16px; font-weight: bold;}
+#divReceiptMsg {padding-bottom: 5px; padding-top: 5px;}
+#divClickAway {text-align: center; padding-bottom: 15px;}
+#divPreviewMode, #divPreviewModeRcpt, #divPreviewMode2 {
+    text-align:center;
+    color:Red;
+    background-color:White;
+}
+#divPreviewMode, #divPreviewModeRcpt {font-size: 16px;}
+
+
+
+
+* {margin:0; padding:0;}
+
+
+.login {
+	background:url(../gfx/user.gif) no-repeat 95% 1em;
+}
+
+.contact {
+	background:url(../gfx/email2.gif) no-repeat 95% 1em;
+}
+
+fieldset div {
+	margin:0.3em 0;
+	clear:both;
+}
+label {
+	float:left;
+	width:10em;
+	text-align:right;
+	margin-right:1em;
+}
+
+legend {
+	color:#0b77b7;
+	font-size:1.2em;
+}
+
+legend span {
+	width:20em;
+	text-align:right;
+}
+input {
+	padding:0.15em;
+	width:10em;
+	border:1px solid #AAA;
+	background:#fafafa;
+	font: 0.95em arial, sans-serif;
+	-moz-border-radius:0.4em;
+	-khtml-border-radius:0.4em;
+}
+input:hover, input:focus {
+	border-color:#C5C5C5;
+	background:#EEEEEE;
+} 
+fieldset {
+	border:1px solid #ddd;
+	padding:0 0.5em 0.5em;
+}
+
+.date input {
+	background-image:url(../gfx/calendar-small.gif);
+	background-repeat:no-repeat;
+	background-position:100% 50%;
+}
+
+.date fieldset label {
+	float:none;
+	display:block;
+	text-align:left;
+	width:auto;
+}
+.date fieldset div {
+	float:left;
+	clear:none;
+	margin-right:0.2em;
+}
+.radio, .date {
+	position:relative;
+}
+.radio fieldset, .date fieldset {
+	border:none;
+	width:auto;
+	padding:1px 0 0 11em;
+}
+.radio legend, .date legend {
+	font-size:1em;
+	color:#000;
+}
+.radio legend span, .date legend span {
+	position:absolute;
+	left:0;
+	top:0.3em;
+	width:10em;
+	display:block;
+}
+.radio label, .radio input {
+	vertical-align:middle;
+	display:inline;
+	float:none;
+	width:auto;
+	background:none;
+	border:none;
+}
+.radio div {
+	float:left;
+	white-space:nowrap;
+	clear:none;
+}
+
+.email {
+	width:14em;
+}
+
+input.default {
+	color:#bbb;
+}
+
+#submit-go {
+	margin-top:1em;
+	width:69px;
+	height:26px;
+	text-indent:-9999px;
+	overflow:hidden;
+	border:0;
+	background:url(../gfx/submit-button.gif) no-repeat 0 0;
+	display:block;
+	cursor:pointer !important; cursor:hand;
+}
+#submit-go:hover {
+	background-position:0 -26px;
+}
+
+a:link {
+	color: #0000FF;
+}
+
