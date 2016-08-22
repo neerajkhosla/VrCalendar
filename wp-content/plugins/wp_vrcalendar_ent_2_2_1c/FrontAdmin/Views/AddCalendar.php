@@ -47,13 +47,14 @@ $requires_admin_approval = array(
 );
 ?>
 <div class="wrap vrcal-content-wrapper edit_dashboard">
-    <h2><?php _e('Add Calendar', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></h2>
+   
 	<div class="cont-fuild vr-dashboard">
 	<div class="left-panel-vr-plg">
 		<?php include('sidebar.php'); ?>
 	</div>
 	<div class="right-panel-vr-plg">
-		<div class="tabs-wrapper">
+	 <h2><?php _e('Add Calendar', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></h2>
+		<div class="tabs-wrapper mt15 pull-left"> 
 			<h2 class="nav-tab-wrapper">
 				<a class='nav-tab nav-tab-active' href='#general-options'><?php _e('General', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></a>
 				<a class='nav-tab' href='#booking-options'><?php _e('Booking Options', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></a>

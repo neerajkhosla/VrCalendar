@@ -4,7 +4,7 @@ if (!class_exists('WP_List_Table')) {
         require_once(ABSPATH . 'wp-admin/includes/admin.php');
     }
 class VRCalendarFrontAdmin extends VRCSingleton {
-	private $_post='/client-dashboard';
+	private $_post="/client-dashboard";
     protected function __construct(){
         
         if(isset($_GET['vrc_slug'])){

@@ -5,7 +5,7 @@
     $user_data = unserialize($user_meta[0]);
     }
 ?>
-<table class="form-table">
+<table class="form-table form-table05">
     <tbody>
     <tr valign="top">
         <th>

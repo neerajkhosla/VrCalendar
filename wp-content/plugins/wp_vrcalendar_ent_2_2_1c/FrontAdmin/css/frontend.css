@@ -1,7 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700); 
 
 
+.mt5{margin-top: 5px!important;} 
 .mt10{margin-top: 10px!important;} 
+.mt15{margin-top: 15px!important;} 
+.mt20{margin-top: 20px!important;} 
+.mt25{margin-top: 25px!important;} 
+.mt30{margin-top: 30px!important;} 
+.mt35{margin-top: 35px!important;} 
+.mt40{margin-top: 40px!important;} 
+.mt45{margin-top: 45px!important;} 
+.mt50{margin-top: 50px!important;}   
 
 body, button, input, select, textarea{font-family: 'Open Sans', sans-serif;} 
 *{font-family: 'Open Sans', sans-serif;}
@@ -41,8 +50,7 @@ body, button, input, select, textarea{font-family: 'Open Sans', sans-serif;}
 } 
  
 .menu-list > ul li.active a, .menu-list > ul li a:hover, .menu-list > ul li.active a, .menu-list > ul li a:focus{background-color: #0f66b7;color: #FFF;}  
-
-.menu-list > ul li:first-child a{background-color: #0f66b7;color: #FFF;}
+ 
   
 
 .right-panel-vr-plg {
@@ -116,7 +124,7 @@ body, button, input, select, textarea{font-family: 'Open Sans', sans-serif;}
 .vr-dashboard .bulkactions .button.action:hover, .vr-dashboard .bulkactions .button.action:focus{opacity: 0.75;text-decoration: none;}
 .vr-dashboard .tablenav .tablenav-pages {
   box-sizing: border-box;
-  float: left;
+  float: right;
   padding-left: 13px;
   width: 50%;
 }  
@@ -132,7 +140,7 @@ body, button, input, select, textarea{font-family: 'Open Sans', sans-serif;}
 } 
 .vr-dashboard .tablenav .tablenav-pages {
   box-sizing: border-box;
-  float: left;
+  float: right;
   margin-top: 0;
   padding-left: 13px;
   text-align: right;
@@ -315,8 +323,8 @@ body, button, input, select, textarea {
 } */ 
 
 .tablenav-pages-navspan {
-  background-color: rgba(142, 191, 68, 0.42);
-  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
   color: #000;
   height: 30px;
   opacity: 1 !important;
@@ -427,12 +435,12 @@ form.edd_form {
  
  
 
-.add-new-h2, .form-table button.button {
+.add-new-h2, .form-table button.button, input.button.button-primary {
   background-color: #90c046;
-  color: #fff;
+  color: #fff;border: none;
   padding: 5px 11px !important;
 } 
-.add-new-h2:hover, .form-table button.button:hover{opacity: 0.75;}  
+.add-new-h2:hover, .form-table button.button:hover, input.button.button-primary:hover {opacity: 0.75;}   
 
 .form-table button.button {
   border: none;
@@ -442,6 +450,28 @@ form.edd_form {
   margin-right: 6px;
 } 
 
+.updated.alert {
+  background-color: rgba(161, 202, 99, 0.93);
+  color: #fff;
+  float: left;
+  margin-top: -5px;
+  padding: 3px 0 6px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+} 
+#my-calendars .updated.alert { 
+  background-color: rgba(161, 202, 99, 0.93);
+   margin-top: 8px;  
+}
+
+.alert{background-color: #f8af75; color: #fff;
+  float: left;
+  margin-top: 8px; 
+  padding: 3px 0 6px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;}
 /*-select-*/
 .custom_select{position: relative;padding-right: 10px;display: inline-block;width: 100%;}    
 .custom_select select{ -webkit-appearance: none;
@@ -484,6 +514,16 @@ h1, h2, h3, h4, h5, h6, .et_quote_content blockquote p, .et_pb_slide_description
   clear: both;
   margin-top: 1px;
 } 
+
+
+.form-table05 tr th {
+  font-size: 14px;
+  font-weight: 600;
+  width: 33%;
+}  
+.form-table05 tr td{border: none!important;}
+.form-table05 tr td > *{width: 50%;font-size: 14px;}
+
 
 /*-RESPONSIVE CSS-*/
 
