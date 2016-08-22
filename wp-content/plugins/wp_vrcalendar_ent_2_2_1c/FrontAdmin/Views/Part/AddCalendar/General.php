@@ -146,6 +146,7 @@
                 <?php _e('Columns', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
             </th>
             <td>
+                <div class="custom_select " style="width: 160px;">   
                 <select name="calendar_layout_options[columns]" class="large-text">
                 <?php for($i=1;$i<=12; $i++):
                     $selected = '';
@@ -155,6 +156,7 @@
                     <option value="<?php echo $i; ?>" <?php echo $selected; ?>><?php echo $i; ?></option>
                 <?php endfor; ?>
                 </select>
+                </div> 
             </td>
         </tr>
         <tr valign="top">
@@ -162,6 +164,7 @@
                 <?php _e('Rows', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
             </th>
             <td>
+                 <div class="custom_select " style="width: 160px;">  
                 <select name="calendar_layout_options[rows]" class="large-text">
                     <?php for($i=1;$i<=12; $i++):
                         $selected = '';
@@ -170,7 +173,7 @@
                         ?>
                         <option value="<?php echo $i; ?>" <?php echo $selected; ?>><?php echo $i; ?></option>
                     <?php endfor; ?>
-                </select>
+                     </select></div> 
             </td>
         </tr>
 		<tr valign="top">
@@ -229,6 +232,7 @@
                        <?php _e('Difference Between each Hours', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                    </th>
                    <td >
+                        <div class="custom_select " style="width: 160px;"> 
                            <select name="hoursbookingdiifference" id="hoursbookingdiifference" >
                             <?php
                             for($i=1; $i<= 24; $i++)
@@ -251,6 +255,7 @@
                             }
                             ?>
                         </select>
+                       </div> 
                     </td>
                </tr>
             </table>
@@ -282,10 +287,12 @@
                     <?php _e('Booking Form Location', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                 </th>
                 <td >
+                     <div class="custom_select " style="width: 160px;"> 
                     <select name="booking_form_location" id="booking_form_location">
                         <option value="next_to_call" <?php if($cdata->booking_form_location == 'next_to_call'){ ?> selected="selected" <?php } ?>><?php _e('Next to Calendar', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></option>
                         <option value="below_to_call" <?php if($cdata->booking_form_location == 'below_to_call'){ ?> selected="selected" <?php } ?>><?php _e('Below to Calendar', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></option>
                     </select>
+                    </div> 
                 </td>
             </table>
         </td>
@@ -323,7 +330,7 @@
                 <tr>
                     <th>
                         <?php _e('Link', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
-                    </th>
+                    </th> 
                     <td>
                         <input type="text" name="calendar_links[url][]" value="" class="large-text" placeholder="<?php _e('ics/ical Link', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>" />
                     </td>

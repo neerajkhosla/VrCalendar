@@ -229,16 +229,16 @@ foreach($cals as $cal) {
             <td>
                 <table class="form-table">
 					<tr>
-						<th>
-							<?php _e('To :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
-						</th> 
-						<td>
+						 
+						<td colspan="2">
+                            <label class="lable_heading"><?php _e('To :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></label>
 							<fieldset>
 								<label title='<?php if(isset($email_send_to)){ echo $email_send_to; } ?>'>
 									<input type="radio" name="email_send_to" value="admin" <?php if(isset($email_send_to) && $email_send_to == 'admin'){ echo 'checked="checked"';}else {echo 'checked="checked"';} ?> /><span><?php echo 'Admin'; ?></span><br>
 									<input type="radio" name="email_send_to" value="both" <?php if(isset($email_send_to) && $email_send_to == 'both'){ echo 'checked="checked"';} ?> /><span><?php echo 'Both'; ?></span><br>
 									<input type="radio" name="email_send_to" value="single" <?php if(isset($email_send_to) && $email_send_to == 'single'){ echo 'checked="checked"';} ?> /><span><?php echo 'Custom'; ?></span><br>
-									<input type="text" name="email_address_template" value="<?php if(isset($emailaddress)){ echo $emailaddress; } ?>" class="large-text" placeholder="Email Address"/>
+                                    
+									<input type="text" name="email_address_template mt10" value="<?php if(isset($emailaddress)){ echo $emailaddress; } ?>" class="large-text" placeholder="Email Address"/>
 								</label> &nbsp;
 								
 							</fieldset>
@@ -262,10 +262,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>     
+                        
+                        <td colspan="2">
+                            <label class="lable_heading"><?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> </label>
                             <?php
                                 $editor_id = "emailtemplate[your_booking_is_removed][body]";
                                 $content = $your_booking_is_removed_body;
@@ -274,10 +273,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>
+                         
+                        <td colspan="2">
                             <?php _e('%booking_user_fname% = Booking User First Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                             <br />
                             <?php _e('%booking_user_lname% = Booking User Last Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -313,10 +310,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>   
+                      
+                        <td colspan="2"> 
+                        <label class="lable_heading"><?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></label>    
                         <?php
                                 $editor_id = "emailtemplate[your_booking_is_approved][body]";
                                 $content = $your_booking_is_approved_body;
@@ -326,10 +322,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>
+                         
+                        <td colspan="2">
                             <?php _e('%booking_user_fname% = Booking User First Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                             <br />
                             <?php _e('%booking_user_lname% = Booking User Last Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -356,10 +350,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>     
+                       
+                        <td colspan="2">
+                            <label class="lable_heading"> <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> </label>
                             <?php
                                 $editor_id = "emailtemplate[your_booking_is_approved_make_payment][body]";
                                 $content = $your_booking_is_approved_make_payment_body;
@@ -369,10 +362,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>
+                        
+                        <td colspan="2">
                             <?php _e('%booking_user_fname% = Booking User First Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                             <br />
                             <?php _e('%booking_user_lname% = Booking User Last Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -400,10 +391,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>     
+                        
+                        <td colspan="2">  
+                            <label class="lable_heading"> <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> </label>
                              <?php
                                 $editor_id = "emailtemplate[conflict_aroused_while_synchronizing_calendar][body]";
                                 $content = $conflict_aroused_while_synchronizing_calendar_body;
@@ -413,10 +403,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>
+                        
+                        <td colspan="2">
                             <?php _e('%calendar_name% = Booking User First Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                             <br />
                             <?php _e('%booking_source% = Booking source type (website / Calendar Links).', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -448,10 +436,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>   
+                      
+                        <td colspan="2">  
+                        <label class="lable_heading"> <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> </label>    
                         <?php
                                 $editor_id = "emailtemplate[approval_needed_on_new_booking_on][body]";
                                 $content = $approval_needed_on_new_booking_on_body;
@@ -461,10 +448,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>
+                        
+                        <td colspan="2">
                             
                             <?php _e('%blogname% = Booking received User Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                             <br />
@@ -503,10 +488,10 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>    
+                      
+                        <td colspan="2">  
+                        <label class="lable_heading"> <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></label>    
+                            
                         <?php
                                 $editor_id = "emailtemplate[your_booking_is_received_is_pending_for_approval][body]";
                                 $content = $your_booking_is_received_is_pending_for_approval_body;
@@ -516,10 +501,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>
+                        
+                        <td colspan="2">
                             
                             
                             <?php _e('%booking_user_fname% = Booking User First Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -559,10 +542,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>    
+                         
+                        <td colspan="2">   
+                        <label class="lable_heading"> <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> </label>    
                          <?php
                                 $editor_id = "emailtemplate[new_booking][body]";
                                 $content = $new_booking_body;
@@ -571,10 +553,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>
+                       
+                        <td colspan="2">
                             <?php _e('%blogname% = Booking received User Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                             <br />
                            <?php _e('%booking_id% = System Generated Booking ID.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -610,10 +590,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>    
+                      
+                        <td colspan="2">   
+                        <label class="lable_heading"> <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></label>    
                           <?php
                                 $editor_id = "emailtemplate[your_booking_is_received][body]";
                                 $content = $your_booking_is_received_body;
@@ -623,10 +602,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>
+                      
+                        <td colspan="2">
                             <?php _e('%booking_user_fname% = Booking User First Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                             <br />
                             <?php _e('%booking_user_lname% = Booking User Last Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -664,10 +641,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>     
+                       
+                        <td colspan="2">  
+                        <label class="lable_heading"><?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> </label>    
                              <?php
                                 $editor_id = "emailtemplate[new_booking_payment_received][body]";
                                 $content = $new_booking_payment_received_body;
@@ -677,10 +653,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>
+                     
+                        <td colspan="2">
                             <?php _e('%blogname% = Booking received User Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                             <br />
                            <?php _e('%booking_id% = System Generated Booking ID.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -720,10 +694,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>   
+                        
+                        <td colspan="2"> 
+                        <label class="lable_heading"><?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> </label>    
                           <?php
                                 $editor_id = "emailtemplate[your_bookingpayment_is_received][body]";
                                 $content = $your_bookingpayment_is_received_body;
@@ -733,8 +706,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>&nbsp;</th>
-                        <td>
+                      
+                        <td colspan="2">
                             <?php _e('%booking_user_fname% =  Booking User First name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                             <br />
                             <?php _e('%booking_user_lname% =  Booking User Last name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -775,10 +748,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>     
+                        
+                        <td colspan="2"> 
+                        <label class="lable_heading"><?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> </label>    
                               <?php
                                 $editor_id = "emailtemplate[approval_needed_on_new_booking][body]";
                                 $content = $approval_needed_on_new_booking_body;
@@ -788,10 +760,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>     
+                        
+                        <td colspan="2">     
                              <?php _e('%blogname% = Booking received User Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                              <br />
                             <?php _e('%booking_id% = System Generated Booking ID.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -825,10 +795,9 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> 
-                        </th>
-                        <td>     
+                        
+                        <td colspan="2">   
+                        <label class="lable_heading"><?php _e('Body :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></label>    
                               <?php
                                 $editor_id = "emailtemplate[if_deposit_payment_enable][body]";
                                 $content = $if_deposit_payment_enable_body;
@@ -838,10 +807,8 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            &nbsp;
-                        </th>
-                        <td>     
+                        
+                        <td colspan="2">     
                              <?php _e('%booking_user_fname% = Booking User First Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
                             <br />
                             <?php _e('%booking_user_lname% = Booking User Last Name.', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -850,7 +817,7 @@ foreach($cals as $cal) {
                         </td>
                     </tr>
                 </table>
-            </td>
+            </td> 
         </tr>
     </tbody>
 </table>

@@ -370,3 +370,13 @@ function edd_sample_re_check_license() {
         return false;
     }
 } //end function edd_sample_re_check_license()
+add_filter( 'ajax_query_attachments_args', 'show_current_user_attachments', 10, 1 );
+
+function show_current_user_attachments( $query = array() ) {
+    $user_id = get_current_user_id();
+
+    if( $user_id ) {
+        $query['author'] = $user_id;
+    }
+    return $query;
+}

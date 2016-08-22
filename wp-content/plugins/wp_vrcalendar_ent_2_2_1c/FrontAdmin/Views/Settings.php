@@ -1,4 +1,5 @@
 <?php
+
 if (edd_sample_check_license_new()){
 	$VRCalendarSettings = VRCalendarSettings::getInstance();
 	$availablePages = get_pages();
@@ -144,29 +145,26 @@ if (edd_sample_check_license_new()){
 		'ZAR'=> __('South African Rand', VRCALENDAR_PLUGIN_TEXT_DOMAIN)
 	);
 	?>
-	<div class="wrap vrcal-content-wrapper">
+	<div class="wrap vrcal-content-wrapper vr-booking vr-dashboard">
 		<h2><?php _e('Settings', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></h2>
 		<div class="left-panel-vr-plg">
 		<?php include('sidebar.php'); ?>
 		</div>
 		<div class="right-panel-vr-plg">
-		<div class="tabs-wrapper">
-			<h2 class="nav-tab-wrapper">
-				<a class='nav-tab nav-tab-active' href='#general-options'><?php _e('General', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></a>
-			</h2>
+                    <div class="tabs-wrapper">
 			<div class="tabs-content-wrapper">
 				<form method="post" action="" >
 					<div id="general-options" class="tab-content tab-content-active">
 						<?php require(VRCALENDAR_PLUGIN_DIR.'/FrontAdmin/Views/Part/Settings/General.php'); ?>
 					</div>
 					<div>
-						<input type="hidden" name="vrc_cmd" id="vrc_cmd" value="VRCalendarAdmin:saveSettings" />
+						<input type="hidden" name="vrc_cmd" id="vrc_cmd" value="VRCalendarFrontAdmin:saveSettings" />
 						<input type="submit" value="<?php _e('Save', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>" class="button button-primary">
 					</div>
 				</form>
 			</div>
-		</div>
-	</div>
+                    </div>
+                </div>
 	</div>
 <?php } else {
 	_e('Please check your license key', VRCALENDAR_PLUGIN_TEXT_DOMAIN);

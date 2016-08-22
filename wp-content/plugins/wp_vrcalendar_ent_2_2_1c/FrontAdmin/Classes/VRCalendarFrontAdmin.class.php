@@ -4,26 +4,28 @@ if (!class_exists('WP_List_Table')) {
         require_once(ABSPATH . 'wp-admin/includes/admin.php');
     }
 class VRCalendarFrontAdmin extends VRCSingleton {
-	private $_post;
+	private $_post='/client-dashboard';
     protected function __construct(){
-
-		if(isset($_GET['vrc_slug'])){
-			$this->_post = $_GET['vrc_slug'];
-		}
+        
+        if(isset($_GET['vrc_slug'])){
+                $this->_post = $_GET['vrc_slug'];
+        }
         add_action('init', array($this, 'handleCommands'));
         add_action( 'init', array( $this,'frontNotice') );
-
+        add_action('init', array( $this,'allow_subscriber_uploads'));
+     
         add_shortcode('calendar_dashboard', array($this,'registerPages'));
-		if(strpos($_SERVER['REQUEST_URI'],'client-dashboard')){
-			add_action( 'init', array( $this, 'enqueueStyles' ) );
-			add_action( 'wp_enqueue_scripts', array( $this, 'enqueueScripts' ) );
-			add_action( 'wp_enqueue_scripts', array( $this,'wpa82718_scripts'), 100 );
-			add_action( 'wp_head', array( $this,'enqueuefrontendstyle') );
-		 }
+        if(strpos($_SERVER['REQUEST_URI'],'client-dashboard')){
+                add_action( 'init', array( $this, 'enqueueStyles' ) );
+                add_action( 'wp_enqueue_scripts', array( $this, 'enqueueScripts' ) );
+                add_action( 'wp_enqueue_scripts', array( $this,'wpa82718_scripts'), 100 );
+                add_action( 'wp_head', array( $this,'enqueuefrontendstyle') );
+         }
+       
     }
 
     function frontNotice() {
-        $type = __('updated', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
+       $type = __('updated', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
 
         if(isset ($_GET['vrc_msg']) ) {
             $msg = urldecode($_GET['vrc_msg']);
@@ -33,9 +35,14 @@ class VRCalendarFrontAdmin extends VRCSingleton {
                     $type = $_GET['vrc_msg_type'];
                 }
                 ?>
-                <div class="<?php echo $type; ?>">
-                    <p><?php echo $msg; ?></p>
-                </div>
+                <script>
+                    
+                    window.onload = function() {
+                            jQuery('body .right-panel-vr-plg form').prepend('<div class="<?php echo $type; ?> alert"><p><?php echo $msg; ?></p></div>');
+                            jQuery('.alert').delay(3000).fadeOut('slow');
+                    };
+                   // '<div class="<?php echo $type; ?>"><p><?php echo $msg; ?></p></div>'
+                 </script>
             <?php
             }
         }
@@ -218,24 +225,38 @@ class VRCalendarFrontAdmin extends VRCSingleton {
     }
 
     function saveSettings() {
-        $VRCalendarSettings = VRCalendarSettings::getInstance();
-
-        $VRCalendarSettings->setSettings('booking_page', $_POST['booking_page']);
-        $VRCalendarSettings->setSettings('payment_page', $_POST['payment_page']);
-        $VRCalendarSettings->setSettings('thank_you_page', $_POST['thank_you_page']);
-        $VRCalendarSettings->setSettings('payment_cancel_page', $_POST['payment_cancel_page']);
-        $VRCalendarSettings->setSettings('paypal_email', $_POST['paypal_email']);
-        $VRCalendarSettings->setSettings('stripe_api_key', $_POST['stripe_api_key']);
-        $VRCalendarSettings->setSettings('payment_mode', $_POST['payment_mode']);
-        $VRCalendarSettings->setSettings('auto_sync', $_POST['auto_sync']);
-        $VRCalendarSettings->setSettings('attribution', $_POST['attribution']);
-        $VRCalendarSettings->setSettings('load_jquery_ui_css', $_POST['load_jquery_ui_css']);
-		$VRCalendarSettings->setSettings('attr_currency', $_POST['attr_currency']);
-        $VRCalendarSettings->setSettings('language', $_POST['language']);
-         $VRCalendarSettings->setSettings('searchbar_result_page', $_POST['searchbar_result_page']);
+    $user = wp_get_current_user();
+    if( $user->roles[0]!="administrator"){
+            $curent_user_id =  get_current_user_id();
+            $user_setting=array(
+                'paypal_email'=> $_POST['paypal_email'],
+                'payment_mode'=> $_POST['payment_mode'],
+                'attr_currency'=> $_POST['attr_currency'],
+                'language'=>$_POST['language'],
+                'auto_sync'=> $_POST['auto_sync']
+            );
+            $serialized_data=serialize($user_setting);
+            update_user_meta( $curent_user_id, '_user_settings', $serialized_data);
+        }
+       else{
+            $VRCalendarSettings = VRCalendarSettings::getInstance();
+            $VRCalendarSettings->setSettings('booking_page', $_POST['booking_page']);
+            $VRCalendarSettings->setSettings('payment_page', $_POST['payment_page']);
+            $VRCalendarSettings->setSettings('thank_you_page', $_POST['thank_you_page']);
+            $VRCalendarSettings->setSettings('payment_cancel_page', $_POST['payment_cancel_page']);
+            $VRCalendarSettings->setSettings('paypal_email', $_POST['paypal_email']);
+            $VRCalendarSettings->setSettings('stripe_api_key', $_POST['stripe_api_key']);
+            $VRCalendarSettings->setSettings('payment_mode', $_POST['payment_mode']);
+            $VRCalendarSettings->setSettings('auto_sync', $_POST['auto_sync']);
+            $VRCalendarSettings->setSettings('attribution', $_POST['attribution']);
+            $VRCalendarSettings->setSettings('load_jquery_ui_css', $_POST['load_jquery_ui_css']);
+            $VRCalendarSettings->setSettings('attr_currency', $_POST['attr_currency']);
+            $VRCalendarSettings->setSettings('language', $_POST['language']);
+             $VRCalendarSettings->setSettings('searchbar_result_page', $_POST['searchbar_result_page']);
         /* Updated sync hook */
+       }
         wp_clear_scheduled_hook( 'vrc_cal_sync_hook' );
-        wp_schedule_event( time(), $VRCalendarSettings->getSettings('auto_sync', 'daily'), 'vrc_cal_sync_hook' );
+      //  wp_schedule_event( time(), $VRCalendarSettings->getSettings('auto_sync', 'daily'), 'vrc_cal_sync_hook' );
         $msg = __('Settings saved successfully', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
         $msg = rawurlencode($msg);
         $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-settings&vrc_msg={$msg}");
@@ -290,6 +311,12 @@ class VRCalendarFrontAdmin extends VRCSingleton {
                 
     //12:29:2015 permissions change for admin panel: was Manage_options changed now to edit_dashboard
     function registerPages() {
+       // echo get_current_user_id();
+                $user = wp_get_current_user();
+                if( $user->roles[0]=="administrator"){
+                    echo '<script>window.location = "'.admin_url().'"</script>';
+                    exit;
+                }
 		if(!is_user_logged_in()){
 			//wp_safe_redirect( site_url(), '302' );
 			 echo '<script>window.location = "'.site_url().'"</script>';
@@ -485,12 +512,12 @@ class VRCalendarFrontAdmin extends VRCSingleton {
     public function enqueueScripts()
     {
         wp_enqueue_media();
-		wp_enqueue_script( 'wp-color-picker');
+	wp_enqueue_script( 'wp-color-picker');
         wp_enqueue_script('jquery-ui-datepicker');
         wp_enqueue_script( VRCALENDAR_PLUGIN_SLUG . '-plugin-script', VRCALENDAR_PLUGIN_URL.'/assets/js/admin.js', array( 'jquery' ), VRCalendar::VERSION );
     }
 	
-	function wpa82718_scripts() {
+    function wpa82718_scripts() {
     wp_enqueue_style( 'wp-color-picker' );
     wp_enqueue_script(
         'iris',
@@ -520,5 +547,13 @@ class VRCalendarFrontAdmin extends VRCSingleton {
 	 echo "<link href='".VRCALENDAR_PLUGIN_URL."FrontAdmin/css/frontend.css' rel='stylesheet'>";
 	 
 	}
+ 
+    function allow_subscriber_uploads() {
+      
+        $subscriber = get_role('subscriber');
+        $subscriber->add_cap('upload_files');
+    }
+
+    
 
 }

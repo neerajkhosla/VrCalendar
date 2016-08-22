@@ -47,10 +47,10 @@
             </td>
         </tr>
 		<tr valign="top">
-            <th>
-                <?php _e('Summary', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
-            </th>
-            <td><?php wp_editor( $cdata->calendar_summary, 'calendar_summary', $settings = array('textarea_name' => 'calendar_summary') ); ?>               
+            
+            <td colspan="2">
+                <label class="lable_heading"><?php _e('Summary', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></label>
+                <?php wp_editor( $cdata->calendar_summary, 'calendar_summary', $settings = array('textarea_name' => 'calendar_summary') ); ?>               
             </td>
         </tr>
         <tr valign="top">
@@ -202,7 +202,7 @@
                 <?php _e('Custom Label', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
             </th>
             <td>
-                <input type="text" id="calendar_custom_field_name" name="calendar_custom_field_name" value="<?php echo $cdata->calendar_custom_field_name; ?>" class="large-text" placeholder="Custom Label Name" style="width:180px;"> (This will replace '<?php echo $extrafeescustom; ?>' on booking screen).
+                <input type="text" id="calendar_custom_field_name" name="calendar_custom_field_name" value="<?php echo $cdata->calendar_custom_field_name; ?>" class="large-text" placeholder="Custom Label Name" style="width:180px;"><br> (This will replace '<?php echo $extrafeescustom; ?>' on booking screen).
             </td>
         </tr>
 		<tr valign="top">

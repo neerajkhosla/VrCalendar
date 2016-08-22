@@ -19,8 +19,8 @@ else
 ?>
 
 
-    <div class="wrap vrcal-content-wrapper">
-
+    <div class="wrap vrcal-content-wrapper vr-booking vr-dashboard">
+	
 
 <?php
 $cdata = $VRCalendarEntity->getCalendar($calendar_id);
@@ -220,6 +220,18 @@ class VRBookingsTable extends WP_List_Table {
 			{
 				$columns = array(
 					'cb' => '<input type="checkbox"/>',
+					'booking_user_name' => __('Name', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_user_email' => __('Email', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_user_phone' => __('Phone No', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_date_from' =>__('Booking From', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_date_to' =>__('Booking To', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_status'=> __('Status', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_total_price'=>__('Booking Price ($)', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_created_on' =>__('Booking Date', VRCALENDAR_PLUGIN_TEXT_DOMAIN)
+				);
+				
+				/*$columns = array(
+					'cb' => '<input type="checkbox"/>',
 					'booking_id' => __('Booking ID',RCALENDAR_PLUGIN_TEXT_DOMAIN),
 					'booking_user_name' => __('Name', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
 					'booking_user_source' => __('Source', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
@@ -238,10 +250,20 @@ class VRBookingsTable extends WP_List_Table {
 					
 					'booking_created_on' =>__('Booking Date', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
 					'booking_summary' => __('Summary', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
-				);
+				);*/
 			}else
 			{
 				$columns = array(
+					'cb' => '<input type="checkbox"/>',
+					'booking_user_name' => __('Name', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_user_email' => __('Email', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_user_phone' => __('Phone No', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_date_from' =>__('Booking From', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_date_to' =>__('Booking To', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_status'=> __('Status', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
+					'booking_created_on' =>__('Booking Date', VRCALENDAR_PLUGIN_TEXT_DOMAIN)
+				);
+				/*$columns = array(
 					'cb' => '<input type="checkbox"/>',
 					'booking_id' => __('Booking ID',RCALENDAR_PLUGIN_TEXT_DOMAIN),
 					'booking_user_name' => __('Name', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
@@ -257,7 +279,7 @@ class VRBookingsTable extends WP_List_Table {
 					'booking_total_price'=>__('Booking Price ($)', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
 					'booking_created_on' =>__('Booking Date', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
 					'booking_summary' => __('Summary', VRCALENDAR_PLUGIN_TEXT_DOMAIN),
-				);
+				);*/
 			}
 			
 			
@@ -435,6 +457,10 @@ if($action == 'editbooking'){
 	<h2>
     <?php _e('Bookings for Calendar', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> "<?php echo $booking_data->calendar_name ?>"
 </h2>
+	<div class="left-panel-vr-plg">
+		<?php include('sidebar.php'); ?>
+	</div>
+	<div class="right-panel-vr-plg">
 	<strong>Filter:</strong> <select name="select_fillter" id="select_fillter">
 		<option <?php if($_GET['fillter'] == 'all'){ echo 'selected="selected"'; } ?> value= 'all'>All</option>
 		<option <?php if($_GET['fillter'] == 'website'){ echo 'selected="selected"'; } ?>  value= 'website'>Web Site Booking</option>
@@ -482,6 +508,7 @@ if($action == 'editbooking'){
 		$VRBookingsTable->process_bulk_action();
 	?>
 	</form>
+	</div>
 		</div>
 	<?php
 	

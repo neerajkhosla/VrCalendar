@@ -23,7 +23,8 @@ class VRCalendarTableFront extends WP_List_Table_CS
                 echo  $cal['calendar_name'];
                 break;
             case 'calendar_shortcode':
-                echo  '[vrcalendar id="'.$cal['calendar_id'].'" /]';
+              //  echo  '[vrcalendar id="'.$cal['calendar_id'].'" /]';
+               echo '<a class="btn" data-popup-open="popup-'.$cal['calendar_id'].'" href="#">Get Embed Code</a><div class="popup" data-popup="popup-'.$cal['calendar_id'].'"><div class="popup-inner"><h2>Embed Code for '.$cal['calendar_id'].'   </h2><p><a data-popup-close="popup-'.$cal['calendar_id'].'" href="#">Close</a></p><a class="popup-close" data-popup-close="popup-'.$cal['calendar_id'].'" href="#">x</a></div></div>';
                 break;
             case 'booking_shortcode':
                 echo  '[vrcalendar_booking_btn id="'.$cal['calendar_id'].'" class=""]'.__('Book Now', VRCALENDAR_PLUGIN_TEXT_DOMAIN).'[/vrcalendar_booking_btn]';
@@ -151,12 +152,13 @@ class VRCalendarTableFront extends WP_List_Table_CS
     function prepare_items()
     {
         
-        global $wpdb;
+		global $wpdb;
+        $user_id = get_current_user_id();
         $calendar_table = $wpdb->prefix."vrcalandar";
         $cal_per_page   = 4;
         //retrive all calendar  from database
 
-        $cal_query = "SELECT * FROM {$calendar_table}";
+        $cal_query = "SELECT * FROM {$calendar_table} WHERE calendar_author_id = ".$user_id." order by calendar_created_on";
         $calendar_data = $wpdb->get_results($cal_query, ARRAY_A);
         $columns   = $this->get_columns();
         $sortable  = $this->get_sortable_columns();
@@ -229,7 +231,8 @@ class VRCalendarTableFront extends WP_List_Table_CS
 	</div>
 	<div class="right-panel-vr-plg">
 		<h2>
-			<?php _e('My Calendars', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> <a href="<?php global $post;  echo site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-add-calendar'.'&vrc_slug='.$post->post_name) ?>" class="add-new-h2"><?php _e('Add new', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></a>
+			<?php _e('My Calendars', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> <a href="<?php global $post;  echo site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-add-calendar'.'&vrc_slug='.$post->post_name) ?>" class="add-new-h2"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+ <?php _e('Add new', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></a>
 		</h2>
 		<form id="my-calendars" name="my-calendars" method="post" action="">
 
@@ -245,5 +248,22 @@ class VRCalendarTableFront extends WP_List_Table_CS
 	jQuery(".manage-column input").change(function(){  //"select all" change
     jQuery("tbody .check-column > input").prop('checked', jQuery(this).prop("checked")); //change all ".checkbox" checked status
 	});
+            jQuery(function() {
+        //----- OPEN
+        jQuery('[data-popup-open]').on('click', function(e)  {
+            var targeted_popup_class = jQuery(this).attr('data-popup-open');
+            jQuery('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+
+            e.preventDefault();
+        });
+
+        //----- CLOSE
+        jQuery('[data-popup-close]').on('click', function(e)  {
+            var targeted_popup_class = jQuery(this).attr('data-popup-close');
+            jQuery('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+            e.preventDefault();
+        });
+    });
 	</script>
 </div>
