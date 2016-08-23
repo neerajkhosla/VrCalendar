@@ -196,7 +196,7 @@
                         if($sizek == $cdata->calendar_layout_options['size'])
                             $checked = 'checked="checked"';
                         ?>
-                        <label title='<?php echo $sizev; ?>'><input type="radio" name="calendar_layout_options[size]" value="<?php echo $sizek; ?>" <?php echo $checked; ?> /> <span><?php echo $sizev; ?></span></label> &nbsp;
+                        <label class="custom_checkbox" title='<?php echo $sizev; ?>'><input type="radio" name="calendar_layout_options[size]" value="<?php echo $sizek; ?>" <?php echo $checked; ?> /> <i></i> <span><?php echo $sizev; ?></span></label> &nbsp;
                     <?php endforeach; ?>
                 </fieldset>
             </td>
@@ -204,19 +204,25 @@
         <tr>
             <th><?php _e('Standard One Day Booking', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></th>
             <td>
+                <label class="custom_checkbox"> 
                 <input type="checkbox" name="pro_one_day_book" id="pro_one_day_book"  value="<?php _e('yes', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>" <?php if($cdata->pro_one_day_book == 'yes'){ echo 'checked="checked"'; } ?> />
+                    <i></i>   
+                </label>    
             </td>
         </tr>
         <tr valign="top">
            
-            <td colspan="2" style="padding-left: 0;">
+            <td colspan="2" style="padding-left: 0px; padding-right: 0px;">
            <table class="hourly_booking" <?php echo $standardCss1; ?>>
                <tr valign="top">
                    <th>
                            <?php _e('Hourly Booking'); ?>&nbsp;&nbsp;
                    </th>
                    <td>
+                         <label class="custom_checkbox"> 
                        <input type="checkbox" name="hourly_booking" id="hourly_booking"  value="<?php _e('yes', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>" <?php if($cdata->hourly_booking == 'yes'){ echo 'checked="checked"'; } ?> />
+                            <i></i> 
+                       </label>
                    </td>
                </tr>
                
@@ -225,7 +231,7 @@
     </tr>
     
     <tr valign="top">
-        <td colspan="2" style="padding: 0;">
+        <td colspan="2" style="padding-left: 0px; padding-right: 0px;">
             <table class="hoursbookingdiifference" <?php echo $standardCss; ?>>
                 <tr valign="top">
                    <th >
@@ -268,7 +274,10 @@
             <?php _e('Show Booking Form next to Calendar', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
         </th>
         <td>
+              <label class="custom_checkbox"> 
             <input type="checkbox" name="show_booking_from_one_page" id="show_booking_from_one_page"  value="<?php _e('yes', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>" <?php if($cdata->show_booking_from_one_page == 'yes'){ echo 'checked="checked"'; } ?> />
+                  <i></i>
+            </label>  
         </td>
        </tr> 
         <?php
@@ -281,7 +290,7 @@
     }
     ?>
        <tr valign="top">
-        <td colspan="2" style="padding-left: 0;">
+        <td colspan="2" style="padding-left: 0;padding-right: 0;"> 
             <table class="booking_form_location" <?php echo $booking_form_location; ?>>
                 <th >
                     <?php _e('Booking Form Location', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -349,7 +358,7 @@
 
 <script>
 
-jQuery(document).ready(function(){
+jQuery(document).ready(function(){ 
  jQuery('.from_to_unable_date').datepicker({
         dateFormat: 'yy-mm-dd',
         minDate: -0,
@@ -396,7 +405,7 @@ jQuery(document).ready(function(){
     jQuery('#pro_one_day_book').click(function(){
         
         if(document.getElementById('pro_one_day_book').checked) {
-            jQuery('.hourly_booking').show(500);
+            jQuery('.hourly_booking').show(500); 
         }else{
             jQuery('.hourly_booking').hide(500);
             jQuery('.hoursbookingdiifference').hide(500);

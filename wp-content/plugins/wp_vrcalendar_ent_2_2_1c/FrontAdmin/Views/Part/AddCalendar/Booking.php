@@ -12,7 +12,7 @@
                         if($k == $cdata->calendar_enable_booking)
                             $checked = 'checked="checked"';
                         ?>
-                        <label title='<?php echo $v; ?>'><input type="radio" name="calendar_enable_booking" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <span><?php echo $v; ?></span></label> &nbsp;
+                        <label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="calendar_enable_booking" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <i></i> <span><?php echo $v; ?></span></label> &nbsp;
                     <?php endforeach; ?>
                 </fieldset>
             </td>
@@ -73,11 +73,12 @@
         <tr>
             <th class="minimum_number_of_night" ><?php _e('Minimum Number Of Nights', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></th>
             <td class="minimum_number_of_night" >
-                <input type="checkbox" name="minimum_number_of_night" id="minimum_number_of_night"  value="<?php _e('yes', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>" <?php if($cdata->minimum_number_of_night == 'yes'){ echo 'checked="checked"'; } ?> />
+                <label class="custom_checkbox"> 
+                    <input type="checkbox" name="minimum_number_of_night" id="minimum_number_of_night"  value="<?php _e('yes', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>" <?php if($cdata->minimum_number_of_night == 'yes'){ echo 'checked="checked"'; } ?> /> <i></i></label>
             </td>
         </tr>
         <tr>
-            <td colspan="2" style="padding-left: 0;">
+            <td colspan="2" style="padding-left: 0;"> 
                 <table class="number_of_night" <?php echo $number_of_night; ?>>
                     <tr>
                         <th ><?php _e('Number Of Night', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></th>
@@ -101,7 +102,7 @@
                         if($k == $cdata->calendar_offer_weekly)
                             $checked = 'checked="checked"';
                         ?>
-                        <label title='<?php echo $v; ?>'><input type="radio" name="calendar_offer_weekly" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <span><?php echo $v; ?></span></label> &nbsp;
+                        <label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="calendar_offer_weekly" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <i></i> <span><?php echo $v; ?></span></label> &nbsp;
                     <?php endforeach; ?>
                 </fieldset>
             </td>
@@ -126,7 +127,7 @@
                         if($k == $cdata->calendar_offer_monthly)
                             $checked = 'checked="checked"';
                         ?>
-                        <label title='<?php echo $v; ?>'><input type="radio" name="calendar_offer_monthly" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <span><?php echo $v; ?></span></label> &nbsp;
+                        <label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="calendar_offer_monthly" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <i></i> <span><?php echo $v; ?></span></label> &nbsp;
                     <?php endforeach; ?>
                 </fieldset>
             </td>
@@ -210,7 +211,8 @@
                 <?php _e('Weekend Pricing', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
             </th>
             <td>
-                <input type="checkbox" name="weekend_pricing" id="weekend_pricing" value="yes" <?php if($cdata->weekend_pricing == 'yes'){ echo 'checked="checked"'; } ?> />
+                <label class="custom_checkbox"> 
+                    <input type="checkbox" name="weekend_pricing" id="weekend_pricing" value="yes" <?php if($cdata->weekend_pricing == 'yes'){ echo 'checked="checked"'; } ?> /> <i></i></label>
             </td>
         </tr>
         
@@ -323,7 +325,7 @@
                         if($k == $cdata->calendar_tax_type)
                             $checked = 'checked="checked"';
                         ?>
-                        <label title='<?php echo $v; ?>'><input type="radio" name="calendar_tax_type" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <span><?php echo $v; ?></span></label> &nbsp;
+                        <label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="calendar_tax_type" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <i></i> <span><?php echo $v; ?></span></label> &nbsp;
                     <?php endforeach; ?>
                 </fieldset>
             </td>
@@ -355,7 +357,7 @@
                         
                             
                         ?>
-                        <label title='<?php echo $v; ?>'><input type="radio" name="calendar_payment_method" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <span><?php echo $v; ?></span></label> &nbsp;
+                        <label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="calendar_payment_method" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <i></i> <span><?php echo $v; ?></span></label> &nbsp;
                     <?php endforeach; ?>
                 </fieldset>
             </td>
@@ -366,7 +368,8 @@
                 <?php _e('Deposit Enable', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
             </th>
             <td>
-                <input type="checkbox" name="deposit_enable" id="deposit_enable" value="<?php _e('yes', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>" <?php if($cdata->deposit_enable == 'yes'){ echo 'checked="checked"'; } ?> />
+                <label class="custom_checkbox">
+                <input type="checkbox" name="deposit_enable" id="deposit_enable" value="<?php _e('yes', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>" <?php if($cdata->deposit_enable == 'yes'){ echo 'checked="checked"'; } ?> /> <i></i></label>
             </td>
         </tr>
         
@@ -418,7 +421,7 @@
                         if($k == $cdata->calendar_requires_admin_approval)
                             $checked = 'checked="checked"';
                         ?>
-                        <label title='<?php echo $v; ?>'><input type="radio" name="calendar_requires_admin_approval" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <span><?php echo $v; ?></span></label> &nbsp;
+                        <label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="calendar_requires_admin_approval" value="<?php echo $k; ?>" <?php echo $checked; ?> /> <i></i> <span><?php echo $v; ?></span></label> &nbsp;
                     <?php endforeach; ?>
                 </fieldset>
             </td>

@@ -23,6 +23,13 @@
 if ( ! defined( 'WPINC' ) ) {
     die;
 }    
+ob_start();
+ob_clean();
+ob_flush();
+session_start();
+//if ( ! current_user_can( 'manage_options' ) ) {
+    show_admin_bar( false );
+//}
 //Gloabal Variable to define version
 $gbversiontype = "enterprisepaid";
 $phpversionold = phpversion();

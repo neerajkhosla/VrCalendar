@@ -768,5 +768,45 @@ h1, h2, h3, h4, h5, h6, .et_quote_content blockquote p, .et_pb_slide_description
 
 
 
+.custom_checkbox > input {
+ display: none;
+}  
+.custom_checkbox { 
+  padding-left: 25px;position: relative; 
+} 
 
+.custom_checkbox input[type=checkbox] + i{background-image: url(img/check.png);background-repeat: no-repeat;width: 17px;position: absolute;top: 0px;left: 0px;height: 17px;background-size: 100%;}    
+.custom_checkbox input[type=checkbox]:checked + i {
+  background-image: url("img/check_box.png");
+  background-repeat: no-repeat;  
+  left: 0;
+  position: absolute;height: 17px;background-size: 100%; 
+  top: 0;
+  width: 17px;
+}
+ 
 
+.custom_checkbox input[type=radio] + i{background-image: url(img/radio.png);background-repeat: no-repeat;width: 17px;position: absolute;top: 0px;left: 0px;height: 17px;background-size: 100%;}    
+.custom_checkbox input[type=radio]:checked + i {
+  background-image: url("img/radio_check.png");  
+  background-repeat: no-repeat;   
+  left: 0;
+  position: absolute;height: 17px;background-size: 100%; 
+  top: 0;
+  width: 17px;
+} 
+
+.vr-dashboard table.wp-list-table tr td .row-actions > span.edit, .vr-dashboard table.wp-list-table tr td .row-actions > span.delete {
+  font-size: 0 !important; color: #0f66b7; 
+} 
+.vr-dashboard table.wp-list-table tr td .row-actions > span.edit > a .fa, .vr-dashboard table.wp-list-table tr td .row-actions > span.delete > a .fa {
+  font-size: 15px;
+ /* padding-right: 10px;
+  padding-top: 4px;*/ 
+} 
+
+ 
+.vr-dashboard .wp-list-table thead tr td, .vr-dashboard .wp-list-table tfoot tr td{ padding-left: 0px!important;}
+
+  
+ 

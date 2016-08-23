@@ -168,24 +168,26 @@ class VRBookingsTable extends WP_List_Table {
 		 * @Params       $booking
 		 * @description  display static column name and corrosponding value
 		 */
-		/*function column_booking_user_name($booking)
+		function column_booking_user_name($booking)
 		{
+			global $post;
 			$actions = array(
-				'delete' => '<a href="' .site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-dashboard&view=bookings&vrc_cmd=VRCalendarAdmin:deleteBooking&bid='.$booking['booking_id'].'&cal_id='.$_GET['cal_id']). '">'.__('Delete', VRCALENDAR_PLUGIN_TEXT_DOMAIN).'</a>'
+				'edit' => '<a href="' .site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-dashboard&view=bookings&action=editbooking&bid='.$booking['booking_id'].'&cal_id='.$_GET['cal_id']). '"><i class="fa fa-edit"></i></a>',
+				'delete' => '<a href="' .site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-dashboard&view=bookings&vrc_cmd=VRCalendarFrontAdmin:deleteBooking&bid='.$booking['booking_id'].'&cal_id='.$_GET['cal_id']). '"><i class="fa fa-trash"></i></a>'
 			);
 
 			if($booking['booking_admin_approved'] == 'no') {
-				$actions['approve_booking'] = '<a href="' .site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-dashboard&view=bookings&vrc_cmd=VRCalendarAdmin:approveBooking&bid='.$booking['booking_id'].'&cal_id='.$_GET['cal_id']). '">'.__('Approve', VRCALENDAR_PLUGIN_TEXT_DOMAIN).'</a>';
+				$actions['approve_booking'] = '<a href="' .site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-dashboard&view=bookings&vrc_cmd=VRCalendarFrontAdmin:approveBooking&bid='.$booking['booking_id'].'&cal_id='.$_GET['cal_id']). '">'.__('Approve', VRCALENDAR_PLUGIN_TEXT_DOMAIN).'</a>';
 			}
 			return $booking['booking_user_fname'].' '.$booking['booking_user_lname'].$this->row_actions($actions) ;
-		}*/
+		}
 		function column_booking_id($booking)
 		{
 			global $post;
 			$page = $post->post_name;
 			$actions = array(
-				'edit' => '<a href="' .site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-dashboard&view=bookings&action=editbooking&bid='.$booking['booking_id'].'&cal_id='.$_GET['cal_id']). '">'.__('Edit', VRCALENDAR_PLUGIN_TEXT_DOMAIN).'</a>',
-				'delete' => '<a href="' .site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-dashboard&view=bookings&vrc_cmd=VRCalendarAdmin:deleteBooking&bid='.$booking['booking_id'].'&cal_id='.$_GET['cal_id']). '">'.__('Delete', VRCALENDAR_PLUGIN_TEXT_DOMAIN).'</a>'
+				'edit' => '<a href="' .site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-dashboard&view=bookings&action=editbooking&bid='.$booking['booking_id'].'&cal_id='.$_GET['cal_id']). '"><i class="fa fa-edit"></i></a>',
+				'delete' => '<a href="' .site_url($post->post_name.'/?page='.VRCALENDAR_PLUGIN_SLUG.'-dashboard&view=bookings&vrc_cmd=VRCalendarFrontAdmin:deleteBooking&bid='.$booking['booking_id'].'&cal_id='.$_GET['cal_id']). '"><i class="fa fa-trash"></i></a>'
 			);
 
 			if($booking['booking_admin_approved'] == 'no') {
@@ -194,6 +196,7 @@ class VRBookingsTable extends WP_List_Table {
 			return $booking['booking_id'].$this->row_actions($actions) ;
 		}
 
+		
 		/**
 		 * @Method name  column_cb
 		 * @Params       $booking

@@ -229,17 +229,20 @@ foreach($cals as $cal) {
             <td>
                 <table class="form-table">
 					<tr>
-						 
+						  
 						<td colspan="2">
                             <label class="lable_heading"><?php _e('To :', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></label>
 							<fieldset>
-								<label title='<?php if(isset($email_send_to)){ echo $email_send_to; } ?>'>
-									<input type="radio" name="email_send_to" value="admin" <?php if(isset($email_send_to) && $email_send_to == 'admin'){ echo 'checked="checked"';}else {echo 'checked="checked"';} ?> /><span><?php echo 'Admin'; ?></span><br>
-									<input type="radio" name="email_send_to" value="both" <?php if(isset($email_send_to) && $email_send_to == 'both'){ echo 'checked="checked"';} ?> /><span><?php echo 'Both'; ?></span><br>
-									<input type="radio" name="email_send_to" value="single" <?php if(isset($email_send_to) && $email_send_to == 'single'){ echo 'checked="checked"';} ?> /><span><?php echo 'Custom'; ?></span><br>
-                                    
-									<input type="text" name="email_address_template mt10" value="<?php if(isset($emailaddress)){ echo $emailaddress; } ?>" class="large-text" placeholder="Email Address"/>
-								</label> &nbsp;
+								<label title='<?php if(isset($email_send_to)){ echo $email_send_to; } ?>'></label> &nbsp;
+                                    <label class="custom_checkbox"> 
+                                        <input type="radio" name="email_send_to" value="admin" <?php if(isset($email_send_to) && $email_send_to == 'admin'){ echo 'checked="checked"';}else {echo 'checked="checked"';} ?> /><i></i> <span><?php echo 'Admin'; ?></span> </label>
+									<label class="custom_checkbox"> 
+                                        <input type="radio" name="email_send_to" value="both" <?php if(isset($email_send_to) && $email_send_to == 'both'){ echo 'checked="checked"';} ?> /><i></i> <span><?php echo 'Both'; ?></span></label>
+                                <label class="custom_checkbox"> 
+                                    <input type="radio" name="email_send_to" value="single" <?php if(isset($email_send_to) && $email_send_to == 'single'){ echo 'checked="checked"';} ?> /><i></i> <span><?php echo 'Custom'; ?></span></label>
+                                     
+									<input type="text" name="email_address_template " value="<?php if(isset($emailaddress)){ echo $emailaddress; } ?>" class="large-text mt10" placeholder="Email Address"/> 
+								
 								
 							</fieldset>
 						</td>

@@ -27,12 +27,12 @@ class VRCalendarFrontAdmin extends VRCSingleton {
     function frontNotice() {
        $type = __('updated', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
 
-        if(isset ($_GET['vrc_msg']) ) {
-            $msg = urldecode($_GET['vrc_msg']);
+        if(isset ($_SESSION['vrc_msg']) && $_SESSION['vrc_msg']!="") {
+            $msg = urldecode($_SESSION['vrc_msg']);
             if(!empty($msg))
             {
-                if(isset ($_GET['vrc_msg_type']) ) {
-                    $type = $_GET['vrc_msg_type'];
+                if(isset ($_SESSION['vrc_msg_type']) && $_SESSION['vrc_msg_type']!="" ) {
+                    $type = $_SESSION['vrc_msg_type'];
                 }
                 ?>
                 <script>
@@ -43,7 +43,11 @@ class VRCalendarFrontAdmin extends VRCSingleton {
                     };
                    // '<div class="<?php echo $type; ?>"><p><?php echo $msg; ?></p></div>'
                  </script>
+				 
             <?php
+			$_SESSION['vrc_msg_type']="";
+			$_SESSION['vrc_msg']="";
+			
             }
         }
     }
@@ -72,7 +76,9 @@ class VRCalendarFrontAdmin extends VRCSingleton {
             $type = __('updated', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
         }
         $msg = rawurlencode($msg);
-        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}&vrc_msg_type={$type}");
+		$_SESSION['vrc_msg']=$msg;
+		$_SESSION['vrc_msg_type']=$type;
+        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
         wp_redirect($redirect_url);
     }
     function syncAllCalendars() {
@@ -89,7 +95,9 @@ class VRCalendarFrontAdmin extends VRCSingleton {
         $VRCalendarEntity->deleteCalendar( $_GET['cal_id'] );
         $msg = __('Calendar deleted successfully', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
         $msg = rawurlencode($msg);
-        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}");
+		$_SESSION['vrc_msg']=$msg;
+		
+        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
         wp_redirect($redirect_url);
     }
 
@@ -105,7 +113,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
             if( count($cals)>=100 ) {
                 $msg = __('Only 100 calendars are allowed', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
                 $msg = rawurlencode($msg);
-                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}");
+				$_SESSION['vrc_msg']=$msg;
+                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
                 
                 echo '<script>window.location = "'.$redirect_url.'"</script>';
                 //wp_redirect($redirect_url);
@@ -116,7 +125,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
             if( count($cals)>=500 ) {
                 $msg = __('Only 500 calendars are allowed', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
                 $msg = rawurlencode($msg);
-                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}");
+				$_SESSION['msg']=$msg;
+                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
                 
                 echo '<script>window.location = "'.$redirect_url.'"</script>';
                 exit;
@@ -126,8 +136,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
             if( count($cals)>=10 ) {
                 $msg = __('Only 10 calendars are allowed', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
                 $msg = rawurlencode($msg);
-                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}");
-                
+				$_SESSION['vrc_msg']=$msg;
+                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
                 wp_redirect($redirect_url);
                 exit;
             }
@@ -136,8 +146,10 @@ class VRCalendarFrontAdmin extends VRCSingleton {
         $VRCalendarEntity->cloneCalendar( $_GET['cal_id'] );
         
         $msg = __('Calendar cloned successfully', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
+		$_SESSION['msg']=$msg;
         $msg = rawurlencode($msg);
-        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}");
+		$_SESSION['vrc_msg']=$msg;
+        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
         wp_redirect($redirect_url);
         exit;
     }
@@ -219,7 +231,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
         $VRCalendarEntity = VRCalendarEntity::getInstance();
         $VRCalendarEntity->saveCalendar( $data );
         $msg = rawurlencode($msg);
-        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}");
+		$_SESSION['vrc_msg']=$msg;
+        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
         wp_redirect($redirect_url);
         exit();
     }
@@ -259,7 +272,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
       //  wp_schedule_event( time(), $VRCalendarSettings->getSettings('auto_sync', 'daily'), 'vrc_cal_sync_hook' );
         $msg = __('Settings saved successfully', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
         $msg = rawurlencode($msg);
-        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-settings&vrc_msg={$msg}");
+		$_SESSION['vrc_msg']=$msg;
+        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-settings");
         wp_redirect($redirect_url);
         exit();
     }
@@ -291,7 +305,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
 
         $msg = __('Booking removed successfully', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
         $msg = rawurlencode($msg);
-        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&view=bookings&cal_id={$cal_id}&vrc_msg={$msg}");
+		$_SESSION['vrc_msg']=$msg;
+        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&view=bookings&cal_id={$cal_id}");
         wp_redirect($redirect_url);
         exit();
     }
@@ -303,7 +318,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
         $VRCalendarBooking->approveBooking($booking_id);
         $msg = __('Booking approved successfully', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
         $msg = rawurlencode($msg);
-        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&view=bookings&cal_id={$cal_id}&vrc_msg={$msg}");
+		$_SESSION['vrc_msg']=$msg;
+        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&view=bookings&cal_id={$cal_id}");
         wp_redirect($redirect_url);
         exit();
     }
@@ -367,8 +383,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
             if(!isset($cal->calendar_id)) {
                 $msg = __('Invalid calendar!', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
                 $msg = rawurlencode($msg);
-                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}");
-
+				$_SESSION['vrc_msg']=$msg;
+                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
                 echo '<script>window.location = "'.$redirect_url.'"</script>';
                 exit;
             }
@@ -377,8 +393,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
             if( count($cals)>=100 ) {
                 $msg = __('Only 100 calendars are allowed', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
                 $msg = rawurlencode($msg);
-                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}");
-
+				$_SESSION['vrc_msg']=$msg;
+                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
                 echo '<script>window.location = "'.$redirect_url.'"</script>';
                 exit;
             }
@@ -387,7 +403,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
             if( count($cals)>=500 ) {
                 $msg = __('Only 500 calendars are allowed', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
                 $msg = rawurlencode($msg);
-                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}");
+				$_SESSION['vrc_msg']=$msg;
+                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
                 
                 echo '<script>window.location = "'.$redirect_url.'"</script>';
                 exit;
@@ -398,7 +415,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
             {
                 $msg = __('Only 10 calendars are allowed', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
                 $msg = rawurlencode($msg);
-                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&vrc_msg={$msg}");
+				$_SESSION['vrc_msg']=$msg;
+                $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
                    
                 echo '<script>window.location = "'.$redirect_url.'"</script>';
                 exit;
@@ -448,7 +466,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
 					$searchbardata['created_on'] = date('Y-m-d');	
 				}
 				$VRCalendarEntity->saveSearchbar($searchbardata);
-				$redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-add-search-bar&vrc_msg=".__('Search Bar added successfully', VRCALENDAR_PLUGIN_TEXT_DOMAIN)."");
+				$_SESSION['vrc_msg']="Search Bar added successfully";
+				$redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-add-search-bar");
                 echo '<script>window.location = "'.$redirect_url.'"</script>';
                 exit;
 			    }			
@@ -458,7 +477,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
 				if(isset($_POST['search_bar_save'])){
 				$searchbardata = $_POST;					
 				$VRCalendarEntity->saveSearchbar($searchbardata);
-				$redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-add-search-bar&vrc_msg=".__('Search Bar updated successfully', VRCALENDAR_PLUGIN_TEXT_DOMAIN)."");
+				$_SESSION['vrc_msg']='Search Bar updated successfully';
+				$redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-add-search-bar");
                 echo '<script>window.location = "'.$redirect_url.'"</script>';
                 exit;
 			    }	
@@ -472,7 +492,8 @@ class VRCalendarFrontAdmin extends VRCSingleton {
 				if(isset($_GET['searchbar_id'])) { 
 				$searchbar_id = $_GET['searchbar_id'];
 				$VRCalendarEntity->deleteSearchbar($searchbar_id);
-				$redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-add-search-bar&vrc_msg=".__('Search Bar deleted successfully', VRCALENDAR_PLUGIN_TEXT_DOMAIN)."");
+				$_SESSION['vrc_msg']='';
+				$redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-add-search-bar");
                 echo '<script>window.location = "'.$redirect_url.'"</script>';
                 exit;
 			    }
@@ -512,7 +533,7 @@ class VRCalendarFrontAdmin extends VRCSingleton {
     public function enqueueScripts()
     {
         wp_enqueue_media();
-	wp_enqueue_script( 'wp-color-picker');
+		wp_enqueue_script( 'wp-color-picker');
         wp_enqueue_script('jquery-ui-datepicker');
         wp_enqueue_script( VRCALENDAR_PLUGIN_SLUG . '-plugin-script', VRCALENDAR_PLUGIN_URL.'/assets/js/admin.js', array( 'jquery' ), VRCalendar::VERSION );
     }

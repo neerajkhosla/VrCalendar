@@ -1060,9 +1060,9 @@ class VRCalendarEntity extends VRCSingleton {
 						'ismvofferenabled' => $ismvofferenabled,
 						'nightsper' =>   $nightsarray,
 						'default' => $default_price	,
-						'fridaynights' => number_format($cal_data->friday_night_discount, 2, '.', ''),
-						'saturdaynights' => number_format($cal_data->saturday_night_discount, 2, '.', ''),
-						'sundaynights' => number_format($cal_data->sunday_night_discount, 2, '.', ''),
+						'fridaynights' => number_format((float)$cal_data->friday_night_discount, 2, '.', ''),
+						'saturdaynights' => number_format((float)$cal_data->saturday_night_discount, 2, '.', ''),
+						'sundaynights' => number_format((float)$cal_data->sunday_night_discount, 2, '.', ''),
 						'prices' => $prices
 					);
 					
