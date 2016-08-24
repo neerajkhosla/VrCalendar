@@ -35,8 +35,7 @@ if($data['booking_price']['deposit_enable_by_date'] == 1)
 /* Add calendar style */
 
 
-
-
+//print_r($_REQUEST['cid']);
 /*$getDepositPaymentPayByLink = VRCalendarEntity::getDepositPaymentPayByLink();
 
 echo "<pre>";

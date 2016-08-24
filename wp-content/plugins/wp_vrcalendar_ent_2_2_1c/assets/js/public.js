@@ -187,8 +187,8 @@ jQuery(document).ready(function ($){
             var cid = jQuery(this).attr('data-calendar-id');
             var bdate = jQuery(this).attr('data-booking-date');		
             var redirect_url = booking_url.replace('{cid}', cid);
-            redirect_url = redirect_url.replace('{bdate}', bdate);		
-            window.location = redirect_url;
+           // redirect_url = redirect_url.replace('{bdate}', bdate);
+            window.open(redirect_url,'_blank');
         }
     });
     $('#booking_checkin_date').datepicker({

@@ -700,7 +700,7 @@ class VRCalendar extends VRCSingleton {
         wp_enqueue_script( VRCALENDAR_PLUGIN_SLUG . '-plugin-script', VRCALENDAR_PLUGIN_URL.'assets/js/public.js', array( 'jquery', 'jquery-ui-datepicker' ), self::VERSION );       
         $vrc_data = array(
             'ajax_url'=>admin_url('admin-ajax.php'),
-            'booking_url' => add_query_arg(array('cid'=>'{cid}', 'bdate'=>'{bdate}'), get_permalink($VRCalendarSettings->getSettings('booking_page')) ),
+            'booking_url' => add_query_arg(array('cid'=>'{cid}'), get_permalink($VRCalendarSettings->getSettings('booking_page')) ),
             'thankyou_url' => add_query_arg(array('bid'=>'{bid}'), get_permalink($VRCalendarSettings->getSettings('thank_you_page')) )
         );
         wp_localize_script( VRCALENDAR_PLUGIN_SLUG . '-plugin-script', 'vrc_data', $vrc_data );

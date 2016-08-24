@@ -24,7 +24,10 @@ class VRCalendarTableFront extends WP_List_Table_CS
                 break;
             case 'calendar_shortcode':
               //  echo  '[vrcalendar id="'.$cal['calendar_id'].'" /]';
-               echo '<a class="btn" data-popup-open="popup-'.$cal['calendar_id'].'" href="#">Get Embed Code</a><div class="popup" data-popup="popup-'.$cal['calendar_id'].'"><div class="popup-inner"><h2>Embed Code for '.$cal['calendar_id'].'   </h2><p><a data-popup-close="popup-'.$cal['calendar_id'].'" href="#">Close</a></p><a class="popup-close" data-popup-close="popup-'.$cal['calendar_id'].'" href="#">x</a></div></div>';
+			  $api_key= base64_encode($cal['calendar_id']."--".uniqid());
+			  $script= htmlspecialchars("<script>window.options = { api_key:'".$api_key."',height:'540px',width:'1000px' };var s = document.createElement('script');s.src = \"http://vrcalendarsync.local/embed.js\";s.async = true; document.body.appendChild(s);</script>");
+			  $calid=$cal["calendar_id"];
+               echo '<a class="btn" data-popup-open="popup-'.$cal['calendar_id'].'" href="#">Get Embed Code</a><div class="popup" data-popup="popup-'.$cal['calendar_id'].'"><div class="popup-inner"><h4 class="embed-heading">Embed Code for '.$cal['calendar_name'].'</h4><p class="embed-section" ><span class="response" style="display:none;"></span><code id="'.$cal['calendar_id'].'">'.$script.'</code><button type="button" onclick=copyToClipboard("#'.$calid.'")>copy to clipboard</button></p><a class="popup-close" data-popup-close="popup-'.$cal['calendar_id'].'" href="#">x</a></div></div>';
                 break;
             case 'booking_shortcode':
                 echo  '[vrcalendar_booking_btn id="'.$cal['calendar_id'].'" class=""]'.__('Book Now', VRCALENDAR_PLUGIN_TEXT_DOMAIN).'[/vrcalendar_booking_btn]';
@@ -265,5 +268,17 @@ class VRCalendarTableFront extends WP_List_Table_CS
             e.preventDefault();
         });
     });
+	</script>
+	<script>
+	function copyToClipboard(element) {
+	
+	  var $temp = jQuery("<input>");
+	  jQuery("body").append($temp);
+	  $temp.val(jQuery(element).text()).select();
+	  document.execCommand("copy");
+	  $temp.remove();
+	  jQuery(".response").show();
+	  jQuery(".response").html('Copied').delay(2000).fadeOut('fast');
+	}
 	</script>
 </div>

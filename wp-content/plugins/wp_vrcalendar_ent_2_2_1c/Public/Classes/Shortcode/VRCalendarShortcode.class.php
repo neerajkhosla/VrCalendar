@@ -17,8 +17,10 @@ class VRCalendarShortcode extends VRCShortcode {
 
         $VRCalendarEntity = VRCalendarEntity::getInstance();
         $VRCalendarSettings = VRCalendarSettings::getInstance();
-        
-        $cal_data = $VRCalendarEntity->getCalendar( $this->atts['id'] );
+		//die($this->atts['id']);
+        $VR_Array = explode("--",base64_decode($this->atts['id']));
+		$calid=isset($VR_Array[0])?$VR_Array[0]:0; // custom code 24-08-2016
+        $cal_data = $VRCalendarEntity->getCalendar($calid);
 
          $pro_one_day_book = $cal_data->pro_one_day_book;
             $hourly_booking = $cal_data->hourly_booking;
@@ -778,7 +780,8 @@ E;
 
             $calendar.= '<td class="calendar-day">';
             /* add in the day number */
-            $calendar.= '<div class="day-number '.$booked_class.'" data-tooltip="'.$booking_price.'" data-calendar-id="'.$cal_data->calendar_id.'" data-booking-date="'.$cDate.'" >'.$list_day.'</div>';
+			/*Custom code 28-04-2016*/
+            $calendar.= '<div class="day-number '.$booked_class.'" data-tooltip="'.$booking_price.'" data-calendar-id="'.base64_encode($cal_data->calendar_id.'+'.$cDate).'" data-booking-date="'.$cDate.'" >'.$list_day.'</div>';
 
             $calendar.= '</td>';
             if($running_day == 6):
