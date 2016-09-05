@@ -28,14 +28,21 @@ class VRBookingShortcode extends VRCShortcode {
 
         $VRCalendarBooking = VRCalendarBooking::getInstance();
         $VRCalendarEntity = VRCalendarEntity::getInstance();
+		
 		/**custom code 24-08-2016**/	
-        $get_base64  = $_GET['cid'];	
-		$cal_Details = base64_decode($get_base64);
-		//die($cal_Details);
-		$cal_array=explode("+",$cal_Details);		
-		$cal_id=isset($cal_array[0]) ? $cal_array[0] : 0; // calendar id
-		$checkin= isset($cal_array[1]) && $cal_array[1]!="" ? $cal_array[1]:date('Y-m-d'); // booking date
-        //  $checkin = (isset($_GET['bdate'])) ? $_GET['bdate'] : date('Y-m-d');
+       	if(!isset($_REQUEST['sbcindate'])){
+			$get_base64  = $_GET['cid'];
+			$cal_Details = base64_decode($get_base64);
+			//die($cal_Details);
+			$cal_array=explode("+",$cal_Details);		
+			$cal_id=isset($cal_array[0]) ? $cal_array[0] : 0; // calendar id
+			$checkin= isset($cal_array[1]) && $cal_array[1]!="" ? $cal_array[1]:date('Y-m-d'); // booking date
+		}
+		else{
+			$cal_id = $_GET['cid'];	
+			$checkin = (isset($_GET['bdate'])) ? $_GET['bdate'] : date('Y-m-d');
+		}
+        
         $cal_data = $VRCalendarEntity->getCalendar( $cal_id );
 
         if($cal_data->calendar_enable_booking != 'yes')

@@ -1,9 +1,10 @@
-<div class="wrap vrcal-content-wrapper">
-	<h2><?php _e('Add Search Bar', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></h2>
+<div class="wrap vrcal-content-wrapper cont-fuild vr-dashboard vr-search-bar vr-search-bar-edit edit_dashboard">
+	
 	<div class="left-panel-vr-plg">
 		<?php include('sidebar.php'); ?>
 	</div>
 	<div class="right-panel-vr-plg">
+	<h2><?php _e('Add Search Bar', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></h2>
     <div class="tabs-wrapper">
         <h2 class="nav-tab-wrapper">
             <a class='nav-tab nav-tab-active' href='#general-options'><?php _e('General', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></a>
@@ -40,7 +41,7 @@
 									if($k == $searchbardata->result_page)
 										$checked = 'checked="checked"';
 									?>							
-								<label title='<?php echo $v; ?>'><input type="radio" name="result_page" value="<?php echo $k; ?>" <?php echo $checked; ?>   />  <span><?php echo $v; ?></span></label> &nbsp;
+								<label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="result_page" value="<?php echo $k; ?>" <?php echo $checked; ?>   /> <i></i>  <span><?php echo $v; ?></span></label> &nbsp;
 							<?php endforeach; ?>
 							</td>
 						</tr>
@@ -54,7 +55,7 @@
 									if($k == $searchbardata->use_price_filter)
 										$checked = 'checked="checked"';
 									?>							
-								<label title='<?php echo $v; ?>'><input type="radio" name="use_price_filter" value="<?php echo $k; ?>" <?php echo $checked; ?>   />  <span><?php echo $v; ?></span></label> &nbsp;
+								<label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="use_price_filter" value="<?php echo $k; ?>" <?php echo $checked; ?>   /><i></i>  <span><?php echo $v; ?></span></label> &nbsp;
 							<?php endforeach; ?>
 							</td>
 						</tr>
@@ -68,7 +69,7 @@
 									if($k == $searchbardata->show_image)
 										$checked = 'checked="checked"';
 									?>							
-								<label title='<?php echo $v; ?>'><input type="radio" name="show_image" value="<?php echo $k; ?>" <?php echo $checked; ?>   />  <span><?php echo $v; ?></span></label> &nbsp;
+								<label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="show_image" value="<?php echo $k; ?>" <?php echo $checked; ?>   /><i></i>  <span><?php echo $v; ?></span></label> &nbsp;
 							<?php endforeach; ?>
 							</td>
 						</tr>
@@ -82,7 +83,7 @@
 									if($k == $searchbardata->show_address)
 										$checked = 'checked="checked"';
 									?>							
-								<label title='<?php echo $v; ?>'><input type="radio" name="show_address" value="<?php echo $k; ?>" <?php echo $checked; ?>   />  <span><?php echo $v; ?></span></label> &nbsp;
+								<label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="show_address" value="<?php echo $k; ?>" <?php echo $checked; ?>   /> <i></i> <span><?php echo $v; ?></span></label> &nbsp;
 							<?php endforeach; ?>
 							</td>
 						</tr>
@@ -98,14 +99,15 @@
 							
 						</tr>
 						<tr valign="top">
-							<th colspan ="2">
-								<?php _e('All', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> <input type = "checkbox" id="allcal" name ="allcal">
-								</th>
+                            
+							<th>
+								<?php _e('All', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></th> 
+								<td><label class="custom_checkbox"><input type = "checkbox" id="allcal" name ="allcal"> <i></i> </label></td>
 							
 						</tr>
 					</tbody>
 				    </table> 
-					<div class ="searchbar_cals" style="margin-left:10px;">
+					<div class ="searchbar_cals">
 					<table class="form-table">
 					<tbody>
 					   <?php foreach($cals as $cal){                            
@@ -121,7 +123,7 @@
 								}							
                                 $checked =(in_array($cal->calendar_id, $precals))?'checked="checked"':'';
 							 
-								echo '<input type = "checkbox" id= "'.$cal->calendar_id.'" name ="calendars['.$cal->calendar_id.']" '. $checked.'>';
+								echo '<label class="custom_checkbox"><input type = "checkbox" id= "'.$cal->calendar_id.'" name ="calendars['.$cal->calendar_id.']" '. $checked.'><i></i></label>' ;
 							   ?>
 							</td>
 						</tr>
@@ -174,6 +176,7 @@
 				    <input type="hidden" name="created_on" value="<?php echo $searchbardata->created_on; ?>" />
 					<input type="hidden" name="author" value="<?php echo $searchbardata->author; ?>" />
 					<input type="hidden" name="searchbar_id" id="searchbar_id" value="<?php echo $searchbardata->id; ?>" />
+                                        <input type="hidden" name="vrc_cmd" id="vrc_cmd" value="VRCalendarFrontAdmin:addSearchbar" />
                     <input type="submit" value="<?php _e('Update', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>" name = "search_bar_save" class="button button-primary">
                 </div>
             </form>

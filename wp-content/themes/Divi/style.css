@@ -15573,3 +15573,11 @@ span.comment_date {
 		margin-bottom: 16% !important;
 	}
 }
+#main-content .container::before {
+  background-color: transparent;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}

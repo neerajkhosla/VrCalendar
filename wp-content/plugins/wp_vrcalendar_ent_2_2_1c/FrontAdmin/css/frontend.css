@@ -197,7 +197,7 @@ body, button, input, select, textarea{font-family: 'Open Sans', sans-serif;}
 .vr-dashboard table.wp-list-table tr td .row-actions > span { 
   font-size: 0 !important;
 } 
-.vr-dashboard .dashboard-icons:hover, .vr-dashboard .dashboard-icons:focus{background-color: #0F66B7;color: #FFF;} 
+.vr-dashboard .dashboard-icons:hover, .vr-dashboard .dashboard-icons:focus{background-color: #0F66B7;color: #FFF !important;} 
 
 .vr-dashboard table.wp-list-table tr td button.toggle-row{display: none;}
  .edit_dashboard .nav-tab-wrapper {
@@ -332,7 +332,7 @@ body, button, input, select, textarea {
 } 
 
 .next-page, .last-page, .first-page, .prev-page{  background-color: rgb(142, 191, 68);
-  border-radius: 3px;
+  border-radius: 0px;
   color: #fff;
   height: 30px;
   padding: 7px 5px;}
@@ -813,6 +813,8 @@ h1, h2, h3, h4, h5, h6, .et_quote_content blockquote p, .et_pb_slide_description
   float: left;
   margin-bottom: 12px !important;
   padding: 10px;
+  width: 100%;
+   min-height: 121px;
 }
 .popup-inner button {
   background: #90c046 none repeat scroll 0 0;
@@ -838,3 +840,70 @@ h1, h2, h3, h4, h5, h6, .et_quote_content blockquote p, .et_pb_slide_description
 .embed-section {
   position: relative;
 }
+.button.action:disabled {
+  opacity: 0.3 !important;
+}
+
+#custom-price th {
+  width: 20% !important;
+}
+
+.heading_col {
+  font-size: 22px;
+  margin-top: 0;
+} 
+
+.right-panel-vr-plg > h2 {
+  margin-bottom: 12px;
+} 
+.vr-search-bar-edit input[type="submit"],.vr-search-bar input[type="submit"] {
+  background: #0f66b7 none repeat scroll 0 0;
+  float: right;
+  margin: 5px 15px 15px 17px;
+}
+.button.button-small.wp-picker-default {
+  border: medium none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bolder;
+}
+#the-list a {
+  color: #0f66b7;
+}
+.vr-search-bar table th,.vr-search-bar table td {
+  padding: 0.857em 0.587em;
+  text-align: left !important;
+  width: 100px !important;
+  max-width:100% !important;
+}
+
+
+ .vrc .searchbar input[type="submit"] {
+  
+  border: none!important; 
+  
+} 
+
+#main-content.search-bar-result .container, #main-content.payment-page .container, #main-content.booking-page .container {
+  padding-top: 2px;
+  width: 98%;
+} 
+
+body .searchbar_cals table.form-table tr th,  body .searchbar_cals table.form-table tr td {
+  font-weight: normal;
+  font-size: 13px;
+ 
+  padding-bottom: 3px!important; 
+}  
+ 
+body .vrc .searchbar input[type="submit"], body .submit-search{border:none!important;}
+body .vrc .searchbar .search-hdr{display: none!important;} 
+
+body .search-bar-result{}
+
+body .vrc .searchbar {padding-top: 15px!important;} 
+body .search-bar-result .main_title, body .payment-page .main_title, body .booking-page .main_title {display: none!important;}  
+
+body .search-bar-result .vrc .searchbar .col-sm-3, body .search-bar-result .vrc .searchbar .col-sm-4 {
+  padding-right: 15px;
+}  

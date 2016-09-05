@@ -1,10 +1,11 @@
-<div class="wrap vrcal-content-wrapper">
+<div class="wrap vrcal-content-wrapper cont-fuild vr-dashboard vr-search-bar edit_dashboard">
 
-    <h2><?php _e('Add Search Bar', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></h2>
+    
 	<div class="left-panel-vr-plg">
 			<?php include('sidebar.php'); ?>
 	</div>
 	<div class="right-panel-vr-plg">
+	<h2><?php _e('Add Search Bar', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></h2>
     <div class="tabs-wrapper">
         <h2 class="nav-tab-wrapper">
             <a class='nav-tab nav-tab-active' href='#general-options'><?php _e('General', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?></a>
@@ -15,6 +16,7 @@
                 <div id="general-options" class="tab-content tab-content-active">
 				    <table class="form-table">
 					<tbody>
+						<tr valign="top">
 						<tr valign="top">
 							<th>
 								<?php _e('Search Bar Name', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
@@ -41,7 +43,7 @@
 									if($k == 'result')
 										$checked = 'checked="checked"';
 									?>								
-								<label title='<?php echo $v; ?>'><input type="radio" name="result_page" value="<?php echo $k; ?>"  <?php echo $checked; ?> /> <span><?php echo $v; ?></span></label> &nbsp;
+								<label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="result_page" value="<?php echo $k; ?>"  <?php echo $checked; ?> /> <i></i><span><?php echo $v; ?></span></label> &nbsp;
 							<?php endforeach; ?>
 							</td>
 						</tr>
@@ -55,7 +57,7 @@
 									if($k == 'yes')
 										$checked = 'checked="checked"';
 									?>								
-								<label title='<?php echo $v; ?>'><input type="radio" name="use_price_filter" value="<?php echo $k; ?>"  <?php echo $checked; ?> /> <span><?php echo $v; ?></span></label> &nbsp;
+								<label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="use_price_filter" value="<?php echo $k; ?>"  <?php echo $checked; ?> /> <i></i> <span><?php echo $v; ?></span></label> &nbsp;
 							<?php endforeach; ?>
 							</td>
 						</tr>
@@ -69,7 +71,7 @@
 									if($k == 'yes')
 										$checked = 'checked="checked"';
 									?>								
-								<label title='<?php echo $v; ?>'><input type="radio" name="show_image" value="<?php echo $k; ?>"  <?php echo $checked; ?> /> <span><?php echo $v; ?></span></label> &nbsp;
+								<label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="show_image" value="<?php echo $k; ?>"  <?php echo $checked; ?> /> <i></i> <span><?php echo $v; ?></span></label> &nbsp;
 							<?php endforeach; ?>
 							</td>
 						</tr>
@@ -83,7 +85,7 @@
 									if($k == 'yes')
 										$checked = 'checked="checked"';
 									?>								
-								<label title='<?php echo $v; ?>'><input type="radio" name="show_address" value="<?php echo $k; ?>"  <?php echo $checked; ?> /> <span><?php echo $v; ?></span></label> &nbsp;
+								<label class="custom_checkbox" title='<?php echo $v; ?>'><input type="radio" name="show_address" value="<?php echo $k; ?>"  <?php echo $checked; ?> /><i></i> <span><?php echo $v; ?></span></label> &nbsp;
 							<?php endforeach; ?>
 							</td>
 						</tr>
@@ -100,7 +102,7 @@
 						</tr>
 						<tr valign="top">
 							<th colspan ="2">
-								<?php _e('All', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?> <input type = "checkbox" id="allcal" name ="allcal">
+								<?php _e('All', VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?><label class="custom_checkbox"> <input type = "checkbox" id="allcal" name ="allcal"> <i></i> </label>
 								</th>
 							
 						</tr>
@@ -112,12 +114,8 @@
 					   <?php foreach($cals as $cal){                            
 							$calname =($cal->calendar_name != '') ? $cal->calendar_name : __("No Name", VRCALENDAR_PLUGIN_TEXT_DOMAIN); ?>
 						<tr valign="top">
-							<th>
-							<?php echo $calname; ?>
-							</th>
-							<td>
-								<?php echo '<input type = "checkbox" id= "'.$cal->calendar_id.'" name ="calendars['.$cal->calendar_id.']">'; ?>
-							</td>
+							<th><?php echo $calname; ?></th>
+							<td><?php echo '<label class="custom_checkbox"><input type ="checkbox" id="'.$cal->calendar_id.'" name ="calendars['.$cal->calendar_id.']"><i></i></label>'; ?></td>
 						</tr>
 						<?php }?>
 					</tbody>

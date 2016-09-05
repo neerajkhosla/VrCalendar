@@ -15,8 +15,14 @@ class VRCalendarSearchbarShortcode extends VRCShortcode {
             return __('Searchbar id is missing', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
 	
         $text = (trim(($content))!='')? $content:__('Search Properties', VRCALENDAR_PLUGIN_TEXT_DOMAIN);
+		/**custom code **/
         $VRCalendarEntity = VRCalendarEntity::getInstance();
+		$base64value=base64_decode($this->atts['id']);
+		$baseArray=explode('--',$base64value);
+		$this->atts['id'] = isset($baseArray[0])?$baseArray[0]:0;
 		$data = $VRCalendarEntity->getSearchbar($this->atts['id']); 
+		/**custom code **/
+		
         if(empty($data->calendars))
 			return;
 

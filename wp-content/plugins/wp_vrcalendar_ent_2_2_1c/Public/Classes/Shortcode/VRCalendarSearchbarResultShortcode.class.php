@@ -26,8 +26,10 @@ class VRCalendarSearchbarResultShortcode extends VRCShortcode {
             if($data->use_price_filter == 'yes'){
                 $divcolumnclass =  'col-sm-4';
 			}
-			$outputstyle =  '<style>
-					.vrc .searchbar input {
+			$outputstyle =  '
+            <link href="'.plugins_url("/wp_vrcalendar_ent_2_2_1c/FrontAdmin/css/frontend.css").'" rel="stylesheet"/> 
+            <style>
+					.vrc .searchbar input { 
 						font-size:13px;
 					}
 					.col-sm-4, .col-sm-3{min-height:50px;}
@@ -64,7 +66,7 @@ class VRCalendarSearchbarResultShortcode extends VRCShortcode {
 						font-size:14px;
 					}
 					.ui-slider .ui-slider-handle{z-index:1 !important;}
-				</style>';
+				</style>  ';
             $output  = '<form method = "POST" ><div class ="col-sm-12 searchbar" style="background-color:'.$data->color_options['search_box_background_color'].';color:'.$data->color_options['search_font_color'].';"><div class="col-sm-12 search-hdr">'.__('Search Properties', VRCALENDAR_PLUGIN_TEXT_DOMAIN).' </div><div class="'.$divcolumnclass.'"><input type="text" placeholder = "'.__('Check in Date', VRCALENDAR_PLUGIN_TEXT_DOMAIN).'" name="checkindate" id="searchbar_checkindate" value= "'.$checkindate.'" class ="vrc-calendar-searchbar"></div><div class="'.$divcolumnclass.'"><input type="text"  placeholder = "'.__('Check Out Date', VRCALENDAR_PLUGIN_TEXT_DOMAIN).'" name="checkoutdate" id="searchbar_checkoutdate" value= "'.$checkoutdate.'" class="vrc-calendar-searchbar"></div>';
 			$output .= '<div class="'.$divcolumnclass.'"><select name="totalguests"><option value="">'.__('# of Guests', VRCALENDAR_PLUGIN_TEXT_DOMAIN).'</option>';
 			//foreach(range(1,15) as $v){

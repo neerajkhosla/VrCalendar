@@ -19,6 +19,7 @@
     }
 	.rowhide,.spanhide{display:none;}
 </style>
+<link href="<?php echo  plugins_url("/wp_vrcalendar_ent_2_2_1c/FrontAdmin/css/frontend.css"); ?>" rel="stylesheet"/> 
 <?php
 /* Add calendar style */
 

@@ -1,0 +1,2557 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: VR Calendar Enterprise\n"
+"POT-Creation-Date: 2016-04-08 12:05+0530\n"
+"PO-Revision-Date: 2016-04-08 12:03+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: vrcalendar.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: Admin/Classes/VRCalendarAdmin.class.php:49
+msgid "Something went wrong!"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:54
+msgid "Calendar Synchronized successfully"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:73
+msgid "Calendar deleted successfully"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:86
+#: Admin/Classes/VRCalendarAdmin.class.php:315
+msgid "Only 10 calendars are allowed"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:96
+msgid "Calendar cloned successfully"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:121
+msgid "Calendar updated successfully"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:125
+msgid "Calendar created successfully"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:130
+msgid "Calendar duplicated successfully"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:205
+msgid "Settings saved successfully"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:237
+msgid "Booking removed successfully"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:249
+msgid "Booking approved successfully"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:285
+msgid "Invalid calendar!"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:295
+msgid "Only 100 calendars are allowed"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:305
+msgid "Only 500 calendars are allowed"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:331
+#: Admin/Views/Part/Settings/General.php:73
+msgid "Search Bar Result Page"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:332
+msgid "Same Page"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:335
+#: Admin/Classes/VRCalendarAdmin.class.php:339
+#: Admin/Classes/VRCalendarAdmin.class.php:343 Admin/Views/AddCalendar.php:18
+#: Admin/Views/AddCalendar.php:22 Admin/Views/AddCalendar.php:26
+#: Admin/Views/AddCalendar.php:41 Admin/Views/AddCalendar.php:45
+#: Admin/Views/Settings.php:16 Admin/Views/Settings.php:21
+msgid "Yes"
+msgstr ""
+
+#: Admin/Classes/VRCalendarAdmin.class.php:336
+#: Admin/Classes/VRCalendarAdmin.class.php:340
+#: Admin/Classes/VRCalendarAdmin.class.php:344 Admin/Views/AddCalendar.php:19
+#: Admin/Views/AddCalendar.php:23 Admin/Views/AddCalendar.php:27
+#: Admin/Views/AddCalendar.php:42 Admin/Views/AddCalendar.php:46
+#: Admin/Views/Settings.php:17 Admin/Views/Settings.php:22
+msgid "No"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:13
+msgid "Small"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:14
+msgid "Medium"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:15
+msgid "Large"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:35
+msgid "PayPal"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:36
+msgid "Stripe"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:37
+msgid "Both"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:38
+msgid "None"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:50
+msgid "Add Calendar"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:53 Admin/Views/AddSearchbar.php:5
+#: Admin/Views/Settings.php:151 Admin/Views/UpdateSearchbar.php:5
+msgid "General"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:54
+msgid "Booking Options"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:55 Admin/Views/AddSearchbar.php:6
+#: Admin/Views/UpdateSearchbar.php:6
+msgid "Color Options"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:56
+msgid "Email Template"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:78 Admin/Views/AddSearchbar.php:155
+#: Admin/Views/Settings.php:160
+msgid "Save"
+msgstr ""
+
+#: Admin/Views/AddCalendar.php:85 Admin/Views/Settings.php:167
+msgid "Please check your license key"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:2 Admin/Views/UpdateSearchbar.php:2
+msgid "Add Search Bar"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:15 Admin/Views/UpdateSearchbar.php:15
+msgid "Search Bar Name"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:23 Admin/Views/UpdateSearchbar.php:23
+msgid "Display Search Results on"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:37 Admin/Views/UpdateSearchbar.php:37
+msgid "Use Price Filter"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:51 Admin/Views/UpdateSearchbar.php:51
+msgid "Show Image"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:65 Admin/Views/UpdateSearchbar.php:65
+msgid "Show Address"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:84 Admin/Views/UpdateSearchbar.php:84
+msgid "Search should reference which calendars?"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:90 Admin/Views/UpdateSearchbar.php:90
+msgid "All"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:120 Admin/Views/UpdateSearchbar.php:127
+msgid "Search Button Color"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:128 Admin/Views/UpdateSearchbar.php:135
+msgid "Search Button Font Color"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:136 Admin/Views/UpdateSearchbar.php:143
+msgid "Search Font Color"
+msgstr ""
+
+#: Admin/Views/AddSearchbar.php:144 Admin/Views/UpdateSearchbar.php:151
+msgid "Search Box Background Color"
+msgstr ""
+
+#: Admin/Views/Bookings.php:4
+msgid "Missing calendar id"
+msgstr ""
+
+#: Admin/Views/Bookings.php:24
+msgid "Bookings for Calendar"
+msgstr ""
+
+#: Admin/Views/Bookings.php:223 Admin/Views/ListSearchbar.php:20
+#: Admin/Views/Part/Dashboard/MyCalendars.php:60
+msgid "Delete"
+msgstr ""
+
+#: Admin/Views/Bookings.php:227
+msgid "Approve"
+msgstr ""
+
+#: Admin/Views/Bookings.php:258 Admin/Views/Bookings.php:280
+#: Admin/Views/Part/AddCalendar/General.php:23
+#: Admin/Views/Part/AddCalendar/General.php:26
+#: Admin/Views/Part/AddCalendar/General.php:59
+#: Admin/Views/Part/AddCalendar/General.php:307
+msgid "Name"
+msgstr ""
+
+#: Admin/Views/Bookings.php:259 Admin/Views/Bookings.php:281
+msgid "Source"
+msgstr ""
+
+#: Admin/Views/Bookings.php:260 Admin/Views/Bookings.php:282
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:38
+#: Public/Views/Shortcodes/Booking.view.php:215
+#: Public/Views/Shortcodes/Booking.view.php:216
+msgid "Email"
+msgstr ""
+
+#: Admin/Views/Bookings.php:261 Admin/Views/Bookings.php:283
+msgid "Phone No"
+msgstr ""
+
+#: Admin/Views/Bookings.php:262 Admin/Views/Bookings.php:284
+msgid "Booking From"
+msgstr ""
+
+#: Admin/Views/Bookings.php:263 Admin/Views/Bookings.php:285
+msgid "Booking To"
+msgstr ""
+
+#: Admin/Views/Bookings.php:264 Admin/Views/Bookings.php:286
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:35
+#: Public/Views/Shortcodes/Booking.view.php:192
+#: Public/Views/Shortcodes/Booking.view.php:193
+msgid "Guests"
+msgstr ""
+
+#: Admin/Views/Bookings.php:265 Admin/Views/Bookings.php:287
+msgid "Status"
+msgstr ""
+
+#: Admin/Views/Bookings.php:266 Admin/Views/Bookings.php:288
+msgid "Payment Status"
+msgstr ""
+
+#: Admin/Views/Bookings.php:267 Admin/Views/Bookings.php:289
+msgid "Booking Approved"
+msgstr ""
+
+#: Admin/Views/Bookings.php:268 Admin/Views/Bookings.php:290
+msgid "Booking Price ($)"
+msgstr ""
+
+#: Admin/Views/Bookings.php:270
+msgid "Deposit Amount ($)"
+msgstr ""
+
+#: Admin/Views/Bookings.php:271
+msgid "Remaining Amount ($)"
+msgstr ""
+
+#: Admin/Views/Bookings.php:273 Admin/Views/Bookings.php:291
+msgid "Booking Date"
+msgstr ""
+
+#: Admin/Views/Bookings.php:274 Admin/Views/Bookings.php:292
+#: Admin/Views/Part/AddCalendar/Booking.php:51
+msgid "Summary"
+msgstr ""
+
+#: Admin/Views/Bookings.php:367 Admin/Views/Part/Dashboard/MyCalendars.php:144
+msgid "Trash"
+msgstr ""
+
+#: Admin/Views/Dashboard.php:16
+msgid "Please activate your license!"
+msgstr ""
+
+#: Admin/Views/ListSearchbar.php:6
+msgid "My Search Bars"
+msgstr ""
+
+#: Admin/Views/ListSearchbar.php:6 Admin/Views/ListSearchbar.php:25
+#: Admin/Views/Part/Dashboard/MyCalendars.php:2
+msgid "Add new"
+msgstr ""
+
+#: Admin/Views/ListSearchbar.php:11
+#: Admin/Views/Part/Dashboard/MyCalendars.php:87
+msgid "Title"
+msgstr ""
+
+#: Admin/Views/ListSearchbar.php:11
+msgid "Shortcode"
+msgstr ""
+
+#: Admin/Views/ListSearchbar.php:11
+#: Admin/Views/Part/Dashboard/MyCalendars.php:90
+msgid "Author"
+msgstr ""
+
+#: Admin/Views/ListSearchbar.php:11
+msgid "Date added"
+msgstr ""
+
+#: Admin/Views/ListSearchbar.php:11
+msgid "Action"
+msgstr ""
+
+#: Admin/Views/ListSearchbar.php:20
+#: Admin/Views/Part/Dashboard/MyCalendars.php:59
+msgid "Edit"
+msgstr ""
+
+#: Admin/Views/ListSearchbar.php:25
+msgid "Sorry! No Searchbars exist. Please"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:5
+msgid "Enable Booking?"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:22
+msgid "Booking URL"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:25
+msgid "Booking Url"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:30
+msgid "Listing Image"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:32
+msgid "Add/Edit Image"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:43
+#: Admin/Views/Part/AddCalendar/Booking.php:46
+msgid "Listing Address"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:58
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:111
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:135
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:177
+msgid "Default Price Per Night"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:61
+msgid "Price Per Night"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:74
+msgid "Minimum Number Of Nights"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:83
+msgid "Number Of Night"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:94
+msgid "Offer Weekly Price?"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:111
+#: Admin/Views/Part/AddCalendar/Booking.php:114
+msgid "Weekly Price"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:119
+msgid "Offer Monthly Price?"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:136
+#: Admin/Views/Part/AddCalendar/Booking.php:139
+msgid "Monthly Price"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:144
+#: Admin/Views/Part/AddCalendar/Booking.php:147
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:121
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:178
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:145
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:187
+msgid "Cleaning Fee Per Stay"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:152
+#: Admin/Views/Part/AddCalendar/Booking.php:155
+msgid "Taxes Per Stay"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:160
+msgid "Max Guests No."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:163
+msgid "Maximum No. of Guests"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:168
+msgid "Charge Extra after Guests No."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:171
+msgid "Charge Extra after X guests"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:176
+#: Admin/Views/Part/AddCalendar/Booking.php:179
+msgid "Extra Charge Price"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:184
+#: Admin/Views/Part/AddCalendar/Booking.php:187
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:45
+#: Public/Views/Shortcodes/Booking.view.php:306
+msgid "Extra Fees"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:192
+msgid "Seasonal Pricing"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:195
+#: Admin/Views/Part/AddCalendar/General.php:34
+#: Admin/Views/Part/AddCalendar/General.php:93
+msgid "Add More"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:205
+#: Admin/Views/Part/AddCalendar/Booking.php:233
+#: Admin/Views/Part/AddCalendar/Booking.php:381
+msgid "Start Date"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:208
+#: Admin/Views/Part/AddCalendar/Booking.php:236
+#: Admin/Views/Part/AddCalendar/Booking.php:384
+msgid "End Date"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:211
+#: Admin/Views/Part/AddCalendar/Booking.php:239
+#: Admin/Views/Part/AddCalendar/Booking.php:387
+msgid "Price per night"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:214
+#: Admin/Views/Part/AddCalendar/Booking.php:242
+#: Admin/Views/Part/AddCalendar/Booking.php:390
+msgid "Price per week"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:217
+#: Admin/Views/Part/AddCalendar/Booking.php:245
+#: Admin/Views/Part/AddCalendar/Booking.php:393
+msgid "Price per month"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:220
+msgid "Minimum night"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:252
+#: Admin/Views/Part/AddCalendar/Booking.php:399
+#: Admin/Views/Part/AddCalendar/General.php:63
+#: Admin/Views/Part/AddCalendar/General.php:130
+#: Admin/Views/Part/AddCalendar/General.php:311
+msgid "Remove"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:282
+msgid "Payment Method"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:315
+msgid "Deposit Enable"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:324
+msgid "Deposit Percentage"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:333
+msgid "Balance due in"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:342
+msgid "Alert to Double Booking?"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Booking.php:359
+msgid "Requires Admin Approval?"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Color.php:5
+msgid "Default BG Color"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Color.php:13
+msgid "Default Font Color"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Color.php:21
+msgid "Calendar Border Color"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Color.php:29
+msgid "Week Header BG Color"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Color.php:37
+msgid "Week Header Font Color"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Color.php:45
+msgid "Available BG Color"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Color.php:53
+msgid "Available Font Color"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Color.php:61
+msgid "Unavailable BG Color"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/Color.php:69
+msgid "Unavailable Font Color"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:34
+msgid "Calendar Links"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:68
+#: Admin/Views/Part/AddCalendar/General.php:316
+msgid "Link"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:90
+msgid "Unavailable Dates"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:126
+msgid "From"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:128
+msgid "To"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:145
+msgid "Columns"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:161
+msgid "Rows"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:177
+msgid "Size"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:193
+msgid "Standard One Day Booking"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:204
+msgid "Hourly Booking"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:220
+msgid "Difference Between each Hours"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:230
+#: Admin/Views/Part/AddCalendar/General.php:234
+#: Admin/Views/Part/AddCalendar/General.php:239
+msgid "Hours"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:254
+msgid "Show Booking Form next to Calendar"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:273
+msgid "Booking Form Location"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:277
+msgid "Next to Calendar"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/General.php:278
+msgid "Below to Calendar"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:3
+msgid "Your booking is removed"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:4
+msgid ""
+"Hi %booking_user_fname% %booking_user_lname%,\n"
+"<p>Your Booking is removed by the admin, following were your booking details "
+"for reference:</p>\n"
+"<p>Booking ID: %booking_id%</p>\n"
+"<p>Booking Date: %booking_created_on%</p>\n"
+"<p>From: %booking_date_from%</p>\n"
+"<p>To: %booking_date_to%</p>\n"
+"<p>Guests: %booking_guests%</p>"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:13
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:19
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:117
+msgid "Your booking is approved"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:14
+msgid ""
+"Hi %booking_user_fname% %booking_user_lname%,\n"
+"<br/>\n"
+"Your Booking is confirmed."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:20
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:118
+msgid ""
+"Hi %booking_user_fname% %booking_user_lname%,\n"
+"<br/>\n"
+"Your Booking is confirmed, now you can make payment for your booking by "
+"following this link %booking_payment_link%."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:25
+msgid "Conflict aroused while synchronizing calendar: %calendar_name%"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:26
+msgid ""
+"Conflict aroused while synchronizing calendar: %calendar_name%<br>\n"
+" Conflicting Source: %booking_source%<br>\n"
+" Event Start Date: %booking_date_from%<br>\n"
+" Event End Date: %booking_date_to%<br>\n"
+" Event Summary: %booking_summary%<br>"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:33
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:44
+msgid "Your booking is received on %blogname% and is pending for approval"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:34
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:45
+msgid ""
+"Hi %booking_user_fname% %booking_user_lname%,\n"
+"<p>Your booking is received on %blogname% and is pending for approval</p>\n"
+"<p>Booking Details:</p>\n"
+"<p>Booking ID: %booking_id%</p>\n"
+"<p>From: %booking_date_from%</p>\n"
+"<p>To: %booking_date_to%</p>\n"
+"<p>Guests: %booking_guests%</p>\n"
+"<p>Summary: %booking_summary%</p>"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:54
+msgid "New booking on %blogname%"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:55
+msgid ""
+"Hi,\n"
+"<p>New booking is received on %blogname%</p>\n"
+"<p>Booking Details:</p>\n"
+"<p>Booking ID: %booking_id%</p>\n"
+"<p>From: %booking_date_from%</p>\n"
+"<p>To: %booking_date_to%</p>\n"
+"<p>Guests: %booking_guests%</p>\n"
+"<p>Summary: %booking_summary%</p>\n"
+"<p><a href=\"%booking_admin_link%\">Click here to view booking</a></p>\n"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:67
+msgid "Your booking is received on %blogname%"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:68
+msgid ""
+"Hi %booking_user_fname% %booking_user_lname%,\n"
+"<p>Your booking is received on %blogname%</p>\n"
+"<p>Booking Details:</p>\n"
+"<p>Booking ID: %booking_id%</p>\n"
+"<p>From: %booking_date_from%</p>\n"
+"<p>To: %booking_date_to%</p>\n"
+"<p>Guests: %booking_guests%</p>\n"
+"<p>Summary: %booking_summary%</p>"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:78
+msgid "New booking payment received on %blogname%"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:79
+msgid ""
+"Hi,\n"
+"<p>New booking payment is received on %blogname%</p>\n"
+"<p>Booking Details:</p>\n"
+"<p>Booking ID: %booking_id%</p>\n"
+"<p>Transaction ID: %booking_payment_data_txn_id%</p>\n"
+"<p>Amount: %booking_total_price%</p>\n"
+"<p>From: %booking_date_from%</p>\n"
+"<p>To: %booking_date_to%</p>\n"
+"<p>Guests: %booking_guests%</p>\n"
+"<p>Summary: %booking_summary%</p>\n"
+"<p><a href=\"%booking_admin_link%\">Click here to view booking</a></p>"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:92
+msgid "Your booking payment is received on %blogname%"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:93
+msgid ""
+"Hi %booking_user_fname% %booking_user_lname%,\n"
+"<p>Your booking payment is received on %blogname%</p>\n"
+"<p>Booking Details:</p>\n"
+"<p>Booking ID: %booking_id%</p>\n"
+"<p>Transaction ID: %booking_payment_data_txn_id%</p>\n"
+"<p>Amount : %booking_total_price%</p>\n"
+"<p>From: %booking_date_from%</p>\n"
+"<p>To: %booking_date_to%</p>\n"
+"<p>Guests: %booking_guests%</p>\n"
+"<p>Summary: %booking_summary%</p>"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:105
+msgid "Approval needed on new booking on %blogname%"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:106
+msgid ""
+"Hi,\n"
+"<p>New booking is received on %blogname% and is pending for approval</p>\n"
+"<p>Booking Details:</p>\n"
+"<p>Booking ID: %booking_id%</p>\n"
+"<p>From: %booking_date_from%</p>\n"
+"<p>To: %booking_date_to%</p>\n"
+"<p>Guests: %booking_guests%</p>\n"
+"<p>Summary: %booking_summary%</p>\n"
+"<p><a href=\"%booking_admin_link%\">Click here to view booking</a></p>"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:218
+msgid "1. Your booking is removed"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:225
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:276
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:319
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:363
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:411
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:466
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:522
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:573
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:627
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:683
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:738
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:788
+msgid "Subject :"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:233
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:284
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:327
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:371
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:419
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:474
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:530
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:581
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:635
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:691
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:746
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:796
+msgid "Body :"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:248
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:300
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:343
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:438
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:492
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:597
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:812
+msgid "%booking_user_fname% = Booking User First Name."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:250
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:302
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:345
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:440
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:494
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:599
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:814
+msgid "%booking_user_lname% = Booking User Last Name."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:252
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:442
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:498
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:547
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:603
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:653
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:711
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:764
+msgid "%booking_id% = System Generated Booking ID."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:254
+msgid "%booking_created_on% = Booking Creation Date."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:256
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:391
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:444
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:500
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:549
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:605
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:659
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:717
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:766
+msgid "%booking_date_from% = Booking From Date."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:258
+msgid "%booking_date_to% = Booking To Date"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:260
+msgid "%booking_guests% = Booked No Of Guests."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:269
+msgid "2. Your booking is approved"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:312
+msgid "3. Your booking is approved"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:347
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:816
+msgid ""
+"%booking_payment_link% = Booking link (if booking approved by admin, than "
+"system send payment link via email to user)."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:356
+msgid "4. Conflict aroused while synchronizing calendar"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:387
+msgid "%calendar_name% = Booking User First Name."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:389
+msgid "%booking_source% = Booking source type (website / Calendar Links)."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:393
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:446
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:502
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:551
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:607
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:661
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:719
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:768
+msgid "%booking_date_to% = Booking To Date."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:395
+msgid "%booking_summary% = Booking Summary (Note To Host)."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:404
+msgid "5. Approval needed on new booking on"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:436
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:496
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:545
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:601
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:651
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:709
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:762
+msgid "%blogname% = Booking received User Name."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:448
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:504
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:553
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:609
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:663
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:770
+msgid "%booking_guests% = Number Of Guests."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:450
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:506
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:555
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:611
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:665
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:723
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:772
+msgid "%booking_summary% = Booking Summary Note (Note To Host)."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:459
+msgid "6. Your booking is received on \" \" and is pending for approval"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:515
+msgid "7. New booking"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:557
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:667
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:774
+msgid "%booking_admin_link% = Manage Booking page link."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:566
+msgid "8. Your booking is received"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:620
+msgid "9. New booking payment received"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:655
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:713
+msgid "%booking_payment_data_txn_id% = Booking Payment Transaction ID."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:657
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:715
+msgid "%booking_total_price% = Booking Total Amount."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:676
+msgid "10. Your booking payment is received"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:705
+msgid "%booking_user_fname% =  Booking User First name."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:707
+msgid "%booking_user_lname% =  Booking User Last name."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:721
+msgid "%booking_guests% = Number of guests."
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:731
+msgid "11. Your booking is received on \" \" and is pending for approval"
+msgstr ""
+
+#: Admin/Views/Part/AddCalendar/emaltemplate.php:781
+msgid "12. If Deposit mode enable"
+msgstr ""
+
+#: Admin/Views/Part/Dashboard/MyCalendars.php:2
+msgid "My Calendars"
+msgstr ""
+
+#: Admin/Views/Part/Dashboard/MyCalendars.php:36
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:151
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:193
+msgid "Book Now"
+msgstr ""
+
+#: Admin/Views/Part/Dashboard/MyCalendars.php:61
+msgid "Clone"
+msgstr ""
+
+#: Admin/Views/Part/Dashboard/MyCalendars.php:62
+msgid "Bookings"
+msgstr ""
+
+#: Admin/Views/Part/Dashboard/MyCalendars.php:63
+msgid "Export"
+msgstr ""
+
+#: Admin/Views/Part/Dashboard/MyCalendars.php:64
+msgid "Sync"
+msgstr ""
+
+#: Admin/Views/Part/Dashboard/MyCalendars.php:88
+msgid "Calendar Shortcode"
+msgstr ""
+
+#: Admin/Views/Part/Dashboard/MyCalendars.php:89
+msgid "Booking Shortcode"
+msgstr ""
+
+#: Admin/Views/Part/Dashboard/MyCalendars.php:91
+msgid "Last Sync"
+msgstr ""
+
+#: Admin/Views/Part/Dashboard/MyCalendars.php:92
+msgid "Date"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:5
+#: Public/Classes/VRCalendar.class.php:721
+msgid "Booking Page"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:17
+msgid "Selected page must have [vrc_booking /] shortcode"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:22
+#: Public/Classes/VRCalendar.class.php:722
+msgid "Payment Page"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:34
+msgid "Selected page must have [vrc_payment /] shortcode"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:39
+msgid "Thank you Page"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:51
+msgid "Selected page must have [vrc_thankyou /] shortcode"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:56
+msgid "Payment Cancel Page"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:85
+msgid "Selected page must have [vrcalendar_searchbar_result /] shortcode"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:90
+msgid "PayPal Email ID"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:93
+msgid "PayPal Email"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:98
+msgid "Stripe API Key (Private Key)"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:101
+msgid "Stripe Api Key"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:106
+msgid "Payment Mode"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:122
+msgid "Auto Sync"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:138
+msgid "Show Attribution Link Below Calendar?"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:155
+msgid "Load jquery-ui.css?"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:172
+msgid "Currency"
+msgstr ""
+
+#: Admin/Views/Part/Settings/General.php:188
+msgid "Select a Language"
+msgstr ""
+
+#: Admin/Views/Settings.php:6
+msgid "Live"
+msgstr ""
+
+#: Admin/Views/Settings.php:7
+msgid "Sandbox"
+msgstr ""
+
+#: Admin/Views/Settings.php:10
+msgid "Disable"
+msgstr ""
+
+#: Admin/Views/Settings.php:11
+msgid "Hourly"
+msgstr ""
+
+#: Admin/Views/Settings.php:12
+msgid "Twice Daily"
+msgstr ""
+
+#: Admin/Views/Settings.php:13
+msgid "Daily"
+msgstr ""
+
+#: Admin/Views/Settings.php:26
+msgid "English"
+msgstr ""
+
+#: Admin/Views/Settings.php:27
+msgid "French"
+msgstr ""
+
+#: Admin/Views/Settings.php:28
+msgid "Spanish"
+msgstr ""
+
+#: Admin/Views/Settings.php:31
+msgid "Australian Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:32
+msgid "United Arab Emirates Dirham"
+msgstr ""
+
+#: Admin/Views/Settings.php:33
+msgid "Netherlands Antillean Gulden"
+msgstr ""
+
+#: Admin/Views/Settings.php:34
+msgid "Albanian Lek"
+msgstr ""
+
+#: Admin/Views/Settings.php:35
+msgid "Argentine Peso"
+msgstr ""
+
+#: Admin/Views/Settings.php:36
+msgid "Aruban Florin"
+msgstr ""
+
+#: Admin/Views/Settings.php:37
+msgid "Barbadian Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:38
+msgid "Burundian Franc"
+msgstr ""
+
+#: Admin/Views/Settings.php:39
+msgid "Brunei Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:40
+msgid "Brazilian Real"
+msgstr ""
+
+#: Admin/Views/Settings.php:41
+msgid "Botswana Pula"
+msgstr ""
+
+#: Admin/Views/Settings.php:42
+msgid "Bangladeshi Taka"
+msgstr ""
+
+#: Admin/Views/Settings.php:43
+msgid "Bermudian Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:44
+msgid "Bolivian Boliviano"
+msgstr ""
+
+#: Admin/Views/Settings.php:45
+msgid "Bahamian Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:46
+msgid "Belize Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:47
+msgid "Canadian Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:48
+msgid "Chilean Peso"
+msgstr ""
+
+#: Admin/Views/Settings.php:49
+msgid "Colombian Peso"
+msgstr ""
+
+#: Admin/Views/Settings.php:50
+msgid "Cape Verdean Escudo"
+msgstr ""
+
+#: Admin/Views/Settings.php:51
+msgid "Swiss Franc"
+msgstr ""
+
+#: Admin/Views/Settings.php:52
+msgid "Chinese Renminbi Yuan"
+msgstr ""
+
+#: Admin/Views/Settings.php:53
+msgid "Costa Rican Colon"
+msgstr ""
+
+#: Admin/Views/Settings.php:54
+msgid "Czech Koruna"
+msgstr ""
+
+#: Admin/Views/Settings.php:55
+msgid "Djiboutian Franc"
+msgstr ""
+
+#: Admin/Views/Settings.php:56
+msgid "Dominican Peso"
+msgstr ""
+
+#: Admin/Views/Settings.php:57
+msgid "Danish Krone"
+msgstr ""
+
+#: Admin/Views/Settings.php:58
+msgid "Algerian Dinar"
+msgstr ""
+
+#: Admin/Views/Settings.php:59
+msgid "Egyptian Pound"
+msgstr ""
+
+#: Admin/Views/Settings.php:60
+msgid "Euros"
+msgstr ""
+
+#: Admin/Views/Settings.php:61
+msgid "Ethiopian Birr"
+msgstr ""
+
+#: Admin/Views/Settings.php:62
+msgid "Falkland Islands Pound"
+msgstr ""
+
+#: Admin/Views/Settings.php:63
+msgid "Fijian Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:64
+msgid "British Pound"
+msgstr ""
+
+#: Admin/Views/Settings.php:65
+msgid "Gibraltar Pound"
+msgstr ""
+
+#: Admin/Views/Settings.php:66
+msgid "Guinean Franc"
+msgstr ""
+
+#: Admin/Views/Settings.php:67
+msgid "Guyanese Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:68
+msgid "Gambian Dalasi"
+msgstr ""
+
+#: Admin/Views/Settings.php:69
+msgid "Guatemalan Quetzal"
+msgstr ""
+
+#: Admin/Views/Settings.php:70
+msgid "Honduran Lempira"
+msgstr ""
+
+#: Admin/Views/Settings.php:71
+msgid "Haitian Gourde"
+msgstr ""
+
+#: Admin/Views/Settings.php:72
+msgid "Hong Kong Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:73
+msgid "Croatian Kuna"
+msgstr ""
+
+#: Admin/Views/Settings.php:74
+msgid "Hungarian Forint"
+msgstr ""
+
+#: Admin/Views/Settings.php:75
+msgid "Indonesian Rupiah"
+msgstr ""
+
+#: Admin/Views/Settings.php:76
+msgid "Indian Rupee"
+msgstr ""
+
+#: Admin/Views/Settings.php:77
+msgid "Israeli New Sheqel"
+msgstr ""
+
+#: Admin/Views/Settings.php:78
+msgid "Icelandic Krona"
+msgstr ""
+
+#: Admin/Views/Settings.php:79
+msgid "Jamaican Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:80
+msgid "Japanese Yen"
+msgstr ""
+
+#: Admin/Views/Settings.php:81
+msgid "Kenyan Shilling"
+msgstr ""
+
+#: Admin/Views/Settings.php:82
+msgid "Comorian Franc"
+msgstr ""
+
+#: Admin/Views/Settings.php:83
+msgid "Cayman Islands Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:84
+msgid "Cambodian Riel"
+msgstr ""
+
+#: Admin/Views/Settings.php:85
+msgid "South Korean Won"
+msgstr ""
+
+#: Admin/Views/Settings.php:86
+msgid "Kazakhstani Tenge"
+msgstr ""
+
+#: Admin/Views/Settings.php:87
+msgid "Lao Kip"
+msgstr ""
+
+#: Admin/Views/Settings.php:88
+msgid "Sri Lankan Rupee"
+msgstr ""
+
+#: Admin/Views/Settings.php:89
+msgid "Lebanese Pound"
+msgstr ""
+
+#: Admin/Views/Settings.php:90
+msgid "Liberian Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:91
+msgid "Moroccan Dirham"
+msgstr ""
+
+#: Admin/Views/Settings.php:92
+msgid "Mongolian Togrog"
+msgstr ""
+
+#: Admin/Views/Settings.php:93
+msgid "Mauritanian Ouguiya"
+msgstr ""
+
+#: Admin/Views/Settings.php:94
+msgid "Maldivian Rufiyaa"
+msgstr ""
+
+#: Admin/Views/Settings.php:95
+msgid "Mexican Peso"
+msgstr ""
+
+#: Admin/Views/Settings.php:96
+msgid "Moldovan Leu"
+msgstr ""
+
+#: Admin/Views/Settings.php:97
+msgid "Macanese Pataca"
+msgstr ""
+
+#: Admin/Views/Settings.php:98
+msgid "Mauritian Rupee"
+msgstr ""
+
+#: Admin/Views/Settings.php:99
+msgid "Malawian Kwacha"
+msgstr ""
+
+#: Admin/Views/Settings.php:100
+msgid "Malaysian Ringgit"
+msgstr ""
+
+#: Admin/Views/Settings.php:101
+msgid "Namibian Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:102
+msgid "Nicaraguan Cordoba"
+msgstr ""
+
+#: Admin/Views/Settings.php:103
+msgid "Nepalese Rupee"
+msgstr ""
+
+#: Admin/Views/Settings.php:104
+msgid "Nigerian Naira"
+msgstr ""
+
+#: Admin/Views/Settings.php:105
+msgid "Norwegian Krone"
+msgstr ""
+
+#: Admin/Views/Settings.php:106
+msgid "New Zealand Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:107
+msgid "Panamanian Balboa"
+msgstr ""
+
+#: Admin/Views/Settings.php:108
+msgid "Papua New Guinean Kina"
+msgstr ""
+
+#: Admin/Views/Settings.php:109
+msgid "Pakistani Rupee"
+msgstr ""
+
+#: Admin/Views/Settings.php:110
+msgid "Paraguayan Guarani"
+msgstr ""
+
+#: Admin/Views/Settings.php:111
+msgid "Peruvian Nuevo Sol"
+msgstr ""
+
+#: Admin/Views/Settings.php:112
+msgid "Philippine Peso"
+msgstr ""
+
+#: Admin/Views/Settings.php:113
+msgid "Polish Zloty"
+msgstr ""
+
+#: Admin/Views/Settings.php:114
+msgid "Qatari Riyal"
+msgstr ""
+
+#: Admin/Views/Settings.php:115
+msgid "Russian Ruble"
+msgstr ""
+
+#: Admin/Views/Settings.php:116
+msgid "Solomon Islands Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:117
+msgid "Swedish Krona"
+msgstr ""
+
+#: Admin/Views/Settings.php:118
+msgid "Saint Helenian Pound"
+msgstr ""
+
+#: Admin/Views/Settings.php:119
+msgid "Somali Shilling"
+msgstr ""
+
+#: Admin/Views/Settings.php:120
+msgid "Salvadoran Colon"
+msgstr ""
+
+#: Admin/Views/Settings.php:121
+msgid "Saudi Riyal"
+msgstr ""
+
+#: Admin/Views/Settings.php:122
+msgid "Seychellois Rupee"
+msgstr ""
+
+#: Admin/Views/Settings.php:123
+msgid "Singapore Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:124
+msgid "Sierra Leonean Leone"
+msgstr ""
+
+#: Admin/Views/Settings.php:125
+msgid "Sao Tome and Principe Dobra"
+msgstr ""
+
+#: Admin/Views/Settings.php:126
+msgid "Swazi Lilangeni"
+msgstr ""
+
+#: Admin/Views/Settings.php:127
+msgid "Thai Baht"
+msgstr ""
+
+#: Admin/Views/Settings.php:128
+msgid "Trinidad and Tobago Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:129
+msgid "Tanzanian Shilling"
+msgstr ""
+
+#: Admin/Views/Settings.php:130
+msgid "Tongan Paanga"
+msgstr ""
+
+#: Admin/Views/Settings.php:131
+msgid "New Taiwan Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:132
+msgid "Ugandan Shilling"
+msgstr ""
+
+#: Admin/Views/Settings.php:133
+msgid "Uruguayan Peso"
+msgstr ""
+
+#: Admin/Views/Settings.php:134
+msgid "Ukrainian Hryvnia"
+msgstr ""
+
+#: Admin/Views/Settings.php:135
+msgid "United States Dollar"
+msgstr ""
+
+#: Admin/Views/Settings.php:136
+msgid "Uzbekistani Som"
+msgstr ""
+
+#: Admin/Views/Settings.php:137
+msgid "Vietnamese Dong"
+msgstr ""
+
+#: Admin/Views/Settings.php:138
+msgid "Vanuatu Vatu"
+msgstr ""
+
+#: Admin/Views/Settings.php:139
+msgid "Samoan Tala"
+msgstr ""
+
+#: Admin/Views/Settings.php:140
+msgid "West African Cfa Franc"
+msgstr ""
+
+#: Admin/Views/Settings.php:141
+msgid "Central African Cfa Franc"
+msgstr ""
+
+#: Admin/Views/Settings.php:142
+msgid "Cfp Franc"
+msgstr ""
+
+#: Admin/Views/Settings.php:143
+msgid "Yemeni Rial"
+msgstr ""
+
+#: Admin/Views/Settings.php:144
+msgid "South African Rand"
+msgstr ""
+
+#: Admin/Views/Settings.php:148
+msgid "Settings"
+msgstr ""
+
+#: Admin/Views/UpdateSearchbar.php:165
+msgid "Update"
+msgstr ""
+
+#: Includes/Vendor/EDD_SL_Plugin_Updater.php:176
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+
+#: Includes/Vendor/EDD_SL_Plugin_Updater.php:183
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+
+#: Includes/Vendor/EDD_SL_Plugin_Updater.php:323
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: Includes/Vendor/EDD_SL_Plugin_Updater.php:323
+msgid "Error"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRBookingShortcode.class.php:27
+#: Public/Classes/Shortcode/VRCalendarBookingBtnShortcode.class.php:14
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:16
+msgid "Calendar id is missing"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRBookingShortcode.class.php:40
+msgid "Bookings are disabled."
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:68
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:17
+msgid "Search Properties"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:68
+msgid "Check in Date"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:68
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:49
+#: Public/Views/Shortcodes/Booking.view.php:162
+msgid "Check Out Date"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:69
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:92
+msgid "# of Guests"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:79
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:111
+msgid "Booking Price"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:108
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:203
+msgid "Booking is disabled"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:119
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:176
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:143
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:185
+msgid "Extra Guest Fees Per Night"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarResultShortcode.class.php:218
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:211
+msgid "Sorry! No results found. Please search again."
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:15
+msgid "Searchbar id is missing"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:111
+msgid "Calendar Name"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:111
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:155
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:197
+msgid "Listing Detail"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:111
+msgid "Booking Link"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:132
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:161
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:174
+msgid "Booking is disabled "
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarSearchbarShortcode.class.php:218
+msgid "****VRCalendarsync License Expired Please Renew****"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:33
+#: Public/Views/Shortcodes/Booking.view.php:125
+msgid "Check In"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:34
+#: Public/Views/Shortcodes/Booking.view.php:161
+msgid "Check Out"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:36
+#: Public/Views/Shortcodes/Booking.view.php:201
+msgid "First Name"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:37
+#: Public/Views/Shortcodes/Booking.view.php:207
+msgid "Last Name"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:39
+#: Public/Views/Shortcodes/Booking.view.php:222
+#: Public/Views/Shortcodes/Booking.view.php:223
+msgid "Phone Number"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:40
+#: Public/Views/Shortcodes/Booking.view.php:231
+#: Public/Views/Shortcodes/Booking.view.php:232
+msgid "Note To Host"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:41
+msgid "00.00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:42
+#: Public/Views/Shortcodes/Booking.view.php:281
+msgid "Extra Guest Fees"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:43
+#: Public/Views/Shortcodes/Booking.view.php:289
+msgid "Cleaning Fee"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:44
+#: Public/Views/Shortcodes/Booking.view.php:297
+msgid "Taxes"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:46
+#: Public/Views/Shortcodes/Booking.view.php:314
+msgid "Total Reservation Amount"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:47
+#: Public/Views/Shortcodes/Booking.view.php:378
+msgid "Request to Book"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:48
+#: Public/Views/Shortcodes/Booking.view.php:126
+msgid "Check In Date"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:50
+msgid "x"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:51
+msgid "0"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:83
+#: Public/Views/Shortcodes/Booking.view.php:112
+msgid "Per Night"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:88
+msgid "Night"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:91
+#: Public/Views/Shortcodes/Booking.view.php:114
+msgid "Per Day"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:92
+msgid "day"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:102
+#: Public/Views/Shortcodes/Booking.view.php:136
+msgid "Check In Time"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:110
+#: Public/Views/Shortcodes/Booking.view.php:172
+msgid "Check Out Time"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:176
+msgid "Calendar Updated on"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:177
+msgid "Available"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:178
+msgid "Unavailable"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:207
+msgid "Powered By"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:207
+msgid "Vacation Rental Calendar Sync"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:398
+msgid "License Expired Please Renew"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "12:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "1:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "2:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "3:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "4:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "5:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "6:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "7:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "8:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "9:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "10:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "11:00am"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "12:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "1:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "2:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "3:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "4:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "5:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "6:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "7:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "8:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "9:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "10:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:514
+#: Public/Classes/VRCalendar.class.php:61
+#: Public/Classes/VRCalendar.class.php:71
+#: Public/Classes/VRCalendar.class.php:336
+#: Public/Classes/VRCalendar.class.php:431
+#: Public/Views/Shortcodes/Booking.view.php:52
+msgid "11:00pm"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "00:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "01:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "02:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "03:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "04:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "05:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "06:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "07:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "08:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "09:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "10:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "11:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "12:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "13:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "14:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "15:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "16:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "17:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "18:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "19:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "20:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "21:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "22:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:515
+#: Public/Classes/VRCalendar.class.php:62
+#: Public/Classes/VRCalendar.class.php:72
+#: Public/Classes/VRCalendar.class.php:337
+#: Public/Classes/VRCalendar.class.php:432
+#: Public/Views/Shortcodes/Booking.view.php:53
+msgid "23:00:00"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:576
+msgid "Sun"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:577
+msgid "Mon"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:578
+msgid "Tue"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:579
+msgid "Wed"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:580
+msgid "Thu"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:581
+msgid "Fri"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRCalendarShortcode.class.php:582
+msgid "Sat"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRPaymentShortcode.class.php:9
+msgid "Booking id is missing"
+msgstr ""
+
+#: Public/Classes/Shortcode/VRPaymentShortcode.class.php:12
+msgid "Your payment has been received and your booking is approved."
+msgstr ""
+
+#: Public/Classes/Shortcode/VRThankyouShortcode.class.php:9
+msgid "Your Payment is completed successfully."
+msgstr ""
+
+#: Public/Classes/Shortcode/VRThankyouShortcode.class.php:10
+msgid ""
+"Your details are sent for approval, you will receive the confirmation email "
+"on approval of your booking."
+msgstr ""
+
+#: Public/Classes/Shortcode/VRThankyouShortcode.class.php:11
+msgid "Your booking is completed successfully."
+msgstr ""
+
+#: Public/Classes/Shortcode/VRThankyouShortcode.class.php:15
+msgid "Something went wrong!!!"
+msgstr ""
+
+#: Public/Classes/VRCalendar.class.php:350
+#: Public/Classes/VRCalendar.class.php:351
+msgid "pending"
+msgstr ""
+
+#: Public/Classes/VRCalendar.class.php:354
+msgid "yes"
+msgstr ""
+
+#: Public/Classes/VRCalendar.class.php:356
+msgid "no"
+msgstr ""
+
+#: Public/Classes/VRCalendar.class.php:723
+msgid "Thank you"
+msgstr ""
+
+#: Public/Classes/VRCalendar.class.php:724
+msgid "Payment Cancel"
+msgstr ""
+
+#: Public/Classes/VRCalendar.class.php:725
+msgid "Search Bar Result"
+msgstr ""
+
+#: Public/Views/Shortcodes/Booking.view.php:202
+msgid "First name"
+msgstr ""
+
+#: Public/Views/Shortcodes/Booking.view.php:208
+msgid "Last name"
+msgstr ""
+
+#: Public/Views/Shortcodes/Booking.view.php:248
+#: Public/Views/Shortcodes/Booking.view.php:262
+msgid "days"
+msgstr ""
+
+#: Public/Views/Shortcodes/Booking.view.php:250
+#: Public/Views/Shortcodes/Booking.view.php:264
+msgid "nights"
+msgstr ""
+
+#: Public/Views/Shortcodes/Booking.view.php:321
+msgid "Total"
+msgstr ""
+
+#: Public/Views/Shortcodes/Booking.view.php:326
+msgid "Deposit Due Today ("
+msgstr ""
+
+#: Public/Views/Shortcodes/Booking.view.php:351
+msgid "Balance of <b>"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Paypal.view.php:5
+msgid "Pay via PayPal"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:3
+msgid "Jan"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:4
+msgid "Feb"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:5
+msgid "Mar"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:6
+msgid "Apr"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:7
+msgid "May"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:8
+msgid "Jun"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:9
+msgid "Jul"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:10
+msgid "Aug"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:11
+msgid "Sep"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:12
+msgid "Oct"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:13
+msgid "Nov"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:14
+msgid "Dec"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:21
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:22
+msgid "Card Number"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:25
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:26
+msgid "Card Holder Name"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:29
+msgid "CVC"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:30
+msgid "CVV"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:35
+msgid "Expiration Month"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:43
+msgid "Expiration Year"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:53
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:54
+msgid "Address Line 1"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:57
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:58
+msgid "Address Line 2"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:63
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:64
+msgid "City"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:67
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:68
+msgid "State"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:75
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:76
+msgid "ZIP"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:79
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:80
+msgid "Country"
+msgstr ""
+
+#: Public/Views/Shortcodes/Partial/Payment/Stripe.view.php:338
+msgid "Pay via Credit Card"
+msgstr ""
+
+#: Public/Views/Shortcodes/Thankyou.view.php:5
+msgid "Booking ID"
+msgstr ""
+
+#: Public/Views/Shortcodes/Thankyou.view.php:14
+msgid "Transaction ID"
+msgstr ""
+
+#: vrcalendar.php:91
+msgid "VR Calendar Sync License"
+msgstr ""
+
+#: vrcalendar.php:100
+msgid "VR Calendar Sync License Options"
+msgstr ""
+
+#: vrcalendar.php:107
+msgid "License Key"
+msgstr ""
+
+#: vrcalendar.php:111
+msgid "Enter your license key"
+msgstr ""
+
+#: vrcalendar.php:117 vrcalendar.php:126
+msgid "Activate License"
+msgstr ""
+
+#: vrcalendar.php:121
+msgid "active"
+msgstr ""
+
+#: vrcalendar.php:123
+msgid "Deactivate License"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "VR Calendar Enterprise"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.vrcalendarsync.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "VR Calendar Plugin"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Innate Images, LLC"
+msgstr ""
