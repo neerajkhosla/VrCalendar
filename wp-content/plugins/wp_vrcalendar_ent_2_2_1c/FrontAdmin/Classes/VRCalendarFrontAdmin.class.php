@@ -4,7 +4,7 @@ if (!class_exists('WP_List_Table')) {
         require_once(ABSPATH . 'wp-admin/includes/admin.php');
     }
 class VRCalendarFrontAdmin extends VRCSingleton {
-	private $_post="/client-dashboard";
+	private $_post="/dashboard";
     protected function __construct(){
         
         if(isset($_GET['vrc_slug'])){
@@ -15,7 +15,7 @@ class VRCalendarFrontAdmin extends VRCSingleton {
         add_action('init', array( $this,'allow_subscriber_uploads'));
      
         add_shortcode('calendar_dashboard', array($this,'registerPages'));
-        if(strpos($_SERVER['REQUEST_URI'],'client-dashboard')){
+        if(strpos($_SERVER['REQUEST_URI'],'dashboard')){
                 add_action( 'init', array( $this, 'enqueueStyles' ) );
                 add_action( 'wp_enqueue_scripts', array( $this, 'enqueueScripts' ) );
                 add_action( 'wp_enqueue_scripts', array( $this,'wpa82718_scripts'), 100 );
@@ -97,8 +97,10 @@ class VRCalendarFrontAdmin extends VRCSingleton {
         $msg = rawurlencode($msg);
 		$_SESSION['vrc_msg']=$msg;
 		
-        $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
-        wp_redirect($redirect_url);
+        // $redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard");
+		// echo '<script>window.location = "'.$redirect_url.'"</script>';
+       // wp_redirect($redirect_url);
+		// exit;
     }
 
     
@@ -206,7 +208,7 @@ class VRCalendarFrontAdmin extends VRCSingleton {
         array_pop($data['calendar_price_exception']['end_date']);
         array_pop($data['calendar_price_exception']['price_per_night']);
         array_pop($data['calendar_price_exception']['price_per_week']);
-	    array_pop($data['calendar_price_exception']['price_per_month']);
+	array_pop($data['calendar_price_exception']['price_per_month']);
         array_pop($data['calendar_price_exception']['seasonal_minimum_nights']);
 
         $exception = array();
@@ -238,6 +240,7 @@ class VRCalendarFrontAdmin extends VRCSingleton {
     }
 
     function saveSettings() {
+        
     $user = wp_get_current_user();
     if( $user->roles[0]!="administrator"){
             $curent_user_id =  get_current_user_id();
@@ -246,7 +249,9 @@ class VRCalendarFrontAdmin extends VRCSingleton {
                 'payment_mode'=> $_POST['payment_mode'],
                 'attr_currency'=> $_POST['attr_currency'],
                 'language'=>$_POST['language'],
-                'auto_sync'=> $_POST['auto_sync']
+                'auto_sync'=> $_POST['auto_sync'],
+				'thank_you_page'=> $_POST['thank_you_page'],
+                'cancel_payment_page'=> $_POST['cancel_payment_page']
             );
             $serialized_data=serialize($user_setting);
             update_user_meta( $curent_user_id, '_user_settings', $serialized_data);
@@ -279,6 +284,7 @@ class VRCalendarFrontAdmin extends VRCSingleton {
     }
 
     function deleteBooking() {
+        
         $booking_id = $_GET['bid'];
         $cal_id = $_GET['cal_id'];
         $VRCalendarBooking = VRCalendarBooking::getInstance();
@@ -338,6 +344,7 @@ class VRCalendarFrontAdmin extends VRCSingleton {
 			 echo '<script>window.location = "'.site_url().'"</script>';
 			exit;
 		}
+
         switch($_GET['page']){
         
 		    case 'vr-calendar-dashboard': 
@@ -427,6 +434,7 @@ class VRCalendarFrontAdmin extends VRCSingleton {
 }
 	// .................added searchbars..............................start...........................
     function addSearchbar(){
+       
         global $gbversiontype;
         
         //06:10:2016 asm
@@ -457,6 +465,7 @@ class VRCalendarFrontAdmin extends VRCSingleton {
 			'no'=>__('No', VRCALENDAR_PLUGIN_TEXT_DOMAIN)
 		);
 		$action =(isset($_GET['action'])) ? $_GET['action'] : '';
+                
 		switch($action){
 			case 'add':
 				if(isset($_POST['search_bar_save'])){
@@ -468,19 +477,20 @@ class VRCalendarFrontAdmin extends VRCSingleton {
 				$VRCalendarEntity->saveSearchbar($searchbardata);
 				$_SESSION['vrc_msg']="Search Bar added successfully";
 				$redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-add-search-bar");
-                echo '<script>window.location = "'.$redirect_url.'"</script>';
-                exit;
+                                echo '<script>window.location = "'.$redirect_url.'"</script>';
+                                exit;
 			    }			
 				require(VRCALENDAR_PLUGIN_DIR.'/FrontAdmin/Views/AddSearchbar.php'); 
 				break;
-            case 'edit':
+                             case 'edit':
 				if(isset($_POST['search_bar_save'])){
 				$searchbardata = $_POST;					
 				$VRCalendarEntity->saveSearchbar($searchbardata);
 				$_SESSION['vrc_msg']='Search Bar updated successfully';
 				$redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-add-search-bar");
-                echo '<script>window.location = "'.$redirect_url.'"</script>';
-                exit;
+                                
+                                echo '<script>window.location = "'.$redirect_url.'"</script>';
+                                exit;
 			    }	
 				if(isset($_GET['searchbar_id'])) { 
 				   $presearchbarid = $_GET['searchbar_id'];
@@ -488,14 +498,14 @@ class VRCalendarFrontAdmin extends VRCSingleton {
 				   require(VRCALENDAR_PLUGIN_DIR.'/FrontAdmin/Views/UpdateSearchbar.php');
 			    }
 				break;
-            case 'del':
+                              case 'del':
 				if(isset($_GET['searchbar_id'])) { 
 				$searchbar_id = $_GET['searchbar_id'];
 				$VRCalendarEntity->deleteSearchbar($searchbar_id);
 				$_SESSION['vrc_msg']='';
 				$redirect_url = site_url($this->_post."/?page=".VRCALENDAR_PLUGIN_SLUG."-add-search-bar");
-                echo '<script>window.location = "'.$redirect_url.'"</script>';
-                exit;
+                                echo '<script>window.location = "'.$redirect_url.'"</script>';
+                                exit;
 			    }
 				break;
 			default:			

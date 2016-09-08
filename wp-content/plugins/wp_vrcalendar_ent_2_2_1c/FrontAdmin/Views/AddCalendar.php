@@ -112,7 +112,7 @@ $requires_admin_approval = array(
 
 	jQuery('input[type="text"]').on('blur',function(){
 	currentValue=jQuery(this).val();
-		if(currentValue=="" || currentValue==0){
+		if(currentValue==""){
 			jQuery(this).val(defaultValue);
 		}
 	});

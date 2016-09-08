@@ -420,7 +420,15 @@ class VRBookingsTable extends WP_List_Table {
 			);
 			//pagging code ends from here
 		}
-
+		public function get_pagenum() {
+		
+		$pagenum = get_query_var( 'paged') ? absint( get_query_var( 'paged') ) : 0;
+	 
+		if ( isset( $this->_pagination_args['total_pages'] ) && $pagenum > $this->_pagination_args['total_pages'] )
+			$pagenum = $this->_pagination_args['total_pages'];
+	 
+		return max( 1, $pagenum );
+		}
 		/**
 		 * @Method name  sort_data
 		 * @params $a $b

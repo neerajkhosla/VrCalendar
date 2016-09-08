@@ -1,3 +1,4 @@
+
 <?php 
 $VRCalendarBooking = VRCalendarBooking::getInstance();
 $booking_details = $VRCalendarBooking->getBookingByID($bid); 
@@ -20,13 +21,20 @@ if(isset($_POST['admin_booking_update'])){
 	$sql = "update {$table} set booking_source='{$data['booking_source']}', booking_date_from='{$data['booking_date_from']}', booking_date_to='{$data['booking_date_to']}', booking_guests='{$data['booking_guests']}', booking_user_fname='{$data['booking_user_fname']}', booking_user_lname='{$data['booking_user_lname']}', booking_user_email='{$data['booking_user_email']}', booking_summary='{$data['booking_summary']}', booking_status='{$data['booking_status']}', booking_payment_status='{$data['booking_payment_status']}', booking_user_phone ='{$data['booking_user_phone']}', booking_sub_price='{$data['booking_sub_price']}', booking_admin_approved='{$data['booking_admin_approved']}', booking_total_price='{$data['booking_total_price']}', booking_modified_on =Now(), booking_created_on='{$data['booking_created_on']}' where booking_id='{$data['update_booking_id']}';";
 
 	if($wpdb->query($sql)){
-        $redirect_url = site_url($post->post_name."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&view=bookings&cal_id=".$calendar_id);                
+        $redirect_url = site_url($post->post_name."/?page=".VRCALENDAR_PLUGIN_SLUG."-dashboard&view=bookings&cal_id=".$calendar_id);     
+		$_SESSION['vrc_msg']="Booking Updated successfully";
         echo '<script>window.location = "'.$redirect_url.'"</script>';
         exit;
 	}
 	
 }
-?><h2>Edit Booking</h2>
+?>
+
+<div class="left-panel-vr-plg">
+	<?php include('sidebar.php'); ?>
+</div>
+<div class="right-panel-vr-plg">
+<h2>Edit Booking</h2>
 <div class="notice-warning notice"><p>Warning: You can change any setting of the booking below, however changing the price will not automatically charge or refund the guest, you must do it manually. Also, changing the reservation dates will not check for conflicts so you could easily double book a listing if you aren't careful. Good luck!</p></div>
 <form method="POST" action=""><table class="form-table">
 <input type ="hidden" name="update_booking_id" value="<?php echo $bid;?>" >
@@ -179,3 +187,4 @@ if(isset($_POST['admin_booking_update'])){
         </tr>
     </tbody>
 </table></form>
+</div>

@@ -474,14 +474,17 @@ form.edd_form {
   width: 100%;}
 /*-select-*/
 .custom_select{position: relative;padding-right: 10px;display: inline-block;width: 100%;}    
-.custom_select select{ -webkit-appearance: none;
-    -moz-appearance: none; 
-    appearance: none;
+.custom_select select{ 
+	-webkit-appearance: none;
+	-moz-appearance: none; 
+	appearance: none;
+	background: rgba(0, 0, 0, 0) url("img/dropdown.png") no-repeat scroll 90% center / 10px auto;
+	border-radius: 2px;
+	padding:6px 7px;
+	width: 100%;
+}   
 
-  border-radius: 2px;
-    padding:6px 7px;
-    width: 100%; }       
-.custom_select:before{content: "\f0dd";font-family: "FontAwesome";position: absolute;right: 30px;top: 5px;z-index: 99;}      
+/*.custom_select:before{content: "\f0dd";font-family: "FontAwesome";position: absolute;right: 30px;top: 5px;z-index: 99;} */     
 /*-select end-*/    
 
 
@@ -907,3 +910,17 @@ body .search-bar-result .main_title, body .payment-page .main_title, body .booki
 body .search-bar-result .vrc .searchbar .col-sm-3, body .search-bar-result .vrc .searchbar .col-sm-4 {
   padding-right: 15px;
 }  
+.vr-booking #the-list a{
+margin-right: 6px;
+}
+#vrc-payment-paypal {
+  float: left;
+  padding: 13px;
+  text-align: center;
+  width: 100%;
+}
+.message {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 2%;
+}

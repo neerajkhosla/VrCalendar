@@ -25,7 +25,7 @@ class VRCalendarTableFront extends WP_List_Table_CS
             case 'calendar_shortcode':
               //  echo  '[vrcalendar id="'.$cal['calendar_id'].'" /]';
 			  $api_key= base64_encode($cal['calendar_id']."--".uniqid());
-			  $script= htmlspecialchars("<script>window.options = { api_key:'".$api_key."',height:'540px',width:'1000px' };var s = document.createElement('script');s.src = \"".site_url()."/embed.js\";s.async = true; document.body.appendChild(s);</script>");
+			  $script= htmlspecialchars("<script id='vr_".$api_key."'>window.options = { api_key:'".$api_key."',height:'100%',width:'100%'};var s = document.createElement('script');s.src = \"".site_url()."/embed.js\";s.async = true; document.body.appendChild(s);</script>");
 			  
 			  $calid=$cal["calendar_id"];
 

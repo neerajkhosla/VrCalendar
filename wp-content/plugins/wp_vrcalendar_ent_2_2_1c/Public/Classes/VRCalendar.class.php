@@ -252,13 +252,12 @@ class VRCalendar extends VRCSingleton {
         $VRCalendarBooking = VRCalendarBooking::getInstance();
          /* Delete the booking */
         $booking_id = $_REQUEST['bid'];
-        $VRCalendarBooking->deleteBooking($booking_id);
-        
         /*Custom code*/
         $author_id=self::getUserIdFromBookingId($booking_id); //Find user id
         $user_meta = get_user_meta( $author_id, '_user_settings',true); 
         $usermeta=  unserialize($user_meta);
         $cancel_payment_page = $usermeta['cancel_payment_page'];
+		$VRCalendarBooking->deleteBooking($booking_id);
          /*Custom code*/  
         if(trim($cancel_payment_page)!=""){
             wp_redirect($cancel_payment_page);
@@ -298,12 +297,13 @@ class VRCalendar extends VRCSingleton {
     function paypalPayment() {
         $VRCalendarSettings = VRCalendarSettings::getInstance();
         $VRCalendarBooking = VRCalendarBooking::getInstance();
-		$author_id=self::getUserIdFromBookingId($booking_id);
+		
 		$sel_currency = $VRCalendarSettings->getSettings('attr_currency');
 
         $booking_id = $_POST['bid'];
         $booking_data = $VRCalendarBooking->getBookingByID( $booking_id );
           /*Custom code*/
+		$author_id=self::getUserIdFromBookingId($booking_id);
         $user_meta = get_user_meta( $author_id, '_user_settings',true); 
         $usermeta=  unserialize($user_meta);
         $sel_currency = $usermeta['attr_currency'];

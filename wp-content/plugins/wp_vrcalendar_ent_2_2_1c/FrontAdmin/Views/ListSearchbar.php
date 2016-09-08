@@ -27,9 +27,9 @@ global $post;
 		
 		<td><?php
 			  $api_key= base64_encode($searchbar->id."--".uniqid());
-			  $script= htmlspecialchars("<script>window.options = { api_key:'".$api_key."',height:'540px',width:'1000px' ,'title':'search'};var s = document.createElement('script');s.src = \"".site_url()."/embed.js\";s.async = true; document.body.appendChild(s);</script>");
+			  $script= htmlspecialchars("<script id='vr_".$api_key."'>window.options_search = { api_key_search:'".$api_key."',height:'100%',width:'100%' ,'title':'search'};var s = document.createElement('script');s.src = \"".site_url()."/embed-search.js\";s.async = true; document.body.appendChild(s);</script>");
 			  
-               echo '<a class="btn" data-popup-open="popup-'.$cal['calendar_id'].'" href="#">Get Embed Code</a><div class="popup" data-popup="popup-'.$cal['calendar_id'].'"><div class="popup-inner"><h4 class="embed-heading">Embed Code for '.$cal['calendar_name'].'</h4><p class="embed-section" ><span class="response" style="display:none;"></span><code id="'.$cal['calendar_id'].'">'.$script.'</code><button type="button" onclick=copyToClipboard("#'.$searchbar->id.'")>copy to clipboard</button></p><a class="popup-close" data-popup-close="popup-'.$cal['calendar_id'].'" href="#">x</a></div></div>';
+               echo '<a class="btn" data-popup-open="popup-'.$searchbar->id.'" href="#">Get Embed Code</a><div class="popup" data-popup="popup-'.$searchbar->id.'"><div class="popup-inner"><h4 class="embed-heading">Embed Code for '.$name.'</h4><p class="embed-section" ><span class="response" style="display:none;"></span><code id="'.$searchbar->id.'">'.$script.'</code><button type="button" onclick=copyToClipboard("#'.$searchbar->id.'")>copy to clipboard</button></p><a class="popup-close" data-popup-close="popup-'.$searchbar->id.'" href="#">x</a></div></div>';
 		?></td>
 		
 		<td><?php echo get_the_author_meta( 'display_name', $searchbar->author); ?></td>
